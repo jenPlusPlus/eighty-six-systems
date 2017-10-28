@@ -1,6 +1,6 @@
-// export const addUser = (user) => {
-//   return {
-//     type: 'ADD_USER',
-//     user
-//   };
-// };
+export const loginUser = (currentUser) => {
+  return {
+    type: 'LOGIN_USER',
+    currentUser
+  };
+};

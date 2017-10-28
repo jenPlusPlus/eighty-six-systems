@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import { loginUser } from './../Actions/index.js';
-import App from './../Components/App/App';
+import Login from './../Components/Login/Login';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  currentUser: (user) => {
+  loginUser: (user) => {
     return dispatch(loginUser(user));
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

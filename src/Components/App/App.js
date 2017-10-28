@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import AddUser from './../AddUser/AddUser';
-import Login from './../Login/Login';
+import LoginContainer from './../../Containers/LoginContainer';
 // import firebase from './../../firebase.js';
 
 
@@ -36,7 +36,7 @@ class App extends Component {
             );
           }}/>
 
-          <Route exact path='/login' component={Login}/>
+          <Route exact path='/login' component={LoginContainer}/>
         </div>
       </BrowserRouter>
     );
