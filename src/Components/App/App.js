@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
-import firebase from './firebase.js';
+import firebase from './../../firebase.js';
 
 
 class App extends Component {
