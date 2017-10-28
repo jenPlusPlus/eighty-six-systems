@@ -30,7 +30,7 @@ class AddUser extends Component {
     const user = {
       name: this.state.name,
       loginCode: this.state.loginCode,
-      tables: []
+      tables: 0
     };
     usersRef.push(user);
 

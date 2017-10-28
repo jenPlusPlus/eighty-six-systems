@@ -5,7 +5,7 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      loginCode: '0000',
+      systemLoginCode: '0000',
       userLoginCode: ''
     };
   }
@@ -18,12 +18,13 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    if (this.state.loginCode === this.state.userLoginCode) {
+    if (this.state.systemLoginCode === this.state.userLoginCode) {
       const usersRef = firebase.database().ref('users');
-      usersRef.orderByChild("login_code").equalTo(this.state.userLoginCode)
+      usersRef.orderByChild("loginCode").equalTo(this.state.userLoginCode)
         .once('value', snapshot => {
           const currentUser = Object.entries(snapshot.val());
-          alert('Welcome: ', currentUser[0][1].name);
+          this.props.loginUser(currentUser[0][1]);
+          alert(`Welcome, ${currentUser[0][1].name}`);
         });
     } else {
       alert('LOGIN CODE INCORRECT!');
