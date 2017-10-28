@@ -7,7 +7,7 @@ const mapStateToProps = (store) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  currentUser: (user) => {
+  loginUser: (user) => {
     return dispatch(loginUser(user));
   }
 });

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase from './../../firebase.js';
 
 class Login extends Component {
   constructor() {
@@ -13,6 +14,28 @@ class Login extends Component {
     this.setState({
       userLoginCode: this.state.userLoginCode.concat(value)
     });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    if (this.state.loginCode === this.state.userLoginCode) {
+      const usersRef = firebase.database().ref('users');
+      usersRef.orderByChild("login_code").equalTo(this.state.userLoginCode)
+        .once('value', snapshot => {
+          const currentUser = Object.entries(snapshot.val());
+          alert('Welcome: ', currentUser[0][1].name);
+        });
+    } else {
+      alert('LOGIN CODE INCORRECT!');
+    }
+
+    this.setState({
+      userLoginCode: ''
+    });
+
+
+
+    // this.props.loginUser();
   }
 
   render() {
@@ -39,7 +62,8 @@ class Login extends Component {
             onClick={() => this.updateState("9")}>9</button>
           <button className="login-button"
             onClick={() => this.updateState("0")}>0</button>
-          <button className="login-submit">Login</button>
+          <button className="login-submit"
+            onClick={(event) => this.handleSubmit(event)}>Login</button>
         </div>
       </div>
     );
