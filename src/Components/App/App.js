@@ -12,36 +12,6 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    // const usersRef = firebase.database().ref('users');
-    // usersRef.on('value', (snapshot) => {
-    //   let users = snapshot.val();
-    //   for (let user in users) {
-    //       console.log('user: ', users[user]);
-    //   }
-    // })
-  }
-
-  // updateState(key, event) {
-  //   this.setState({[key]: event.target.value})
-  // }
-
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   const usersRef = firebase.database().ref('users');
-  //   const user = {
-  //     name: this.state.name,
-  //     email: this.state.email
-  //   }
-  //   usersRef.push(user);
-  //
-  //   this.setState({
-  //     name: '',
-  //     email: ''
-  //   });
-  // }
-
-
   render() {
     return (
       <BrowserRouter>
