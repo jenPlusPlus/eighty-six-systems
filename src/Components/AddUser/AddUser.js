@@ -43,8 +43,14 @@ class AddUser extends Component {
   render() {
     return (
       <div className="AddUser">
-        <input type='text' placeholder='Name' value={this.state.name} onChange={(event)=>this.updateState('name', event)}/>
-        <input type='text' placeholder='Login Code' value={this.state.login_code} onChange={(event)=>this.updateState('login_code', event)} />
+        <input type='text'
+          placeholder='Name'
+          value={this.state.name}
+          onChange={(event)=>this.updateState('name', event)}/>
+        <input type='text'
+          placeholder='Login Code'
+          value={this.state.login_code}
+          onChange={(event)=>this.updateState('login_code', event)} />
         <button onClick={(event)=> this.handleSubmit(event)}>Submit</button>
       </div>
     );
