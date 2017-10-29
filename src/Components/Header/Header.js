@@ -13,9 +13,11 @@ const Header = (props) => {
       <h1>eighty-six</h1>
 
       { !currentUser.loginCode &&
-        <Link to={'/login'}>
-          <button className={`login-button ${hideButton}`}>Login</button>
-        </Link>
+        <div className='header-logged-out'>
+          <Link to={'/login'}>
+            <button className={`login-button ${hideButton}`}>Login</button>
+          </Link>
+        </div>
       }
       { currentUser.loginCode &&
         <div className='header-logged-in'>
