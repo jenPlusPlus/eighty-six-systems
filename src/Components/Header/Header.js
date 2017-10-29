@@ -18,10 +18,13 @@ const Header = (props) => {
         </Link>
       }
       { currentUser.loginCode &&
-        <Link to={'/'}>
-          <button className={`logout-button ${hideButton}`}
-            onClick={() => logoutUser(currentUser)}>Logout</button>
-        </Link>
+        <div className='header-logged-in'>
+          <h2>Hello, {currentUser.name}</h2>
+          <Link to={'/'}>
+            <button className={`logout-button ${hideButton}`}
+              onClick={() => logoutUser(currentUser)}>Logout</button>
+          </Link>
+        </div>
       }
     </div>
   );
