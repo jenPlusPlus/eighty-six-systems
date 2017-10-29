@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
+  console.log('header props: ', props);
   return (
-    <div className="server-dashboard">HEADER!</div>
+    <div className="header">
+      <h1>eighty-six</h1>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import AddUser from './../AddUser/AddUser';
 import LoginContainer from './../../Containers/LoginContainer';
 import ServerDashboardContainer
   from './../../Containers/ServerDashboardContainer';
-import Header from './../Header/Header';
+import HeaderContainer from './../../Containers/HeaderContainer';
 import PropTypes from 'prop-types';
 // import Login from './../Login/Login';
 // import firebase from './../../firebase.js';
@@ -21,7 +21,7 @@ class App extends Component {
         <div className='app-wrapper'>
           <Route path='/' render={() => {
             return (
-              <Header />
+              <HeaderContainer />
             );
           }}/>
 
