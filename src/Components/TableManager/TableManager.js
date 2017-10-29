@@ -3,7 +3,7 @@ import TableContainer from './../../Containers/TableContainer';
 import firebase from './../../firebase.js';
 import PropTypes from 'prop-types';
 
-class ServerDashboard extends Component {
+class TableManager extends Component {
   constructor() {
     super();
     this.state = {
@@ -55,8 +55,8 @@ class ServerDashboard extends Component {
   }
 }
 
-ServerDashboard.propTypes = {
+TableManager.propTypes = {
   currentUser: PropTypes.object
 };
 
-export default ServerDashboard;
+export default TableManager;
