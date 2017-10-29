@@ -7,7 +7,7 @@ class AddUser extends Component {
     super();
     this.state = {
       name: '',
-      login_code: ''
+      loginCode: ''
     };
   }
   componentDidMount() {
@@ -29,22 +29,28 @@ class AddUser extends Component {
     const usersRef = firebase.database().ref('users');
     const user = {
       name: this.state.name,
-      login_code: this.state.login_code,
-      tables: []
+      loginCode: this.state.loginCode,
+      tables: 0
     };
     usersRef.push(user);
 
     this.setState({
       name: '',
-      login_code: ''
+      loginCode: ''
     });
   }
 
   render() {
     return (
       <div className="AddUser">
-        <input type='text' placeholder='Name' value={this.state.name} onChange={(event)=>this.updateState('name', event)}/>
-        <input type='text' placeholder='Login Code' value={this.state.login_code} onChange={(event)=>this.updateState('login_code', event)} />
+        <input type='text'
+          placeholder='Name'
+          value={this.state.name}
+          onChange={(event)=>this.updateState('name', event)}/>
+        <input type='text'
+          placeholder='Login Code'
+          value={this.state.loginCode}
+          onChange={(event)=>this.updateState('loginCode', event)} />
         <button onClick={(event)=> this.handleSubmit(event)}>Submit</button>
       </div>
     );
