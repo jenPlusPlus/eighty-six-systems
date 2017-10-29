@@ -1,20 +1,25 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Header = (props) => {
-  console.log('header props: ', props);
+  const { currentUser, location } = props;
+  const hideButton = (location.pathname === '/adduser'
+    || location.pathname === '/login')  
+    ? 'hide-button'
+    : '';
   return (
     <div className="header">
       <h1>eighty-six</h1>
-      { !props.currentUser.loginCode &&
+
+      { !currentUser.loginCode &&
         <Link to={'/login'}>
-          <button className="login-button">Login</button>
+          <button className={`login-button ${hideButton}`}>Login</button>
         </Link>
       }
-      { props.currentUser.loginCode &&
+      { currentUser.loginCode &&
         <Link to={'/'}>
-          <button className="logout-button">Logout</button>
+          <button className={`logout-button ${hideButton}`}>Logout</button>
         </Link>
       }
     </div>
@@ -22,7 +27,8 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  location: PropTypes.object
 };
 
 export default Header;

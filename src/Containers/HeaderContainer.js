@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import Header from './../Components/Header/Header';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser
 });
 
-export default connect(mapStateToProps, undefined)(Header);
+export default withRouter(connect(mapStateToProps, undefined)(Header));
