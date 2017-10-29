@@ -41,7 +41,7 @@ class AddUser extends Component {
   }
 
   render() {
-      return (
+    return (
       <div className="AddUser">
         <input type='text'
           placeholder='Name'

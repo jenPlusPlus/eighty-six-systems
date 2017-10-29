@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './../../firebase.js';
+import PropTypes from 'prop-types';
 
 class Login extends Component {
   constructor() {
@@ -34,9 +35,6 @@ class Login extends Component {
       userLoginCode: ''
     });
 
-
-
-    // this.props.loginUser();
   }
 
   render() {
@@ -70,5 +68,9 @@ class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  loginUser: PropTypes.func
+};
 
 export default Login;
