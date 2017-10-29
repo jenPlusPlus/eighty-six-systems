@@ -1,11 +1,11 @@
 import React from 'react';
-import Table from './../Table/Table';
+import TableContainer from './../../Containers/TableContainer';
 
 const ServerDashboard = () => {
   return (
     <div className="server-dashboard">
       <h3>SERVER DASHBOARD!</h3>
-      <Table />
+      <TableContainer />
     </div>
   );
 };
