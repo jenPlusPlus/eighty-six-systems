@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import AddUser from './../AddUser/AddUser';
 import LoginContainer from './../../Containers/LoginContainer';
+import ServerDashboardContainer from './../../Containers/ServerDashboardContainer';
 // import Login from './../Login/Login';
 // import firebase from './../../firebase.js';
 
@@ -35,6 +36,10 @@ class App extends Component {
           }}/>
 
           <Route exact path='/login' component={LoginContainer}/>
+
+          <Route exact path='/serverdashboard'
+            component={ServerDashboardContainer}/>
+
         </div>
       </BrowserRouter>
     );
