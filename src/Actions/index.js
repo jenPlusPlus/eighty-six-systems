@@ -4,3 +4,10 @@ export const loginUser = (currentUser) => {
     currentUser
   };
 };
+
+export const logoutUser = (currentUser) => {
+  return {
+    type: 'LOGOUT_USER',
+    currentUser
+  };
+};

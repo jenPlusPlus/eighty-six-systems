@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Header = (props) => {
-  const { currentUser, location } = props;
+  const { currentUser, location, logoutUser } = props;
   const hideButton = (location.pathname === '/adduser'
-    || location.pathname === '/login')  
+    || location.pathname === '/login')
     ? 'hide-button'
     : '';
   return (
@@ -19,7 +19,8 @@ const Header = (props) => {
       }
       { currentUser.loginCode &&
         <Link to={'/'}>
-          <button className={`logout-button ${hideButton}`}>Logout</button>
+          <button className={`logout-button ${hideButton}`}
+            onClick={() => logoutUser(currentUser)}>Logout</button>
         </Link>
       }
     </div>
@@ -28,7 +29,8 @@ const Header = (props) => {
 
 Header.propTypes = {
   currentUser: PropTypes.object,
-  location: PropTypes.object
+  location: PropTypes.object,
+  logoutUser: PropTypes.func
 };
 
 export default Header;
