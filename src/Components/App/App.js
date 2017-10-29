@@ -4,6 +4,7 @@ import AddUser from './../AddUser/AddUser';
 import LoginContainer from './../../Containers/LoginContainer';
 import ServerDashboardContainer
   from './../../Containers/ServerDashboardContainer';
+import HeaderContainer from './../../Containers/HeaderContainer';
 import PropTypes from 'prop-types';
 // import Login from './../Login/Login';
 // import firebase from './../../firebase.js';
@@ -18,20 +19,15 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className='app-wrapper'>
-          <Route exact path='/' render={() => {
+          <Route path='/' render={() => {
             return (
-              <header className="App-header">
-                <h1 className="App-title">eighty-six</h1>
-              </header>
+              <HeaderContainer />
             );
           }}/>
 
           <Route exact path='/adduser' render={() => {
             return (
               <div className="AddUser-wrapper">
-                <header className="App-header">
-                  <h1 className="App-title">eighty-six</h1>
-                </header>
                 <AddUser />
               </div>
             );
