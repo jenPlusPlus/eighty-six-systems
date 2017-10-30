@@ -1,7 +1,10 @@
 const currentUser = (state = {}, action) => {
   switch (action.type) {
   case 'LOGIN_USER':
-    return action.currentUser;
+    return {
+      name: action.currentUser.name,
+      loginCode: action.currentUser.loginCode
+    };
   case 'LOGOUT_USER':
     return {};
   default:
