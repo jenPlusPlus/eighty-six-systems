@@ -36,6 +36,16 @@ class TableManager extends Component {
     this.props.addTable({[this.state.input]: { seats: 0}});
   }
 
+  mapTables() {
+    const mappedTables = this.props.tables.map( (table, index) => {
+      return (
+        <TableContainer key={index+Date.now()}
+          table={table}/>
+      );
+    });
+    return mappedTables;
+  }
+
   render() {
     return (
       <div className="server-dashboard">
@@ -49,7 +59,7 @@ class TableManager extends Component {
             onClick={(event) => this.handleSubmit(event)}>Add Table</button>
         </form>
         <div className='table-container'>
-          <TableContainer />
+          {this.mapTables()}
         </div>
       </div>
     );
@@ -58,7 +68,8 @@ class TableManager extends Component {
 
 TableManager.propTypes = {
   currentUser: PropTypes.object,
-  addTable: PropTypes.func
+  addTable: PropTypes.func,
+  tables: PropTypes.array
 };
 
 export default TableManager;
