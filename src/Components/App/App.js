@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import AddUser from './../AddUser/AddUser';
 import LoginContainer from './../../Containers/LoginContainer';
-import ServerDashboardContainer
-  from './../../Containers/ServerDashboardContainer';
+import TableManagerContainer
+  from './../../Containers/TableManagerContainer';
 import HeaderContainer from './../../Containers/HeaderContainer';
 import PropTypes from 'prop-types';
 // import Login from './../Login/Login';
@@ -36,13 +36,13 @@ class App extends Component {
           <Route exact path='/login' component={LoginContainer}/>
 
           {/* <Route exact path='/serverdashboard'
-          component={ServerDashboardContainer}/> */}
+          component={TableManagerContainer}/> */}
 
           <Route path='/:loginCode/serverdashboard' render={({ match }) => {
             const server =
               this.props.currentUser.loginCode === match.params.loginCode;
             if (server) {
-              return <ServerDashboardContainer />;
+              return <TableManagerContainer />;
             }
             return (<div>This server does not exist! </div>);
           }} />
