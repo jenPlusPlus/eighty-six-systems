@@ -11,3 +11,10 @@ export const logoutUser = (currentUser) => {
     currentUser
   };
 };
+
+export const addTable = (table) => {
+  return {
+    type: 'ADD_TABLE',
+    table
+  };
+};

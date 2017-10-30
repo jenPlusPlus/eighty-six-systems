@@ -33,6 +33,7 @@ class TableManager extends Component {
             {[this.state.input]: {seats: 0}} ));
         this.clearForm();
       });
+    this.props.addTable({[this.state.input]: { seats: 0}});
   }
 
   render() {
@@ -56,7 +57,8 @@ class TableManager extends Component {
 }
 
 TableManager.propTypes = {
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  addTable: PropTypes.func
 };
 
 export default TableManager;

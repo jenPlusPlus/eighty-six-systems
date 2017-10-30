@@ -1,14 +1,11 @@
 import { connect } from 'react-redux';
+import { addTable } from './../Actions/index.js';
 import Table from './../Components/Table/Table';
 
 const mapStateToProps = (store) => ({
-  currentUser: store.currentUser
+  currentUser: store.currentUser,
+  tables: store.tables
 });
 
-// const mapDispatchToProps = (dispatch) => ({
-//   logoutUser: (user) => {
-//     return dispatch(logoutUser(user));
-//   }
-// });
 
 export default connect(mapStateToProps, undefined)(Table);

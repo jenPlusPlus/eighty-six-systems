@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import currentUser from './LoginReducer.js';
+import tables from './AddTableReducer';
 
 const rootReducer = combineReducers({
-  currentUser
+  currentUser,
+  tables
 });
 
 export default rootReducer;
