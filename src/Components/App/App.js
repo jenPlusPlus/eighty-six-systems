@@ -35,10 +35,7 @@ class App extends Component {
 
           <Route exact path='/login' component={LoginContainer}/>
 
-          {/* <Route exact path='/serverdashboard'
-          component={TableManagerContainer}/> */}
-
-          <Route path='/:loginCode/serverdashboard' render={({ match }) => {
+          <Route path='/:loginCode/tables' render={({ match }) => {
             const server =
               this.props.currentUser.loginCode === match.params.loginCode;
             if (server) {
