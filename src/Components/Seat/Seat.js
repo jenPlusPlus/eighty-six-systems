@@ -9,7 +9,7 @@ class Seat extends Component {
   render() {
     return (
       <div className='seat'>
-        <h3>{Object.keys(this.props.seat)}</h3>
+        <h3>{this.props.seat.seatNumber}</h3>
       </div>
     );
   }

@@ -5,7 +5,8 @@ import SeatManager from './../Components/SeatManager/SeatManager';
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
   tables: store.tables,
-  seats: store.seats
+  seats: store.seats,
+  currentTable: store.currentTable
 });
 
 const mapDispatchToProps = (dispatch) => ({

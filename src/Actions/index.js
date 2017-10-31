@@ -22,7 +22,11 @@ export const addTable = (table) => {
 export const addSeat = (seat) => {
   return {
     type: 'ADD_SEAT',
-    seat
+    seatInfo: {
+      seatNumber: seat.seatNumber,
+      tableNumber: 'TABLE',
+      order: seat.order
+    }
   };
 };
 

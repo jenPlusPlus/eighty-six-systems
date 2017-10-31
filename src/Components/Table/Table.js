@@ -7,7 +7,6 @@ class Table extends Component {
     super();
   }
   handleClick() {
-    console.log('table', this.props.table.tableNumber);
     this.props.addCurrentTable({tableNumber: this.props.table.tableNumber});
   }
 

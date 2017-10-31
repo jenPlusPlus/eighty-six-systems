@@ -33,7 +33,9 @@ class SeatManager extends Component {
     //         {[this.state.input]: {seats: 0}} ));
     //     this.clearForm();
     //   });
-    this.props.addSeat({ [this.state.input]: {order: 0}});
+    this.props.addSeat({
+      seatNumber: this.state.input,
+      order: []});
     this.clearForm();
   }
 
@@ -70,7 +72,8 @@ class SeatManager extends Component {
 SeatManager.propTypes = {
   currentUser: PropTypes.object,
   addSeat: PropTypes.func,
-  seats: PropTypes.array
+  seats: PropTypes.array,
+  currentTable: PropTypes.object
 };
 
 export default SeatManager;
