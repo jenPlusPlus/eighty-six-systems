@@ -7,7 +7,7 @@ import seats from './AddSeatReducer';
 const rootReducer = combineReducers({
   currentUser,
   tables,
-  seats,
+  // seats,
   currentTable
 });
 

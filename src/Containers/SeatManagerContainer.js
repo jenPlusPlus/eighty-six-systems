@@ -10,8 +10,8 @@ const mapStateToProps = (store) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addSeat: (seat) => {
-    return dispatch(addSeat(seat));
+  addSeat: (tableNumber, seat) => {
+    return dispatch(addSeat(tableNumber, seat));
   }
 });
 

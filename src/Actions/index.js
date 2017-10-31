@@ -19,12 +19,14 @@ export const addTable = (table) => {
   };
 };
 
-export const addSeat = (seat) => {
+export const addSeat = (tableNumber, seat) => {
+  console.log('tableNumber: ', tableNumber);
+  console.log('seat: ', seat);
   return {
     type: 'ADD_SEAT',
     seatInfo: {
       seatNumber: seat.seatNumber,
-      tableNumber: 'TABLE',
+      tableNumber: tableNumber,
       order: seat.order
     }
   };

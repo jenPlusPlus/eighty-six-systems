@@ -33,20 +33,24 @@ class SeatManager extends Component {
     //         {[this.state.input]: {seats: 0}} ));
     //     this.clearForm();
     //   });
-    this.props.addSeat({
-      seatNumber: this.state.input,
-      order: []});
+    this.props.addSeat(this.props.currentTable.tableNumber,
+      {
+        seatNumber: this.state.input,
+        order: []
+      });
     this.clearForm();
   }
 
   mapSeats() {
-    const mappedSeats = this.props.seats.map( (seat, index) => {
-      return (
-        <SeatContainer key={index+Date.now()}
-          seat={seat}/>
-      );
-    });
-    return mappedSeats;
+    if (this.props.tables.length > 0){
+      const mappedSeats = this.props.tables[0].seats.map( (seat, index) => {
+        return (
+          <SeatContainer key={index+Date.now()}
+            seat={seat}/>
+        );
+      });
+      return mappedSeats;
+    }
   }
 
   render() {
@@ -73,7 +77,8 @@ SeatManager.propTypes = {
   currentUser: PropTypes.object,
   addSeat: PropTypes.func,
   seats: PropTypes.array,
-  currentTable: PropTypes.object
+  currentTable: PropTypes.object,
+  tables: PropTypes.array
 };
 
 export default SeatManager;
