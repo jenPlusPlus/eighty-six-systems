@@ -43,6 +43,9 @@ class App extends Component {
             }
             return (<div>This server does not exist! </div>);
           }} />
+          <Route path='/:loginCode/tables/:table' render={({ match }) => {
+            return (<div>Tables!</div>);
+          }} />
         </div>
       </BrowserRouter>
     );
