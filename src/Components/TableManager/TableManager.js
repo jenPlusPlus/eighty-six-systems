@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import TableContainer from './../../Containers/TableContainer';
+// import TableContainer from './../../Containers/TableContainer';
+import Table from './../Table/Table';
 import firebase from './../../firebase.js';
 import PropTypes from 'prop-types';
 
@@ -39,8 +40,10 @@ class TableManager extends Component {
   mapTables() {
     const mappedTables = this.props.tables.map( (table, index) => {
       return (
-        <TableContainer key={index+Date.now()}
-          table={table}/>
+        <Table key={index+Date.now()}
+          table={table}
+          addCurrentTable={this.props.addCurrentTable}
+          currentUser={this.props.currentUser}/>
       );
     });
     return mappedTables;
@@ -69,7 +72,8 @@ class TableManager extends Component {
 TableManager.propTypes = {
   currentUser: PropTypes.object,
   addTable: PropTypes.func,
-  tables: PropTypes.array
+  tables: PropTypes.array,
+  addCurrentTable: PropTypes.func
 };
 
 export default TableManager;

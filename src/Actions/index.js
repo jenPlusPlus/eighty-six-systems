@@ -25,3 +25,10 @@ export const addSeat = (seat) => {
     seat
   };
 };
+
+export const addCurrentTable = (currentTable) => {
+  return {
+    type: 'ADD_CURRENT_TABLE',
+    currentTable
+  };
+};
