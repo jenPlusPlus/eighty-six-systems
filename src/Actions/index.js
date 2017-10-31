@@ -20,8 +20,6 @@ export const addTable = (table) => {
 };
 
 export const addSeat = (tableNumber, seat) => {
-  console.log('tableNumber: ', tableNumber);
-  console.log('seat: ', seat);
   return {
     type: 'ADD_SEAT',
     seatInfo: {

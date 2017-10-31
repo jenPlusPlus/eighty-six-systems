@@ -25,14 +25,6 @@ class SeatManager extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // const usersRef = firebase.database().ref('users');
-    // usersRef.orderByChild("loginCode").equalTo(this.props.currentUser.loginCode)
-    //   .once('value', snapshot => {
-    //     snapshot.forEach(item =>
-    //       item.child('seats').ref.push(
-    //         {[this.state.input]: {seats: 0}} ));
-    //     this.clearForm();
-    //   });
     this.props.addSeat(this.props.currentTable.tableNumber,
       {
         seatNumber: this.state.input,
