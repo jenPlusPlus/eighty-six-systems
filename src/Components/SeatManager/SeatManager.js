@@ -42,15 +42,17 @@ class SeatManager extends Component {
   }
 
   mapSeats() {
-    if (this.props.tables.length > 0){
-      const mappedSeats = this.props.tables[0].seats.map( (seat, index) => {
-        return (
-          <SeatContainer key={index+Date.now()}
-            seat={seat}/>
-        );
-      });
-      return mappedSeats;
-    }
+    const currTable = this.props.tables.find((table) => {
+      return table.tableNumber === this.props.currentTable.tableNumber;
+    });
+
+    const mappedSeats = currTable.seats.map( (seat, index) => {
+      return (
+        <SeatContainer key={index+Date.now()}
+          seat={seat}/>
+      );
+    });
+    return mappedSeats;
   }
 
   render() {
