@@ -18,3 +18,10 @@ export const addTable = (table) => {
     table
   };
 };
+
+export const addSeat = (seat) => {
+  return {
+    type: 'ADD_SEAT',
+    seat
+  };
+};

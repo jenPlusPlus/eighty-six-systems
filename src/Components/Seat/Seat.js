@@ -9,15 +9,15 @@ class Seat extends Component {
   render() {
     return (
       <div className='seat'>
-        SEAT!
-        {/* <h3>{Object.keys(this.props.table.seat)}</h3> */}
+        <h3>{Object.keys(this.props.seat)}</h3>
       </div>
     );
   }
 }
 
 Seat.propTypes = {
-  table: PropTypes.object
+  table: PropTypes.object,
+  seat: PropTypes.object
 };
 
 export default Seat;

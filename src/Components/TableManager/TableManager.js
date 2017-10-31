@@ -49,7 +49,7 @@ class TableManager extends Component {
   render() {
     return (
       <div className="server-dashboard">
-        <h3>SERVER DASHBOARD!</h3>
+        <h3>Table Manager!</h3>
         <form>
           <input type='text'
             placeholder='Table Number'
