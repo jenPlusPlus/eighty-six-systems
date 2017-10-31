@@ -7,16 +7,16 @@ class Table extends Component {
     super();
   }
   handleClick() {
-    console.log('keys', Object.keys(this.props.table));
-    this.props.addCurrentTable({tableNumber: Object.keys(this.props.table)[0]});
+    console.log('table', this.props.table.tableNumber);
+    this.props.addCurrentTable({tableNumber: this.props.table.tableNumber});
   }
 
   render() {
     return (
-      <Link to={`/${this.props.currentUser.loginCode}/tables/${Object.keys(this.props.table)[0]}`}>
+      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.table.tableNumber}`}>
         <div className='table'>
           <h3 onClick={() => this.handleClick()}>
-            {Object.keys(this.props.table)}
+            {this.props.table.tableNumber}
           </h3>
         </div>
       </Link>

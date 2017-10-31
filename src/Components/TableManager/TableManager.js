@@ -31,10 +31,15 @@ class TableManager extends Component {
       .once('value', snapshot => {
         snapshot.forEach(item =>
           item.child('tables').ref.push(
-            {[this.state.input]: {seats: 0}} ));
+            {tableNumber: this.state.input,
+              seats: []
+            }));
         this.clearForm();
       });
-    this.props.addTable({[this.state.input]: { seats: 0}});
+    this.props.addTable({
+      tableNumber: this.state.input,
+      seats: []
+    });
   }
 
   mapTables() {
