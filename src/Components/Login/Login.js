@@ -67,7 +67,7 @@ class Login extends Component {
           </div>
         }
         { this.props.currentUser.loginCode &&
-          <Redirect to={`/${this.state.systemLoginCode}/serverdashboard`} />
+          <Redirect to={`/${this.state.systemLoginCode}/tables`} />
         }
       </div>
     );
