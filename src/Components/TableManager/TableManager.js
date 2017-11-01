@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Table from './../Table/Table';
 import firebase from './../../firebase.js';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 class TableManager extends Component {
   constructor() {
@@ -56,18 +57,25 @@ class TableManager extends Component {
 
   render() {
     return (
-      <div className="server-dashboard">
-        <form>
-          <input type='text'
-            placeholder='Enter Table Number'
-            onChange={(event) => this.updateState(event)}
-            value={this.state.input}/>
-          <button className='add-table'
-            onClick={(event) => this.handleSubmit(event)}>Add Table</button>
-        </form>
-        <div className='table-container'>
-          {this.mapTables()}
-        </div>
+      <div className="server-dashboard-wrapper">
+        {
+          <div className="server-dashboard">
+            <form>
+              <input type='text'
+                placeholder='Enter Table Number'
+                onChange={(event) => this.updateState(event)}
+                value={this.state.input}/>
+              <button className='add-table'
+                onClick={(event) => this.handleSubmit(event)}>Add Table</button>
+            </form>
+            <div className='table-container'>
+              {this.mapTables()}
+            </div>
+          </div>
+        }
+        {!this.props.currentUser.loginCode &&
+          <Redirect to={'/login'} />
+        }
       </div>
     );
   }

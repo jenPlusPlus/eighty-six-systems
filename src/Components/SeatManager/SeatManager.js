@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import SeatContainer from './../../Containers/SeatContainer';
-import firebase from './../../firebase.js';
+// import firebase from './../../firebase.js';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class SeatManager extends Component {
   constructor() {
@@ -52,22 +52,29 @@ class SeatManager extends Component {
 
   render() {
     return (
-      <div className="server-dashboard">
-        <form>
-          <input type='text'
-            placeholder='Enter Seat Number'
-            onChange={(event) => this.updateState(event)}
-            value={this.state.input}/>
-          <button className='add-seat'
-            onClick={(event) => this.handleSubmit(event)}>Add Seat</button>
-        </form>
-        <Link to={`/${this.props.currentUser.loginCode}/tables`}>
-          <h3 className='all-tables-button'>All Tables</h3>
-        </Link>
-          <h3 className='table-info-seat-manager'>Table {this.props.currentTable.tableNumber}</h3>
-        <div className='seat-container'>
-          {this.mapSeats()}
-        </div>
+      <div className="server-dashboard-wrapper">
+        {this.props.currentUser.loginCode &&
+          <div className='server-dashboard'>
+            <form>
+              <input type='text'
+                placeholder='Enter Seat Number'
+                onChange={(event) => this.updateState(event)}
+                value={this.state.input}/>
+              <button className='add-seat'
+                onClick={(event) => this.handleSubmit(event)}>Add Seat</button>
+            </form>
+            <Link to={`/${this.props.currentUser.loginCode}/tables`}>
+              <h3 className='all-tables-button'>All Tables</h3>
+            </Link>
+            <h3 className='table-info-seat-manager'>Table {this.props.currentTable.tableNumber}</h3>
+            <div className='seat-container'>
+              {this.mapSeats()}
+            </div>
+          </div>
+        }
+        {!this.props.currentUser.loginCode &&
+          <Redirect to={'/login'} />
+        }
       </div>
     );
   }

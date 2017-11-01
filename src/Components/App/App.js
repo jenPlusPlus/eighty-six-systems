@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import AddUser from './../AddUser/AddUser';
 import LoginContainer from './../../Containers/LoginContainer';
 import TableManagerContainer
@@ -43,7 +43,7 @@ class App extends Component {
             if (server) {
               return <TableManagerContainer />;
             }
-            return (<div>This server does not exist! </div>);
+            return (<Redirect to={'/login'} />);
           }} />
 
           <Route exact path='/:loginCode/tables/:table' render={({ match }) => {
