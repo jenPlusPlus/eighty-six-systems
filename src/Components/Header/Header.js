@@ -3,7 +3,14 @@ import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Header = (props) => {
-  const { currentUser, location, logoutUser, currentTable, currentSeat } = props;
+  const {
+    currentUser,
+    location,
+    logoutUser,
+    currentTable,
+    currentSeat
+  } = props;
+
   const hideButton = (location.pathname === '/adduser'
     || location.pathname === '/login')
     ? 'hide-button'
@@ -20,22 +27,23 @@ const Header = (props) => {
         <Redirect to={`/${currentUser.loginCode}/tables`} />
       }
       { !currentUser.loginCode &&
-            <div className='header-logged-out'>
-              <Link to={'/login'}>
-                <button className={`login-button ${hideButton}`}>Login</button>
-              </Link>
-            </div>
-          }
-          { currentUser.loginCode &&
-            <div className='header-logged-in'>
-              <h2 className='greeting'>Hello, {currentUser.name}</h2>
-              <Link to={'/'}>
-                <button className={`logout-button ${hideButton}`}
-                  onClick={() => logoutUser(currentUser)}>Logout</button>
-              </Link>
-            </div>
-          }
-          {location.pathname === `/${currentUser.loginCode}/tables/${currentTable.tableNumber}` &&
+        <div className='header-logged-out'>
+          <Link to={'/login'}>
+            <button className={`login-button ${hideButton}`}>Login</button>
+          </Link>
+        </div>
+      }
+      { currentUser.loginCode &&
+        <div className='header-logged-in'>
+          <h2 className='greeting'>Hello, {currentUser.name}</h2>
+          <Link to={'/'}>
+            <button className={`logout-button ${hideButton}`}
+              onClick={() => logoutUser(currentUser)}>Logout</button>
+          </Link>
+        </div>
+      }
+      {location.pathname ===
+        `/${currentUser.loginCode}/tables/${currentTable.tableNumber}` &&
         <div className='header-logged-in'>
           <h2 className='greeting'>Hello, {currentUser.name}</h2>
           <h2 className='current-table'>Table {currentTable.tableNumber}</h2>
@@ -45,7 +53,8 @@ const Header = (props) => {
           </Link>
         </div>
       }
-      {location.pathname === `/${currentUser.loginCode}/tables/${currentTable.tableNumber}/${currentSeat.seatNumber}` &&
+      {location.pathname === `/${currentUser.loginCode}/
+        tables/${currentTable.tableNumber}/${currentSeat.seatNumber}` &&
         <div className='header-logged-in'>
           <h2 className='greeting'>Hello, {currentUser.name}</h2>
           <h2 className='current-table'>Table {currentTable.tableNumber}</h2>

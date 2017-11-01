@@ -50,7 +50,8 @@ class App extends Component {
             return <SeatManagerContainer />;
           }} />
 
-          <Route exact path='/:loginCode/tables/:table/:seat' component={MenuViewContainer} />
+          <Route exact path='/:loginCode/tables/:table/:seat'
+            component={MenuViewContainer} />
         </div>
       </BrowserRouter>
     );

@@ -66,7 +66,9 @@ class SeatManager extends Component {
             <Link to={`/${this.props.currentUser.loginCode}/tables`}>
               <h3 className='all-tables-button'>All Tables</h3>
             </Link>
-            <h3 className='table-info-seat-manager'>Table {this.props.currentTable.tableNumber}</h3>
+            <h3 className='table-info-seat-manager'>
+              Table {this.props.currentTable.tableNumber}
+            </h3>
             <div className='seat-container'>
               {this.mapSeats()}
             </div>
