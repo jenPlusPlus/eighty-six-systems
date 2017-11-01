@@ -41,7 +41,9 @@ class SeatManager extends Component {
     const mappedSeats = currTable.seats.map( (seat, index) => {
       return (
         <SeatContainer key={index+Date.now()}
-          seat={seat}/>
+          seat={seat}
+          currentTableNumber={this.props.currentTable.tableNumber}
+          addCurrentSeat={this.props.addCurrentSeat}/>
       );
     });
     return mappedSeats;
@@ -72,7 +74,8 @@ SeatManager.propTypes = {
   addSeat: PropTypes.func,
   seats: PropTypes.array,
   currentTable: PropTypes.object,
-  tables: PropTypes.array
+  tables: PropTypes.array,
+  addCurrentSeat: PropTypes.func
 };
 
 export default SeatManager;

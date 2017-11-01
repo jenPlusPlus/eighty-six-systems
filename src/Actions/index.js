@@ -36,3 +36,14 @@ export const addCurrentTable = (currentTable) => {
     currentTable
   };
 };
+
+export const addCurrentSeat = (currentSeat) => {
+  return {
+    type: 'ADD_CURRENT_SEAT',
+    seatInfo: {
+      seatNumber: currentSeat.seatNumber,
+      tableNumber: currentSeat.tableNumber,
+      order: currentSeat.order
+    }
+  };
+};

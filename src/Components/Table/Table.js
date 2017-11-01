@@ -13,8 +13,9 @@ class Table extends Component {
   render() {
     return (
       <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.table.tableNumber}`}>
-        <div className='table'>
-          <h3 onClick={() => this.handleClick()}>
+        <div className='table'
+          onClick={() => this.handleClick()}>
+          <h3>
             {this.props.table.tableNumber}
           </h3>
         </div>
