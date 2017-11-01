@@ -19,9 +19,31 @@ export const addTable = (table) => {
   };
 };
 
-export const addSeat = (seat) => {
+export const addSeat = (tableNumber, seat) => {
   return {
     type: 'ADD_SEAT',
-    seat
+    seatInfo: {
+      seatNumber: seat.seatNumber,
+      tableNumber: tableNumber,
+      order: seat.order
+    }
+  };
+};
+
+export const addCurrentTable = (currentTable) => {
+  return {
+    type: 'ADD_CURRENT_TABLE',
+    currentTable
+  };
+};
+
+export const addCurrentSeat = (currentSeat) => {
+  return {
+    type: 'ADD_CURRENT_SEAT',
+    seatInfo: {
+      seatNumber: currentSeat.seatNumber,
+      tableNumber: currentSeat.tableNumber,
+      order: currentSeat.order
+    }
   };
 };

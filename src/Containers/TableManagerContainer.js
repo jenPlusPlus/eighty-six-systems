@@ -1,15 +1,19 @@
 import { connect } from 'react-redux';
-import { addTable } from './../Actions/index.js';
+import { addTable, addCurrentTable } from './../Actions/index.js';
 import TableManager from './../Components/TableManager/TableManager';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
-  tables: store.tables
+  tables: store.tables,
+  currentTable: store.currentTable
 });
 
 const mapDispatchToProps = (dispatch) => ({
   addTable: (table) => {
     return dispatch(addTable(table));
+  },
+  addCurrentTable: (table) => {
+    return dispatch(addCurrentTable(table));
   }
 });
 

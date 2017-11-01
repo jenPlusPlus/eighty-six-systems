@@ -1,7 +1,7 @@
 const seats = (state = [], action) => {
   switch (action.type) {
   case 'ADD_SEAT':
-    return [...state, action.seat];
+    return [...state, action.seatInfo];
   default:
     return state;
   }

@@ -25,23 +25,25 @@ class SeatManager extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // const usersRef = firebase.database().ref('users');
-    // usersRef.orderByChild("loginCode").equalTo(this.props.currentUser.loginCode)
-    //   .once('value', snapshot => {
-    //     snapshot.forEach(item =>
-    //       item.child('seats').ref.push(
-    //         {[this.state.input]: {seats: 0}} ));
-    //     this.clearForm();
-    //   });
-    this.props.addSeat({ [this.state.input]: {order: 0}});
+    this.props.addSeat(this.props.currentTable.tableNumber,
+      {
+        seatNumber: this.state.input,
+        order: []
+      });
     this.clearForm();
   }
 
   mapSeats() {
-    const mappedSeats = this.props.seats.map( (seat, index) => {
+    const currTable = this.props.tables.find((table) => {
+      return table.tableNumber === this.props.currentTable.tableNumber;
+    });
+
+    const mappedSeats = currTable.seats.map( (seat, index) => {
       return (
         <SeatContainer key={index+Date.now()}
-          seat={seat}/>
+          seat={seat}
+          currentTableNumber={this.props.currentTable.tableNumber}
+          addCurrentSeat={this.props.addCurrentSeat}/>
       );
     });
     return mappedSeats;
@@ -70,7 +72,10 @@ class SeatManager extends Component {
 SeatManager.propTypes = {
   currentUser: PropTypes.object,
   addSeat: PropTypes.func,
-  seats: PropTypes.array
+  seats: PropTypes.array,
+  currentTable: PropTypes.object,
+  tables: PropTypes.array,
+  addCurrentSeat: PropTypes.func
 };
 
 export default SeatManager;

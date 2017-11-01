@@ -6,12 +6,18 @@ class Table extends Component {
   constructor() {
     super();
   }
+  handleClick() {
+    this.props.addCurrentTable({tableNumber: this.props.table.tableNumber});
+  }
 
   render() {
     return (
-      <Link to={`/${this.props.currentUser.loginCode}/tables/${Object.keys(this.props.table)[0]}`}>
-        <div className='table'>
-          <h3>{Object.keys(this.props.table)}</h3>
+      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.table.tableNumber}`}>
+        <div className='table'
+          onClick={() => this.handleClick()}>
+          <h3>
+            {this.props.table.tableNumber}
+          </h3>
         </div>
       </Link>
     );
@@ -20,7 +26,8 @@ class Table extends Component {
 
 Table.propTypes = {
   table: PropTypes.object,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  addCurrentTable: PropTypes.func
 };
 
 export default Table;

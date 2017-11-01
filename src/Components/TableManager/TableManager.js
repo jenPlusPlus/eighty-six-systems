@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import TableContainer from './../../Containers/TableContainer';
+// import TableContainer from './../../Containers/TableContainer';
+import Table from './../Table/Table';
 import firebase from './../../firebase.js';
 import PropTypes from 'prop-types';
 
@@ -30,17 +31,24 @@ class TableManager extends Component {
       .once('value', snapshot => {
         snapshot.forEach(item =>
           item.child('tables').ref.push(
-            {[this.state.input]: {seats: 0}} ));
+            {tableNumber: this.state.input,
+              seats: []
+            }));
         this.clearForm();
       });
-    this.props.addTable({[this.state.input]: { seats: 0}});
+    this.props.addTable({
+      tableNumber: this.state.input,
+      seats: []
+    });
   }
 
   mapTables() {
     const mappedTables = this.props.tables.map( (table, index) => {
       return (
-        <TableContainer key={index+Date.now()}
-          table={table}/>
+        <Table key={index+Date.now()}
+          table={table}
+          addCurrentTable={this.props.addCurrentTable}
+          currentUser={this.props.currentUser}/>
       );
     });
     return mappedTables;
@@ -69,7 +77,8 @@ class TableManager extends Component {
 TableManager.propTypes = {
   currentUser: PropTypes.object,
   addTable: PropTypes.func,
-  tables: PropTypes.array
+  tables: PropTypes.array,
+  addCurrentTable: PropTypes.func
 };
 
 export default TableManager;
