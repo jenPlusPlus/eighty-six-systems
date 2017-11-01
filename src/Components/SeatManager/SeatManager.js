@@ -39,6 +39,7 @@ class SeatManager extends Component {
     });
 
     const mappedSeats = currTable.seats.map( (seat, index) => {
+      console.log('seat: ', seat);
       return (
         <SeatContainer key={index+Date.now()}
           seat={seat}

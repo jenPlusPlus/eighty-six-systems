@@ -4,8 +4,8 @@ import Seat from './../Components/Seat/Seat';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
-  tables: store.tables,
-  seats: store.seats
+  currentTable: store.currentTable,
+  tables: store.tables
 });
 
 

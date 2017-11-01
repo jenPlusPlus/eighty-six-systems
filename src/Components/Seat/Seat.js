@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Seat extends Component {
   constructor() {
@@ -16,10 +17,12 @@ class Seat extends Component {
 
   render() {
     return (
-      <div className='seat'
-        onClick={() => this.handleClick()}>
-        <h3>{this.props.seat.seatNumber}</h3>
-      </div>
+      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}`}>
+        <div className='seat'
+          onClick={() => this.handleClick()}>
+          <h3>{this.props.seat.seatNumber}</h3>
+        </div>
+      </Link>
     );
   }
 }

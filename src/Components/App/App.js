@@ -6,6 +6,7 @@ import TableManagerContainer
   from './../../Containers/TableManagerContainer';
 import SeatManagerContainer from './../../Containers/SeatManagerContainer';
 import HeaderContainer from './../../Containers/HeaderContainer';
+import MenuViewContainer from './../../Containers/MenuViewContainer';
 import PropTypes from 'prop-types';
 // import Login from './../Login/Login';
 // import firebase from './../../firebase.js';
@@ -44,9 +45,12 @@ class App extends Component {
             }
             return (<div>This server does not exist! </div>);
           }} />
+
           <Route exact path='/:loginCode/tables/:table' render={({ match }) => {
             return <SeatManagerContainer />;
           }} />
+
+          <Route exact path='/:loginCode/tables/:table/:seat' component={MenuViewContainer} />
         </div>
       </BrowserRouter>
     );
