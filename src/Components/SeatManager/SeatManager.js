@@ -55,7 +55,7 @@ class SeatManager extends Component {
       <div className="server-dashboard">
         <form>
           <input type='text'
-            placeholder='Seat Number'
+            placeholder='Enter Seat Number'
             onChange={(event) => this.updateState(event)}
             value={this.state.input}/>
           <button className='add-seat'

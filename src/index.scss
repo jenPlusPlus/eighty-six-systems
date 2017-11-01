@@ -19,6 +19,15 @@ body {
   background-color: #6D576A;
 }
 
+input {
+  width: 120px;
+  border-radius: 20px;
+  border: 2px solid #33202A;
+  height: 25px;
+  text-align: center;
+  color: #444444;
+}
+
 #root {
   height: 100%;
   width: 100%;
