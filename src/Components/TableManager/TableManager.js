@@ -59,7 +59,7 @@ class TableManager extends Component {
       <div className="server-dashboard">
         <form>
           <input type='text'
-            placeholder='Table Number'
+            placeholder='Enter Table Number'
             onChange={(event) => this.updateState(event)}
             value={this.state.input}/>
           <button className='add-table'
