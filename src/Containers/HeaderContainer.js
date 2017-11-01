@@ -4,7 +4,9 @@ import { withRouter } from 'react-router-dom';
 import { logoutUser } from './../Actions/index.js';
 
 const mapStateToProps = (store) => ({
-  currentUser: store.currentUser
+  currentUser: store.currentUser,
+  currentTable: store.currentTable,
+  currentSeat: store.currentSeat
 });
 
 const mapDispatchToProps = (dispatch) => ({

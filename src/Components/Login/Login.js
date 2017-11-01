@@ -42,25 +42,25 @@ class Login extends Component {
       <div className="login-form-container">
         { !this.props.currentUser.loginCode &&
           <div className="login-form">
-            <button className="login-button"
+            <button className="number-button button-1"
               onClick={() => this.updateState("1")}>1</button>
-            <button className="login-button"
+            <button className="number-button button-2"
               onClick={() => this.updateState("2")}>2</button>
-            <button className="login-button"
+            <button className="number-button button-3"
               onClick={() => this.updateState("3")}>3</button>
-            <button className="login-button"
+            <button className="number-button button-4"
               onClick={() => this.updateState("4")}>4</button>
-            <button className="login-button"
+            <button className="number-button button-5"
               onClick={() => this.updateState("5")}>5</button>
-            <button className="login-button"
+            <button className="number-button button-6"
               onClick={() => this.updateState("6")}>6</button>
-            <button className="login-button"
+            <button className="number-button button-7"
               onClick={() => this.updateState("7")}>7</button>
-            <button className="login-button"
+            <button className="number-button button-8"
               onClick={() => this.updateState("8")}>8</button>
-            <button className="login-button"
+            <button className="number-button button-9"
               onClick={() => this.updateState("9")}>9</button>
-            <button className="login-button"
+            <button className="number-button button-0"
               onClick={() => this.updateState("0")}>0</button>
             <button className="login-submit"
               onClick={(event) => this.handleSubmit(event)}>Login</button>

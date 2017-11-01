@@ -1,2 +1,55 @@
 .hide-button {
   display: none; }
+
+.login-button, .logout-button {
+  background-color: #EFEFF0;
+  color: #6D576A;
+  border-radius: 15px;
+  width: 85px;
+  height: 30px;
+  border: none;
+  font-size: 18px;
+  margin: 40px; }
+
+.logout-button {
+  margin: 0 5px 0 0;
+  width: 80px;
+  height: 25px;
+  font-size: 16px; }
+
+.home-page {
+  width: 400px;
+  height: 75px;
+  margin: auto;
+  position: relative;
+  top: 40%;
+  color: #EFEFF0;
+  font-size: 72px; }
+
+.header {
+  color: #EFEFF0;
+  font-size: 26px;
+  padding: 10px; }
+
+.greeting {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 18px; }
+
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+.current-table {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  font-size: 16px; }
+
+.current-seat {
+  position: absolute;
+  top: 52px;
+  left: 10px;
+  font-size: 16px; }
