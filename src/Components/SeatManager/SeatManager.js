@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SeatContainer from './../../Containers/SeatContainer';
 import firebase from './../../firebase.js';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class SeatManager extends Component {
   constructor() {
@@ -60,7 +61,10 @@ class SeatManager extends Component {
           <button className='add-seat'
             onClick={(event) => this.handleSubmit(event)}>Add Seat</button>
         </form>
-        <h3 className='table-info'>Table {this.props.currentTable.tableNumber}</h3>
+        <Link to={`/${this.props.currentUser.loginCode}/tables`}>
+          <h3 className='all-tables-button'>All Tables</h3>
+        </Link>
+          <h3 className='table-info-seat-manager'>Table {this.props.currentTable.tableNumber}</h3>
         <div className='seat-container'>
           {this.mapSeats()}
         </div>

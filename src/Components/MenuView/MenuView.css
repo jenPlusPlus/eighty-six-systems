@@ -1,3 +1,14 @@
-.table-info {
-  margin-top: 5px;
-  color: #33202A; }
+.table-info-menuview {
+  width: 120px;
+  height: 40px;
+  padding: 11px;
+  text-align: center; }
+
+.go-back {
+  display: inline-block;
+  margin: auto;
+  padding: 5px; }
+
+.table-button {
+  background-color: #EFEFF0;
+  border-radius: 20px; }

@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-content: space-around;
   margin-top: 20px; }
 
 .table {
@@ -11,7 +12,8 @@
   padding: 25px;
   border-radius: 50%;
   height: 75px;
-  width: 75px; }
+  width: 75px;
+  margin: 5px; }
 
 a {
   text-decoration: none; }
