@@ -39,7 +39,6 @@ class SeatManager extends Component {
     });
 
     const mappedSeats = currTable.seats.map( (seat, index) => {
-      console.log('seat: ', seat);
       return (
         <SeatContainer key={index+Date.now()}
           seat={seat}
@@ -53,7 +52,6 @@ class SeatManager extends Component {
   render() {
     return (
       <div className="server-dashboard">
-        <h3>Seat Manager!</h3>
         <form>
           <input type='text'
             placeholder='Seat Number'
@@ -62,6 +60,7 @@ class SeatManager extends Component {
           <button className='add-seat'
             onClick={(event) => this.handleSubmit(event)}>Add Seat</button>
         </form>
+        <h3 className='table-info'>Table {this.props.currentTable.tableNumber}</h3>
         <div className='seat-container'>
           {this.mapSeats()}
         </div>

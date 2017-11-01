@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Header = (props) => {
-  const { currentUser, location, logoutUser } = props;
+  const { currentUser, location, logoutUser, currentTable, currentSeat } = props;
+  console.log('location: ', location);
   const hideButton = (location.pathname === '/adduser'
     || location.pathname === '/login')
     ? 'hide-button'
     : '';
+
+  const onHomePage = (location.pathname === '/')
+    ? 'home-page'
+    : '';
+
   return (
-    <div className="header">
+    <div className={`header ${onHomePage}`}>
       <h1>eighty-six</h1>
 
       { !currentUser.loginCode &&
@@ -21,7 +27,28 @@ const Header = (props) => {
       }
       { currentUser.loginCode &&
         <div className='header-logged-in'>
-          <h2>Hello, {currentUser.name}</h2>
+          <h2 className='greeting'>Hello, {currentUser.name}</h2>
+          <Link to={'/'}>
+            <button className={`logout-button ${hideButton}`}
+              onClick={() => logoutUser(currentUser)}>Logout</button>
+          </Link>
+        </div>
+      }
+      {location.pathname === `/${currentUser.loginCode}/tables/${currentTable.tableNumber}` &&
+        <div className='header-logged-in'>
+          <h2 className='greeting'>Hello, {currentUser.name}</h2>
+          <h2 className='current-table'>Table {currentTable.tableNumber}</h2>
+          <Link to={'/'}>
+            <button className={`logout-button ${hideButton}`}
+              onClick={() => logoutUser(currentUser)}>Logout</button>
+          </Link>
+        </div>
+      }
+      {location.pathname === `/${currentUser.loginCode}/tables/${currentTable.tableNumber}/${currentSeat.seatNumber}` &&
+        <div className='header-logged-in'>
+          <h2 className='greeting'>Hello, {currentUser.name}</h2>
+          <h2 className='current-table'>Table {currentTable.tableNumber}</h2>
+          <h2 className='current-seat'>Seat {currentSeat.seatNumber}</h2>
           <Link to={'/'}>
             <button className={`logout-button ${hideButton}`}
               onClick={() => logoutUser(currentUser)}>Logout</button>
@@ -34,6 +61,8 @@ const Header = (props) => {
 
 Header.propTypes = {
   currentUser: PropTypes.object,
+  currentTable: PropTypes.object,
+  currentSeat: PropTypes.object,
   location: PropTypes.object,
   logoutUser: PropTypes.func
 };

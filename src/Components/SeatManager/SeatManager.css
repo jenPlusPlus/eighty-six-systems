@@ -3,25 +3,20 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 .seat {
   border: 3px solid #33202A;
   background-color: #33202A;
   border-radius: 5px;
-  width: 250px;
-}
+  width: 250px; }
 
 .seat-info {
-  margin: 5px;
-}
+  margin: 5px; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .table-info {
   margin-top: 5px;
-  color: #33202A;
-}
+  color: #33202A; }

@@ -20,7 +20,7 @@ class Seat extends Component {
       <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}`}>
         <div className='seat'
           onClick={() => this.handleClick()}>
-          <h3>{this.props.seat.seatNumber}</h3>
+          <h3 className='seat-info'>Seat {this.props.seat.seatNumber}</h3>
         </div>
       </Link>
     );

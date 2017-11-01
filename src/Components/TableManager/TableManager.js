@@ -57,7 +57,6 @@ class TableManager extends Component {
   render() {
     return (
       <div className="server-dashboard">
-        <h3>Table Manager!</h3>
         <form>
           <input type='text'
             placeholder='Table Number'
@@ -78,7 +77,8 @@ TableManager.propTypes = {
   currentUser: PropTypes.object,
   addTable: PropTypes.func,
   tables: PropTypes.array,
-  addCurrentTable: PropTypes.func
+  addCurrentTable: PropTypes.func,
+  currentTable: PropTypes.object
 };
 
 export default TableManager;
