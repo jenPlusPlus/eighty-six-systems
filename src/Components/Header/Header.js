@@ -12,6 +12,7 @@ const Header = (props) => {
   } = props;
 
   const hideButton = (location.pathname === '/adduser'
+    || location.pathname === '/addmenuitems'
     || location.pathname === '/login')
     ? 'hide-button'
     : '';
@@ -53,8 +54,7 @@ const Header = (props) => {
           </Link>
         </div>
       }
-      {location.pathname === `/${currentUser.loginCode}/
-        tables/${currentTable.tableNumber}/${currentSeat.seatNumber}` &&
+      {location.pathname === `/${currentUser.loginCode}/tables/${currentTable.tableNumber}/${currentSeat.seatNumber}` &&
         <div className='header-logged-in'>
           <h2 className='greeting'>Hello, {currentUser.name}</h2>
           <h2 className='current-table'>Table {currentTable.tableNumber}</h2>

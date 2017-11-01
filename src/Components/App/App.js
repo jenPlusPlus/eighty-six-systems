@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import AddUser from './../AddUser/AddUser';
+import AddMenuItems from './../AddMenuItems/AddMenuItems';
 import LoginContainer from './../../Containers/LoginContainer';
 import TableManagerContainer
   from './../../Containers/TableManagerContainer';
@@ -51,6 +52,8 @@ class App extends Component {
 
           <Route exact path='/:loginCode/tables/:table/:seat'
             component={MenuViewContainer} />
+
+          <Route exact path='/addmenuitems' component={AddMenuItems}/>
         </div>
       </BrowserRouter>
     );
