@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 const Header = (props) => {
   const { currentUser, location, logoutUser, currentTable, currentSeat } = props;
-  console.log('location: ', location);
   const hideButton = (location.pathname === '/adduser'
     || location.pathname === '/login')
     ? 'hide-button'
