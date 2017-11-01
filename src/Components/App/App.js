@@ -46,9 +46,8 @@ class App extends Component {
             return (<Redirect to={'/login'} />);
           }} />
 
-          <Route exact path='/:loginCode/tables/:table' render={({ match }) => {
-            return <SeatManagerContainer />;
-          }} />
+          <Route exact path='/:loginCode/tables/:table'
+            component={SeatManagerContainer} />
 
           <Route exact path='/:loginCode/tables/:table/:seat'
             component={MenuViewContainer} />
