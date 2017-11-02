@@ -4,6 +4,7 @@
 @import url('./Components/TableManager/TableManager.scss');
 @import url('./Components/SeatManager/SeatManager.scss');
 @import url('./Components/MenuView/MenuView.scss');
+@import url('./Components/AddMenuItems/AddMenuItems.scss');
 
 * {
   margin: 0;
@@ -19,7 +20,7 @@ body {
   background-color: #6D576A;
 }
 
-input {
+input, select {
   width: 120px;
   border-radius: 20px;
   border: 2px solid #33202A;
