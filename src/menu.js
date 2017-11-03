@@ -185,13 +185,48 @@ const menu = {
     }
   },
   Beverages: {
-    ['Non-alcholic']: ['Coke', 'Sprite', 'Diet Coke'],
-    ['Wine Glass']: ['Cabernet', ''],
-    ['Wine Bottle']: [],
-    Beer: [],
-    Cocktails: [],
-    Liquor: [],
-    ['After Dinner']: []
+    ['Non-alcholic']:
+      {
+        Coke: {
+          price: 3.00
+        },
+        Sprite: {
+          price: 3.00
+        },
+        ['Diet Coke']: {
+          price: 3.00
+        }
+      },
+    ['Wine Glass']:
+      {
+        Cabernet: {
+          price: 10.00
+        }
+      },
+    ['Wine Bottle']: {
+      ['Silver Palm']: {
+        price: 55.00
+      }
+    },
+    Beer: {
+      ['Yazoo Pale Ale']: {
+        price: 6.00
+      }
+    },
+    Cocktails: {
+      ["Tequilin' Me Softly"]: {
+        price: 12.00
+      }
+    },
+    Liquor: {
+      ["Grey Goose"]: {
+        price: 12.00
+      }
+    },
+    ['After Dinner']: {
+      ["Espress-Yo Self"]: {
+        price: 11.00
+      }}
   }
 };
 
