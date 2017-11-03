@@ -184,7 +184,15 @@ const menu = {
       price: 8.00
     }
   },
-  Beverages: ""
+  Beverages: {
+    ['Non-alcholic']: ['Coke', 'Sprite', 'Diet Coke'],
+    ['Wine Glass']: ['Cabernet', ''],
+    ['Wine Bottle']: [],
+    Beer: [],
+    Cocktails: [],
+    Liquor: [],
+    ['After Dinner']: []
+  }
 };
 
 export default menu;
