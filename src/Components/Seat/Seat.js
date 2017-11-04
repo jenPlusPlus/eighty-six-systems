@@ -17,11 +17,8 @@ class Seat extends Component {
 
   render() {
     return (
-      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
-        <div className='seat'
-          onClick={() => this.handleClick()}>
-          <h3 className='seat-info'>Seat {this.props.seat.seatNumber}</h3>
-        </div>
+      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu/entrees`}>
+        <h3 className='entrees-link'>Entrees</h3>
       </Link>
     );
   }
@@ -30,7 +27,9 @@ class Seat extends Component {
 Seat.propTypes = {
   currentTableNumber: PropTypes.string,
   seat: PropTypes.object,
-  addCurrentSeat: PropTypes.func
+  addCurrentSeat: PropTypes.func,
+  currentUser: PropTypes.object,
+  currentTable: PropTypes.object
 };
 
 export default Seat;
