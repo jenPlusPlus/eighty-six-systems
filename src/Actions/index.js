@@ -47,3 +47,10 @@ export const addCurrentSeat = (currentSeat) => {
     }
   };
 };
+
+export const addMenuItem = (menuItem) => {
+  return {
+    type: 'ADD_MENU_ITEM',
+    menuItem
+  };
+};
