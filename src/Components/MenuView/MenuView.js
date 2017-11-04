@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
+import EntreeContainer from './../../Containers/EntreeContainer';
 
 class MenuView extends Component {
   constructor() {
@@ -21,7 +22,7 @@ class MenuView extends Component {
               <h3 className='table-info-menuview seat-button'>Seat {this.props.currentSeat.seatNumber}</h3>
             </div>
             <div className='menu'>
-              <h3>MENU VIEW</h3>
+              <EntreeContainer />
             </div>
           </div>
         }
