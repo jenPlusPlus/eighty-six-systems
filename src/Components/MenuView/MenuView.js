@@ -21,7 +21,11 @@ class MenuView extends Component {
               <h3 className='table-info-menuview seat-button'>Seat {this.props.currentSeat.seatNumber}</h3>
             </div>
             <div className='menu'>
-              <h3>MENU VIEW</h3>
+              <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu/entrees`}>
+                <div className='entrees'>
+                  <h3 className='seat-info'>Entrees</h3>
+                </div>
+              </Link>
             </div>
           </div>
         }
