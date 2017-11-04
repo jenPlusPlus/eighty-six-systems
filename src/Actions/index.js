@@ -48,9 +48,12 @@ export const addCurrentSeat = (currentSeat) => {
   };
 };
 
-export const addMenuItem = (menuItem) => {
+export const addMenuItem = (seatNumber, menuItem) => {
   return {
     type: 'ADD_MENU_ITEM',
-    menuItem
+    menuInfo : {
+      seatNumber: seatNumber,
+      menuItem: menuItem
+    }
   };
 };

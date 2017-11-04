@@ -10,6 +10,18 @@ const tables = (state = [], action) => {
           table;
       })
     );
+  case 'ADD_MENU_ITEM':
+    return (
+      state.map(table => {
+        table.tableNumber === action.seatInfo.tableNumber ?
+          table.seats.map( seat => {
+            return seat.seatNumber === action.menuInfo.seatNumber ?
+              [...table.seats, action.menuInfo.menuItem] :
+              table.seats;
+          }) :
+          table;
+      })
+    );
   default:
     return state;
   }
