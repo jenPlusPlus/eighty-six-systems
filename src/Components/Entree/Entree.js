@@ -8,8 +8,9 @@ class Entree extends Component {
     super();
   }
 
-  addToOrder(entree) {
-    this.props.addToCurrentOrder(entree);
+  addToOrder(entree, entreeObject) {
+    const order = Object.assign({}, {item: entree}, {price: entreeObject.price});
+    this.props.addToCurrentOrder(order);
 
   }
 
@@ -23,7 +24,7 @@ class Entree extends Component {
       return (
         <div className='entree'
           key={index+Date.now()}
-          onClick={() => this.addToOrder(entree)}>
+          onClick={() => this.addToOrder(entree, menu.Entrees[entree])}>
           {entree}
         </div>
       );
