@@ -1,27 +1,27 @@
 import { connect } from 'react-redux';
 import Entree from './../Components/Entree/Entree';
-import { addMenuItem, addToCurrentOrder, clearCurrentOrder, removeFromCurrentOrder } from './../Actions/index';
+import { addToCurrentSeatOrder, clearCurrentSeatOrder, removeFromCurrentSeatOrder, addToCurrentTableOrder } from './../Actions/index';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
   currentTable: store.currentTable,
   currentSeat: store.currentSeat,
   tables: store.tables,
-  currentOrder: store.currentOrder
+  currentSeatOrder: store.currentSeatOrder
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addMenuItem: (tableNumber, seatNumber, menuItem) => {
-    return dispatch(addMenuItem(tableNumber, seatNumber, menuItem));
+  addToCurrentSeatOrder: (menuItem) => {
+    return dispatch(addToCurrentSeatOrder(menuItem));
   },
-  addToCurrentOrder: (menuItem) => {
-    return dispatch(addToCurrentOrder(menuItem));
+  clearCurrentSeatOrder: () => {
+    return dispatch(clearCurrentSeatOrder());
   },
-  clearCurrentOrder: () => {
-    return dispatch(clearCurrentOrder());
+  removeFromCurrentSeatOrder: (menuItem) => {
+    return dispatch(removeFromCurrentSeatOrder(menuItem));
   },
-  removeFromCurrentOrder: (menuItem) => {
-    return dispatch(removeFromCurrentOrder(menuItem));
+  addToCurrentTableOrder: (currentSeatOrder, seatNumber) => {
+    return dispatch(addToCurrentTableOrder(currentSeatOrder, seatNumber));
   }
 });
 

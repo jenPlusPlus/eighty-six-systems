@@ -10,21 +10,20 @@ class Entree extends Component {
 
   addToOrder(entree, entreeObject) {
     const order = Object.assign({}, {item: entree}, {price: entreeObject.price});
-    this.props.addToCurrentOrder(order);
+    this.props.addToCurrentSeatOrder(order);
   }
 
   removeFromOrder(menuItem) {
-    this.props.removeFromCurrentOrder(menuItem);
+    this.props.removeFromCurrentSeatOrder(menuItem);
   }
 
   addOrderToSeat() {
-    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, this.props.currentOrder);
-    this.props.clearCurrentOrder();
+    this.props.addToCurrentTableOrder(this.props.currentSeatOrder, this.props.currentSeat.seatNumber);
+    this.props.clearCurrentSeatOrder();
   }
 
-  displayCurrentOrder() {
-    console.log('order: ', this.props.currentOrder);
-    const mappedOrder = this.props.currentOrder.map( (menuItem, index) => {
+  displaycurrentSeatOrder() {
+    const mappedOrder = this.props.currentSeatOrder.map( (menuItem, index) => {
       return <li key={index + Date.now()}>{menuItem.item}
         <button className='edit-order-item-button'>Edit</button>
         <button className='remove-order-item-button'
@@ -54,7 +53,7 @@ class Entree extends Component {
           </div>
         </div>
         <ul className='current-order'>Current Order:
-          {this.displayCurrentOrder()}
+          {this.displaycurrentSeatOrder()}
         </ul>
         <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
           <button className='add-order-to-seat-button'
@@ -69,11 +68,12 @@ Entree.propTypes = {
   addMenuItem: PropTypes.func,
   currentSeat: PropTypes.object,
   currentTable: PropTypes.object,
-  currentOrder: PropTypes.array,
-  addToCurrentOrder: PropTypes.func,
-  clearCurrentOrder: PropTypes.func,
-  removeFromCurrentOrder: PropTypes.func,
-  currentUser: PropTypes.object
+  currentSeatOrder: PropTypes.array,
+  addToCurrentSeatOrder: PropTypes.func,
+  clearCurrentSeatOrder: PropTypes.func,
+  removeFromCurrentSeatOrder: PropTypes.func,
+  currentUser: PropTypes.object,
+  addToCurrentTableOrder: PropTypes.func
 };
 
 export default Entree;

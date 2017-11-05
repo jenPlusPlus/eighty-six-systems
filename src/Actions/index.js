@@ -48,33 +48,69 @@ export const addCurrentSeat = (currentSeat) => {
   };
 };
 
-export const addToCurrentOrder = (menuItem) => {
+export const addToCurrentSeatOrder = (menuItem) => {
   return {
-    type: 'ADD_TO_CURRENT_ORDER',
+    type: 'ADD_TO_CURRENT_SEAT_ORDER',
     menuItem
   };
 };
 
-export const removeFromCurrentOrder = (menuItem) => {
+export const removeFromCurrentSeatOrder = (menuItem) => {
   return {
-    type: 'REMOVE_FROM_CURRENT_ORDER',
+    type: 'REMOVE_FROM_CURRENT_SEAT_ORDER',
     menuItem
   };
 };
 
-export const clearCurrentOrder = () => {
+export const clearCurrentSeatOrder = () => {
   return {
-    type: 'CLEAR_CURRENT_ORDER'
+    type: 'CLEAR_CURRENT_SEAT_ORDER'
   };
 };
 
-export const addMenuItem = (tableNumber, seatNumber, menuItem) => {
+export const addToCurrentTableOrder = (currentSeatOrder, seatNumber) => {
+  return {
+    type: 'ADD_TO_CURRENT_TABLE_ORDER',
+    addToTableInfo: {
+      currentSeatOrder: currentSeatOrder,
+      seatNumber: seatNumber
+    }
+  };
+};
+
+export const removeFromCurrentTableOrder = (menuItem, seatNumber) => {
+  return {
+    type: 'REMOVE_FROM_CURRENT_TABLE_ORDER',
+    removeItemInfo: {
+      menuItem: menuItem,
+      seatNumber: seatNumber
+    }
+  };
+};
+
+export const clearCurrentTableOrder = () => {
+  return {
+    type: 'CLEAR_CURRENT_TABLE_ORDER'
+  };
+};
+
+export const addMenuItem = (tableNumber, currentTableOrder) => {
   return {
     type: 'ADD_MENU_ITEM',
     menuInfo : {
       tableNumber: tableNumber,
-      seatNumber: seatNumber,
-      menuItem: menuItem
+      currentTableOrder: currentTableOrder
+    }
+  };
+};
+
+export const addToAllOrders = (serverName, tableNumber, currentTableOrder) => {
+  return {
+    type: 'ADD_TO_ALL_ORDERS',
+    orderInfo: {
+      server: serverName,
+      tableNumber: tableNumber,
+      currentTableOrder: currentTableOrder
     }
   };
 };

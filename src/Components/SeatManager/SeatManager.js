@@ -34,6 +34,12 @@ class SeatManager extends Component {
     this.clearForm();
   }
 
+  sendOrder() {
+    this.props.addToAllOrders(this.props.currentUser.name, this.props.currentTable.tableNumber, this.props.currentTableOrder);
+    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentTableOrder);
+    this.props.clearCurrentTableOrder();
+  }
+
   mapSeats() {
     const currTable = this.props.tables.find((table) => {
       return table.tableNumber === this.props.currentTable.tableNumber;
@@ -70,7 +76,10 @@ class SeatManager extends Component {
             <div className='seat-container'>
               {this.mapSeats()}
             </div>
-            <button className='send-order-button'>Send Order</button>
+            <Link to='/kitchenview'>
+              <button className='send-order-button'
+                onClick={() => this.sendOrder()}>Send Order</button>
+            </Link>
           </div>
         }
         {!this.props.currentUser.loginCode &&
@@ -87,7 +96,11 @@ SeatManager.propTypes = {
   seats: PropTypes.array,
   currentTable: PropTypes.object,
   tables: PropTypes.array,
-  addCurrentSeat: PropTypes.func
+  addCurrentSeat: PropTypes.func,
+  currentTableOrder: PropTypes.array,
+  addToAllOrders: PropTypes.func,
+  clearCurrentTableOrder: PropTypes.func,
+  addMenuItem: PropTypes.func
 };
 
 export default SeatManager;

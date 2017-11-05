@@ -15,13 +15,18 @@ const tables = (state = [], action) => {
       state.map(table => {
         if (table.tableNumber === action.menuInfo.tableNumber) {
           const seatsWithOrder = table.seats.map( seat => {
-            if (seat.seatNumber === action.menuInfo.seatNumber) {
-              return Object.assign({}, seat, {order: seat.order.concat(action.menuInfo.menuItem)});
+            const indexOfSeatInOrder = action.menuInfo.currentTableOrder.findIndex((seatOrder) => {
+              return seatOrder.seatNumber === seat.seatNumber;
+            });
+            if (-1 !== indexOfSeatInOrder) {
+              seat.order = seat.order.concat(action.menuInfo.currentTableOrder[indexOfSeatInOrder].currentSeatOrder);
+              return seat;
             } else {
               return seat;
             }
           });
-          table.seats = seatsWithOrder;
+          const tableWithOrder = Object.assign({}, table, {seats: seatsWithOrder});
+          table = tableWithOrder;
           return table;
         } else {
           return table;
