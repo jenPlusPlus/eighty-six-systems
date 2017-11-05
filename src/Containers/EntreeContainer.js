@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Entree from './../Components/Entree/Entree';
-import { addMenuItem, addToCurrentSeatOrder, clearCurrentSeatOrder, removeFromCurrentSeatOrder, addToCurrentTableOrder } from './../Actions/index';
+import { addToCurrentSeatOrder, clearCurrentSeatOrder, removeFromCurrentSeatOrder, addToCurrentTableOrder } from './../Actions/index';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,

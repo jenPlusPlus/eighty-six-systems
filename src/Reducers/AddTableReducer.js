@@ -14,8 +14,6 @@ const tables = (state = [], action) => {
     return (
       state.map(table => {
         if (table.tableNumber === action.menuInfo.tableNumber) {
-          console.log('table: ', table);
-          console.log('menuInfo: ', action.menuInfo);
           const seatsWithOrder = table.seats.map( seat => {
             const indexOfSeatInOrder = action.menuInfo.currentTableOrder.findIndex((seatOrder) => {
               return seatOrder.seatNumber === seat.seatNumber;
@@ -27,7 +25,6 @@ const tables = (state = [], action) => {
               return seat;
             }
           });
-          console.log('seatsWithOrder: ', seatsWithOrder);
           const tableWithOrder = Object.assign({}, table, {seats: seatsWithOrder});
           table = tableWithOrder;
           return table;

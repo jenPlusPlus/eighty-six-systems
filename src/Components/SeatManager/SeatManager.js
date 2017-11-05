@@ -35,12 +35,8 @@ class SeatManager extends Component {
   }
 
   sendOrder() {
-    console.log('SENDING ORDER');
-    //send currentTableOrder to Kitchen View
     this.props.addToAllOrders(this.props.currentUser.name, this.props.currentTable.tableNumber, this.props.currentTableOrder);
-    //add currentTableOrder to correct table in store
     this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentTableOrder);
-    //clear currentTableOrder
     this.props.clearCurrentTableOrder();
   }
 
