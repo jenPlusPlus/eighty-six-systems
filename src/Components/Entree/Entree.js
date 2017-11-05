@@ -10,21 +10,21 @@ class Entree extends Component {
 
   addToOrder(entree, entreeObject) {
     const order = Object.assign({}, {item: entree}, {price: entreeObject.price});
-    this.props.addToCurrentOrder(order);
+    this.props.addTocurrentSeatOrder(order);
   }
 
   removeFromOrder(menuItem) {
-    this.props.removeFromCurrentOrder(menuItem);
+    this.props.removeFromcurrentSeatOrder(menuItem);
   }
 
   addOrderToSeat() {
-    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, this.props.currentOrder);
-    this.props.clearCurrentOrder();
+    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, this.props.currentSeatOrder);
+    this.props.clearcurrentSeatOrder();
   }
 
-  displayCurrentOrder() {
-    console.log('order: ', this.props.currentOrder);
-    const mappedOrder = this.props.currentOrder.map( (menuItem, index) => {
+  displaycurrentSeatOrder() {
+    console.log('order: ', this.props.currentSeatOrder);
+    const mappedOrder = this.props.currentSeatOrder.map( (menuItem, index) => {
       return <li key={index + Date.now()}>{menuItem.item}
         <button className='edit-order-item-button'>Edit</button>
         <button className='remove-order-item-button'
@@ -54,7 +54,7 @@ class Entree extends Component {
           </div>
         </div>
         <ul className='current-order'>Current Order:
-          {this.displayCurrentOrder()}
+          {this.displaycurrentSeatOrder()}
         </ul>
         <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
           <button className='add-order-to-seat-button'
@@ -69,10 +69,10 @@ Entree.propTypes = {
   addMenuItem: PropTypes.func,
   currentSeat: PropTypes.object,
   currentTable: PropTypes.object,
-  currentOrder: PropTypes.array,
-  addToCurrentOrder: PropTypes.func,
-  clearCurrentOrder: PropTypes.func,
-  removeFromCurrentOrder: PropTypes.func,
+  currentSeatOrder: PropTypes.array,
+  addTocurrentSeatOrder: PropTypes.func,
+  clearcurrentSeatOrder: PropTypes.func,
+  removeFromcurrentSeatOrder: PropTypes.func,
   currentUser: PropTypes.object
 };
 

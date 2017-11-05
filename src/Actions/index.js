@@ -48,21 +48,21 @@ export const addCurrentSeat = (currentSeat) => {
   };
 };
 
-export const addToCurrentOrder = (menuItem) => {
+export const addTocurrentSeatOrder = (menuItem) => {
   return {
     type: 'ADD_TO_CURRENT_ORDER',
     menuItem
   };
 };
 
-export const removeFromCurrentOrder = (menuItem) => {
+export const removeFromcurrentSeatOrder = (menuItem) => {
   return {
     type: 'REMOVE_FROM_CURRENT_ORDER',
     menuItem
   };
 };
 
-export const clearCurrentOrder = () => {
+export const clearcurrentSeatOrder = () => {
   return {
     type: 'CLEAR_CURRENT_ORDER'
   };

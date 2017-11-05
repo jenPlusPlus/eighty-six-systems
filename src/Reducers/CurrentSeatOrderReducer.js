@@ -1,4 +1,4 @@
-const currentOrder = (state = [], action) => {
+const currentSeatOrder = (state = [], action) => {
   switch (action.type) {
   case 'ADD_TO_CURRENT_ORDER':
     return [...state, action.menuItem];
@@ -11,4 +11,4 @@ const currentOrder = (state = [], action) => {
   }
 };
 
-export default currentOrder;
+export default currentSeatOrder;
