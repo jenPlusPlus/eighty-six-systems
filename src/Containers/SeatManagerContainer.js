@@ -6,7 +6,8 @@ const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
   tables: store.tables,
   currentTable: store.currentTable,
-  currentSeat: store.currentSeat
+  currentSeat: store.currentSeat,
+  currentTableOrder: store.currentTableOrder
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -8,6 +8,7 @@ import SeatManagerContainer from './../../Containers/SeatManagerContainer';
 import HeaderContainer from './../../Containers/HeaderContainer';
 import MenuViewContainer from './../../Containers/MenuViewContainer';
 import EntreeContainer from './../../Containers/EntreeContainer';
+import KitchenViewContainer from './../../Containers/KitchenViewContainer';
 import PropTypes from 'prop-types';
 // import Login from './../Login/Login';
 // import firebase from './../../firebase.js';
@@ -54,6 +55,8 @@ class App extends Component {
           <Route exact path='/:loginCode/tables/:table/:seat/menu' component={MenuViewContainer} />
 
           <Route exact path='/:loginCode/tables/:table/:seat/menu/entrees' component={EntreeContainer}/>
+
+          <Route exact path='/kitchenview' component={KitchenViewContainer}/>
 
         </div>
       </BrowserRouter>
