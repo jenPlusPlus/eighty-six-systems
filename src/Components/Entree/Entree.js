@@ -10,16 +10,16 @@ class Entree extends Component {
 
   addToOrder(entree, entreeObject) {
     const order = Object.assign({}, {item: entree}, {price: entreeObject.price});
-    this.props.addTocurrentSeatOrder(order);
+    this.props.addToCurrentSeatOrder(order);
   }
 
   removeFromOrder(menuItem) {
-    this.props.removeFromcurrentSeatOrder(menuItem);
+    this.props.removeFromCurrentSeatOrder(menuItem);
   }
 
   addOrderToSeat() {
     this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, this.props.currentSeatOrder);
-    this.props.clearcurrentSeatOrder();
+    this.props.clearCurrentSeatOrder();
   }
 
   displaycurrentSeatOrder() {
@@ -70,9 +70,9 @@ Entree.propTypes = {
   currentSeat: PropTypes.object,
   currentTable: PropTypes.object,
   currentSeatOrder: PropTypes.array,
-  addTocurrentSeatOrder: PropTypes.func,
-  clearcurrentSeatOrder: PropTypes.func,
-  removeFromcurrentSeatOrder: PropTypes.func,
+  addToCurrentSeatOrder: PropTypes.func,
+  clearCurrentSeatOrder: PropTypes.func,
+  removeFromCurrentSeatOrder: PropTypes.func,
   currentUser: PropTypes.object
 };
 

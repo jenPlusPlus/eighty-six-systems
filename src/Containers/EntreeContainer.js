@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Entree from './../Components/Entree/Entree';
-import { addMenuItem, addTocurrentSeatOrder, clearcurrentSeatOrder, removeFromcurrentSeatOrder } from './../Actions/index';
+import { addMenuItem, addToCurrentSeatOrder, clearCurrentSeatOrder, removeFromCurrentSeatOrder } from './../Actions/index';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
@@ -14,14 +14,14 @@ const mapDispatchToProps = (dispatch) => ({
   addMenuItem: (tableNumber, seatNumber, menuItem) => {
     return dispatch(addMenuItem(tableNumber, seatNumber, menuItem));
   },
-  addTocurrentSeatOrder: (menuItem) => {
-    return dispatch(addTocurrentSeatOrder(menuItem));
+  addToCurrentSeatOrder: (menuItem) => {
+    return dispatch(addToCurrentSeatOrder(menuItem));
   },
-  clearcurrentSeatOrder: () => {
-    return dispatch(clearcurrentSeatOrder());
+  clearCurrentSeatOrder: () => {
+    return dispatch(clearCurrentSeatOrder());
   },
-  removeFromcurrentSeatOrder: (menuItem) => {
-    return dispatch(removeFromcurrentSeatOrder(menuItem));
+  removeFromCurrentSeatOrder: (menuItem) => {
+    return dispatch(removeFromCurrentSeatOrder(menuItem));
   }
 });
 

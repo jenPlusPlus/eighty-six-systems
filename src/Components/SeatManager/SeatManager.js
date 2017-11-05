@@ -34,6 +34,10 @@ class SeatManager extends Component {
     this.clearForm();
   }
 
+  sendOrder() {
+    console.log('SENDING ORDER');
+  }
+
   mapSeats() {
     const currTable = this.props.tables.find((table) => {
       return table.tableNumber === this.props.currentTable.tableNumber;
@@ -70,7 +74,8 @@ class SeatManager extends Component {
             <div className='seat-container'>
               {this.mapSeats()}
             </div>
-            <button className='send-order-button'>Send Order</button>
+            <button className='send-order-button'
+              onClick={() => this.sendOrder()}>Send Order</button>
           </div>
         }
         {!this.props.currentUser.loginCode &&

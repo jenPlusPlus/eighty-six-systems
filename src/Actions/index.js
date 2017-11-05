@@ -48,23 +48,30 @@ export const addCurrentSeat = (currentSeat) => {
   };
 };
 
-export const addTocurrentSeatOrder = (menuItem) => {
+export const addToCurrentSeatOrder = (menuItem) => {
   return {
-    type: 'ADD_TO_CURRENT_ORDER',
+    type: 'ADD_TO_CURRENT_SEAT_ORDER',
     menuItem
   };
 };
 
-export const removeFromcurrentSeatOrder = (menuItem) => {
+export const removeFromCurrentSeatOrder = (menuItem) => {
   return {
-    type: 'REMOVE_FROM_CURRENT_ORDER',
+    type: 'REMOVE_FROM_CURRENT_SEAT_ORDER',
     menuItem
   };
 };
 
-export const clearcurrentSeatOrder = () => {
+export const clearCurrentSeatOrder = () => {
   return {
-    type: 'CLEAR_CURRENT_ORDER'
+    type: 'CLEAR_CURRENT_SEAT_ORDER'
+  };
+};
+
+export const addToCurrentTableOrder = (currentSeatOrder) => {
+  return {
+    type: 'ADD_TO_CURRENT_TABLE_ORDER',
+    currentSeatOrder
   };
 };
 
