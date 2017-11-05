@@ -55,6 +55,13 @@ export const addToCurrentOrder = (menuItem) => {
   };
 };
 
+export const removeFromCurrentOrder = (menuItem) => {
+  return {
+    type: 'REMOVE_FROM_CURRENT_ORDER',
+    menuItem
+  };
+};
+
 export const clearCurrentOrder = () => {
   return {
     type: 'CLEAR_CURRENT_ORDER'

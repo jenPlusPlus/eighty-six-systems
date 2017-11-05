@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Entree from './../Components/Entree/Entree';
-import { addMenuItem, addToCurrentOrder, clearCurrentOrder } from './../Actions/index';
+import { addMenuItem, addToCurrentOrder, clearCurrentOrder, removeFromCurrentOrder } from './../Actions/index';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
@@ -19,6 +19,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   clearCurrentOrder: () => {
     return dispatch(clearCurrentOrder());
+  },
+  removeFromCurrentOrder: (menuItem) => {
+    return dispatch(removeFromCurrentOrder(menuItem));
   }
 });
 
