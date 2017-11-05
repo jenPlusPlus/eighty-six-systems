@@ -28,6 +28,9 @@ const Header = (props) => {
       }
       { currentUser.loginCode &&
         <div className='header-logged-in'>
+          <Link to='/kitchenview'>
+            <button className='go-to-kitchen-view'>Kitchen View</button>
+          </Link>
           <h2 className='greeting'>Hello, {currentUser.name}</h2>
           <Link to={'/'}>
             <button className={`logout-button ${hideButton}`}

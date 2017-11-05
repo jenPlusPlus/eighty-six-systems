@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class KitchenView extends Component {
   constructor() {
@@ -39,7 +40,9 @@ class KitchenView extends Component {
     });
     return (
       <div className='orders-wrapper'>
-        <button>Table Manager</button>
+        <Link to={`/${this.props.currentUser.loginCode}/tables`}>
+          <button>Table Manager</button>
+        </Link>
         <h2>All Orders</h2>
         <div className='all-orders'>
           {mappedOrders}
@@ -51,7 +54,8 @@ class KitchenView extends Component {
 
 KitchenView.propTypes = {
   allOrders: PropTypes.array,
-  removeFromAllOrders: PropTypes.func
+  removeFromAllOrders: PropTypes.func,
+  currentUser: PropTypes.object
 };
 
 export default KitchenView;
