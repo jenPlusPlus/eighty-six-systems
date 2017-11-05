@@ -76,8 +76,10 @@ class SeatManager extends Component {
             <div className='seat-container'>
               {this.mapSeats()}
             </div>
-            <button className='send-order-button'
-              onClick={() => this.sendOrder()}>Send Order</button>
+            <Link to='/kitchenview'>
+              <button className='send-order-button'
+                onClick={() => this.sendOrder()}>Send Order</button>
+            </Link>
           </div>
         }
         {!this.props.currentUser.loginCode &&
