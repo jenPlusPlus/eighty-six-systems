@@ -3,7 +3,7 @@ const allOrders = (state = [], action) => {
   case 'ADD_TO_ALL_ORDERS':
     return [...state, action.orderInfo];
   case 'REMOVE_FROM_ALL_ORDERS':
-    return state.filter(order => order !== action.orderInfo);
+    return state.filter(order => order !== action.order);
   case 'CLEAR_ALL_ORDERS':
     return [];
   default:

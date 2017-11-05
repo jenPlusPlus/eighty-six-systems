@@ -20,6 +20,10 @@ class KitchenView extends Component {
     return mappedSeatOrders;
   }
 
+  removeOrderFromQueue(order) {
+    this.props.removeFromAllOrders(order);
+  }
+
   render() {
     const mappedOrders = this.props.allOrders.map( (order, index) => {
       return (
@@ -27,7 +31,8 @@ class KitchenView extends Component {
         className='kitchen-view-order'>
           <h3>Server: {order.server}</h3>
           <h3>Table: {order.tableNumber}</h3>
-          <button className='remove-from-kitchen-view'>Order Complete</button>
+          <button className='remove-from-kitchen-view'
+            onClick={() => this.removeOrderFromQueue(order)}>Order Complete</button>
           {this.mapSeats(order)}
         </div>
       );
@@ -45,7 +50,8 @@ class KitchenView extends Component {
 }
 
 KitchenView.propTypes = {
-  allOrders: PropTypes.array
+  allOrders: PropTypes.array,
+  removeFromAllOrders: PropTypes.func
 };
 
 export default KitchenView;

@@ -114,3 +114,10 @@ export const addToAllOrders = (serverName, tableNumber, currentTableOrder) => {
     }
   };
 };
+
+export const removeFromAllOrders = (order) => {
+  return {
+    type: 'REMOVE_FROM_ALL_ORDERS',
+    order
+    };
+};
