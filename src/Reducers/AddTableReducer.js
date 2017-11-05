@@ -10,6 +10,24 @@ const tables = (state = [], action) => {
           table;
       })
     );
+  case 'ADD_MENU_ITEM':
+    return (
+      state.map(table => {
+        if (table.tableNumber === action.menuInfo.tableNumber) {
+          const seatsWithOrder = table.seats.map( seat => {
+            if (seat.seatNumber === action.menuInfo.seatNumber) {
+              return Object.assign({}, seat, {order: seat.order.concat(action.menuInfo.menuItem)});
+            } else {
+              return seat;
+            }
+          });
+          table.seats = seatsWithOrder;
+          return table;
+        } else {
+          return table;
+        }
+      })
+    );
   default:
     return state;
   }
