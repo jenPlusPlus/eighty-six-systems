@@ -68,10 +68,13 @@ export const clearCurrentSeatOrder = () => {
   };
 };
 
-export const addToCurrentTableOrder = (currentSeatOrder) => {
+export const addToCurrentTableOrder = (currentSeatOrder, seatNumber) => {
   return {
     type: 'ADD_TO_CURRENT_TABLE_ORDER',
-    currentSeatOrder
+    addToTableInfo: {
+      currentSeatOrder: currentSeatOrder,
+      seatNumber: seatNumber
+    }
   };
 };
 
@@ -85,7 +88,7 @@ export const removeFromCurrentTableOrder = (menuItem, seatNumber) => {
   };
 };
 
-export const clearCurrenTableOrder = () => {
+export const clearCurrentTableOrder = () => {
   return {
     type: 'CLEAR_CURRENT_TABLE_ORDER'
   };
