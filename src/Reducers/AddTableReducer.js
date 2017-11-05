@@ -13,13 +13,19 @@ const tables = (state = [], action) => {
   case 'ADD_MENU_ITEM':
     return (
       state.map(table => {
-        table.tableNumber === action.seatInfo.tableNumber ?
-          table.seats.map( seat => {
-            return seat.seatNumber === action.menuInfo.seatNumber ?
-              [...table.seats, action.menuInfo.menuItem] :
-              table.seats;
-          }) :
-          table;
+        if (table.tableNumber === action.menuInfo.tableNumber) {
+          const seatsWithOrder = table.seats.map( seat => {
+            if (seat.seatNumber === action.menuInfo.seatNumber) {
+              return Object.assign({}, seat, {order: [...seat.order, action.menuInfo.menuItem]});
+            } else {
+              return seat;
+            }
+          });
+          table.seats = seatsWithOrder;
+          return table;
+        } else {
+          return table;
+        }
       })
     );
   default:

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Entree from './../Components/Entree/Entree';
+import { addMenuItem } from './../Actions/index';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
@@ -8,4 +9,10 @@ const mapStateToProps = (store) => ({
   tables: store.tables
 });
 
-export default connect(mapStateToProps, undefined)(Entree);
+const mapDispatchToProps = (dispatch) => ({
+  addMenuItem: (tableNumber, seatNumber, menuItem) => {
+    return dispatch(addMenuItem(tableNumber, seatNumber, menuItem));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Entree);

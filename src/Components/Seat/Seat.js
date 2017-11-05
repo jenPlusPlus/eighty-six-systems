@@ -17,8 +17,11 @@ class Seat extends Component {
 
   render() {
     return (
-      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu/entrees`}>
-        <h3 className='entrees-link'>Entrees</h3>
+      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
+        <div className='seat'
+          onClick={() => this.handleClick()}>
+          <h3>{this.props.seat.seatNumber}</h3>
+        </div>
       </Link>
     );
   }

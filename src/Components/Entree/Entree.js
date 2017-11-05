@@ -8,11 +8,17 @@ class Entree extends Component {
     super();
   }
 
+  handleClick(entree) {
+    console.log('entree: ', entree);
+    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, entree);
+  }
+
   render() {
     const mappedEntrees = Object.keys(menu.Entrees).map( (entree, index) => {
       return (
         <div className='entree'
-          key={index+Date.now()}>
+          key={index+Date.now()}
+          onClick={() => this.handleClick(entree)}>
           {entree}
         </div>
       );
@@ -24,5 +30,11 @@ class Entree extends Component {
     </div>);
   }
 }
+
+Entree.propTypes = {
+  addMenuItem: PropTypes.func,
+  currentSeat: PropTypes.object,
+  currentTable: PropTypes.object
+};
 
 export default Entree;

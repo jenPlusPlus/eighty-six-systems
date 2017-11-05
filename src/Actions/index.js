@@ -48,10 +48,14 @@ export const addCurrentSeat = (currentSeat) => {
   };
 };
 
-export const addMenuItem = (seatNumber, menuItem) => {
+export const addMenuItem = (tableNumber, seatNumber, menuItem) => {
+  console.log('menuItem: ', menuItem);
+  console.log('tableNumber: ', tableNumber);
+  console.log('seatNumber: ', seatNumber);
   return {
     type: 'ADD_MENU_ITEM',
     menuInfo : {
+      tableNumber: tableNumber,
       seatNumber: seatNumber,
       menuItem: menuItem
     }
