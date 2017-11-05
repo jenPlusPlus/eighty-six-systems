@@ -14,7 +14,8 @@ class KitchenView extends Component {
       });
       return <ul className='seat-order'
         key={key+Date.now()}>Seat {seat.seatNumber}:
-        {mappedCurrentSeatOrders}</ul>
+        {mappedCurrentSeatOrders}
+      </ul>
     });
     return mappedSeatOrders;
   }
@@ -26,9 +27,8 @@ class KitchenView extends Component {
         className='kitchen-view-order'>
           <h3>Server: {order.server}</h3>
           <h3>Table: {order.tableNumber}</h3>
-
+          <button className='remove-from-kitchen-view'>Order Complete</button>
           {this.mapSeats(order)}
-
         </div>
       );
     });
