@@ -3,7 +3,8 @@ import { removeFromAllOrders } from './../Actions/index';
 import KitchenView from './../Components/KitchenView/KitchenView';
 
 const mapStateToProps = (store) => ({
-  allOrders: store.allOrders
+  allOrders: store.allOrders,
+  currentUser: store.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
