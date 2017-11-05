@@ -6,6 +6,8 @@ const currentSeat = (state = {}, action) => {
       seatNumber: action.seatInfo.seatNumber,
       order: []
     };
+  case 'ADD_ORDER_TO_CURRENT_SEAT':
+    return Object.assign(state, {order: state.order.concat(action.order)});
   case 'REMOVE_CURRENT_SEAT':
     return {};
   default:

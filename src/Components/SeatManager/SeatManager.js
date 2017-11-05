@@ -35,6 +35,7 @@ class SeatManager extends Component {
   }
 
   sendOrder() {
+    // add seats with orders to currentTable in store
     this.props.addToAllOrders(this.props.currentUser.name, this.props.currentTable.tableNumber, this.props.currentTableOrder);
     this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentTableOrder);
     this.props.clearCurrentTableOrder();
