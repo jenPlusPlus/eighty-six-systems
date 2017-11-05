@@ -70,6 +70,7 @@ class SeatManager extends Component {
             <div className='seat-container'>
               {this.mapSeats()}
             </div>
+            <button className='send-order-button'>Send Order</button>
           </div>
         }
         {!this.props.currentUser.loginCode &&

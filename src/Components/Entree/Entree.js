@@ -58,7 +58,7 @@ class Entree extends Component {
         </ul>
         <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
           <button className='add-order-to-seat-button'
-            onClick={() => this.addOrderToSeat()}>Add Order to Seat</button>
+            onClick={() => this.addOrderToSeat()}>Add to Seat</button>
         </Link>
       </div>
     );
