@@ -8,9 +8,14 @@ class Entree extends Component {
     super();
   }
 
-  handleClick(entree) {
-    console.log('entree: ', entree);
-    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, entree);
+  addToOrder(entree) {
+    this.props.addToCurrentOrder(entree);
+
+  }
+
+  addOrderToSeat() {
+    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, this.props.currentOrder);
+    this.props.clearCurrentOrder();
   }
 
   render() {
@@ -18,15 +23,19 @@ class Entree extends Component {
       return (
         <div className='entree'
           key={index+Date.now()}
-          onClick={() => this.handleClick(entree)}>
+          onClick={() => this.addToOrder(entree)}>
           {entree}
         </div>
       );
     });
 
-    return (<div className='entrees'>
-      Entrees:
-      {mappedEntrees}
+    return (<div className='entrees-wrapper'>
+      <div className='entrees'>
+        Entrees
+        {mappedEntrees}
+      </div>
+      <button className='submit-button'
+        onClick={() => this.addOrderToSeat()}>Add to Seat</button>
     </div>);
   }
 }
@@ -34,7 +43,10 @@ class Entree extends Component {
 Entree.propTypes = {
   addMenuItem: PropTypes.func,
   currentSeat: PropTypes.object,
-  currentTable: PropTypes.object
+  currentTable: PropTypes.object,
+  currentOrder: PropTypes.array,
+  addToCurrentOrder: PropTypes.func,
+  clearCurrentOrder: PropTypes.func
 };
 
 export default Entree;

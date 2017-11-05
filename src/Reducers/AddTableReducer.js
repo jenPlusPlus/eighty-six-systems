@@ -16,7 +16,7 @@ const tables = (state = [], action) => {
         if (table.tableNumber === action.menuInfo.tableNumber) {
           const seatsWithOrder = table.seats.map( seat => {
             if (seat.seatNumber === action.menuInfo.seatNumber) {
-              return Object.assign({}, seat, {order: [...seat.order, action.menuInfo.menuItem]});
+              return Object.assign({}, seat, {order: seat.order.concat(action.menuInfo.menuItem)});
             } else {
               return seat;
             }

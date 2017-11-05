@@ -48,6 +48,19 @@ export const addCurrentSeat = (currentSeat) => {
   };
 };
 
+export const addToCurrentOrder = (menuItem) => {
+  return {
+    type: 'ADD_TO_CURRENT_ORDER',
+    menuItem
+  };
+};
+
+export const clearCurrentOrder = () => {
+  return {
+    type: 'CLEAR_CURRENT_ORDER'
+  };
+};
+
 export const addMenuItem = (tableNumber, seatNumber, menuItem) => {
   console.log('menuItem: ', menuItem);
   console.log('tableNumber: ', tableNumber);
