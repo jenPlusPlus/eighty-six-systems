@@ -62,9 +62,6 @@ export const clearCurrentOrder = () => {
 };
 
 export const addMenuItem = (tableNumber, seatNumber, menuItem) => {
-  console.log('menuItem: ', menuItem);
-  console.log('tableNumber: ', tableNumber);
-  console.log('seatNumber: ', seatNumber);
   return {
     type: 'ADD_MENU_ITEM',
     menuInfo : {
