@@ -56,8 +56,10 @@ class Entree extends Component {
         <ul className='current-order'>Current Order:
           {this.displayCurrentOrder()}
         </ul>
-        <button className='submit-button'
-          onClick={() => this.addOrderToSeat()}>Add Order to Seat</button>
+        <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
+          <button className='add-order-to-seat-button'
+            onClick={() => this.addOrderToSeat()}>Add Order to Seat</button>
+        </Link>
       </div>
     );
   }
@@ -70,7 +72,8 @@ Entree.propTypes = {
   currentOrder: PropTypes.array,
   addToCurrentOrder: PropTypes.func,
   clearCurrentOrder: PropTypes.func,
-  removeFromCurrentOrder: PropTypes.func
+  removeFromCurrentOrder: PropTypes.func,
+  currentUser: PropTypes.object
 };
 
 export default Entree;
