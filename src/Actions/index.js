@@ -75,6 +75,22 @@ export const addToCurrentTableOrder = (currentSeatOrder) => {
   };
 };
 
+export const removeFromCurrentTableOrder = (menuItem, seatNumber) => {
+  return {
+    type: 'REMOVE_FROM_CURRENT_TABLE_ORDER',
+    removeItemInfo: {
+      menuItem: menuItem,
+      seatNumber: seatNumber
+    }
+  };
+};
+
+export const clearCurrenTableOrder = () => {
+  return {
+    type: 'CLEAR_CURRENT_TABLE_ORDER'
+  };
+};
+
 export const addMenuItem = (tableNumber, seatNumber, menuItem) => {
   return {
     type: 'ADD_MENU_ITEM',
