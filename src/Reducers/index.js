@@ -4,6 +4,7 @@ import currentTable from './CurrentTableReducer.js';
 import currentSeat from './CurrentSeatReducer.js';
 import currentSeatOrder from './CurrentSeatOrderReducer.js';
 import currentTableOrder from './CurrentTableOrderReducer.js';
+import allOrders from './AllOrdersReducer';
 import tables from './AddTableReducer';
 // import seats from './AddSeatReducer';
 
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   currentTable,
   currentSeat,
   currentSeatOrder,
-  currentTableOrder
+  currentTableOrder,
+  allOrders
 });
 
 export default rootReducer;

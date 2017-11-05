@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 class KitchenView extends Component {
   constructor() {
-    super()
+    super();
   }
 
   render() {
-    return(
+    return (
       <div>KITCHENVIEW!</div>
     );
   }

@@ -94,13 +94,23 @@ export const clearCurrentTableOrder = () => {
   };
 };
 
-export const addMenuItem = (tableNumber, seatNumber, menuItem) => {
+export const addMenuItem = (tableNumber, currentTableOrder) => {
   return {
     type: 'ADD_MENU_ITEM',
     menuInfo : {
       tableNumber: tableNumber,
-      seatNumber: seatNumber,
-      menuItem: menuItem
+      currentTableOrder: currentTableOrder
+    }
+  };
+};
+
+export const addToAllOrders = (serverName, tableNumber, currentTableOrder) => {
+  return {
+    type: 'ADD_TO_ALL_ORDERS',
+    orderInfo: {
+      server: serverName,
+      tableNumber: tableNumber,
+      currentTableOrder: currentTableOrder
     }
   };
 };

@@ -18,13 +18,11 @@ class Entree extends Component {
   }
 
   addOrderToSeat() {
-    // this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentSeat.seatNumber, this.props.currentSeatOrder);
     this.props.addToCurrentTableOrder(this.props.currentSeatOrder, this.props.currentSeat.seatNumber);
     this.props.clearCurrentSeatOrder();
   }
 
   displaycurrentSeatOrder() {
-    console.log('order: ', this.props.currentSeatOrder);
     const mappedOrder = this.props.currentSeatOrder.map( (menuItem, index) => {
       return <li key={index + Date.now()}>{menuItem.item}
         <button className='edit-order-item-button'>Edit</button>

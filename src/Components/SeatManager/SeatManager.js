@@ -36,9 +36,12 @@ class SeatManager extends Component {
 
   sendOrder() {
     console.log('SENDING ORDER');
-    console.log('table order: ', this.props.currentTableOrder);
-    //sent currentTableOrder to Kitchen View
+    //send currentTableOrder to Kitchen View
+    this.props.addToAllOrders(this.props.currentUser.name, this.props.currentTable.tableNumber, this.props.currentTableOrder);
     //add currentTableOrder to correct table in store
+    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentTableOrder);
+    //clear currentTableOrder
+    this.props.clearCurrentTableOrder();
   }
 
   mapSeats() {
@@ -96,7 +99,10 @@ SeatManager.propTypes = {
   currentTable: PropTypes.object,
   tables: PropTypes.array,
   addCurrentSeat: PropTypes.func,
-  currentTableOrder: PropTypes.array
+  currentTableOrder: PropTypes.array,
+  addToAllOrders: PropTypes.func,
+  clearCurrentTableOrder: PropTypes.func,
+  addMenuItem: PropTypes.func
 };
 
 export default SeatManager;

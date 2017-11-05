@@ -11,9 +11,6 @@ const mapStateToProps = (store) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addMenuItem: (tableNumber, seatNumber, menuItem) => {
-    return dispatch(addMenuItem(tableNumber, seatNumber, menuItem));
-  },
   addToCurrentSeatOrder: (menuItem) => {
     return dispatch(addToCurrentSeatOrder(menuItem));
   },
