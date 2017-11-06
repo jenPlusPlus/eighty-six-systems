@@ -29,7 +29,7 @@ class Seat extends Component {
                className='menu-item'>{item.item}
           <button className='edit-order-item-button'>Edit</button>
           <button className='remove-order-item-button'
-            onClick={() => this.removeFromOrder(item)}>Remove</button>
+            onClick={() => this.removeFromOrder(item)}>X</button>
         </li>;
       });
       return mappedOrders;
