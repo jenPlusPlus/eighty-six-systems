@@ -176,10 +176,13 @@ describe('actions testing', () => {
 
   it(`should add to the current table order`, () => {
 
-    const expectation = actions.addToCurrentTableOrder(toAddToCurrentTableOrder, seatNumber);
+    const expectation = actions.addToCurrentTableOrder(
+      toAddToCurrentTableOrder, 
+      seatNumber);
 
     expect(expectation.type).toEqual('ADD_TO_CURRENT_TABLE_ORDER');
-    expect(expectation.addToTableInfo.currentSeatOrder).toEqual(toAddToCurrentTableOrder);
+    expect(expectation.addToTableInfo.currentSeatOrder)
+      .toEqual(toAddToCurrentTableOrder);
     expect(expectation.addToTableInfo.seatNumber).toEqual(seatNumber);
 
   });
@@ -213,7 +216,8 @@ describe('actions testing', () => {
 
   it(`should add to all orders`, () => {
 
-    const expectation = actions.addToAllOrders(serverName, tableNumber, currentTableOrder);
+    const expectation = actions.addToAllOrders(serverName,
+      tableNumber, currentTableOrder);
 
     expect(expectation.type).toEqual('ADD_TO_ALL_ORDERS');
     expect(expectation.orderInfo.tableNumber).toEqual(tableNumber);
