@@ -38,7 +38,7 @@ class Entree extends Component {
   render() {
     const mappedEntrees = Object.keys(menu.Entrees).map( (entree, index) => {
       return (
-        <div className='entree'
+        <div className='entree-item'
           key={index+Date.now()}
           onClick={() => this.addToOrder(entree, menu.Entrees[entree])}>
           {entree}
@@ -49,7 +49,7 @@ class Entree extends Component {
     return (
       <div className='order-wrapper'>
         <div className='entrees-wrapper'>
-          <div className='entrees'>
+          <div className='entrees-list'>
             Entrees
             {mappedEntrees}
           </div>
