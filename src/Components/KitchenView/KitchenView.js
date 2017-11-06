@@ -16,7 +16,7 @@ class KitchenView extends Component {
       return <ul className='seat-order'
         key={key+Date.now()}>Seat {seat.seatNumber}:
         {mappedCurrentSeatOrders}
-      </ul>
+      </ul>;
     });
     return mappedSeatOrders;
   }

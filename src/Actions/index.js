@@ -119,5 +119,12 @@ export const removeFromAllOrders = (order) => {
   return {
     type: 'REMOVE_FROM_ALL_ORDERS',
     order
-    };
+  };
+};
+
+export const addOrderToCurrentSeat = (order) => {
+  return {
+    type: 'ADD_ORDER_TO_CURRENT_SEAT',
+    order
+  };
 };
