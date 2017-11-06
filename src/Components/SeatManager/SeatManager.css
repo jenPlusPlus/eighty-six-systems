@@ -3,13 +3,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px; }
+  margin: 5px 0 0 0;
+  height: 75%; }
 
 .seat {
   border: 3px solid #33202A;
   background-color: #33202A;
   border-radius: 5px;
   width: 250px;
+  height: 400px;
   margin: 5px; }
 
 .seat-info {
@@ -51,6 +53,34 @@
   background-color: #EFEFF0;
   border-radius: 15px;
   border: none; }
+
+.send-order-button, .close-table-button {
+  background-color: #EFEFF0;
+  color: #6D576A;
+  border-radius: 15px;
+  width: 85px;
+  height: 30px;
+  border: none;
+  font-size: 12px; }
+
+.send-order-button {
+  margin-right: 5px; }
+
+.close-table-button {
+  margin-left: 5px; }
+
+.server-dashboard-wrapper {
+  height: 80%; }
+
+.server-dashboard {
+  height: 100%;
+  width: 100%; }
+
+.buttons-container {
+  margin: auto;
+  position: absolute;
+  bottom: 10px;
+  left: 10px; }
 
 a {
   text-decoration: none; }
