@@ -10,8 +10,6 @@ import MenuViewContainer from './../../Containers/MenuViewContainer';
 import EntreeContainer from './../../Containers/EntreeContainer';
 import KitchenViewContainer from './../../Containers/KitchenViewContainer';
 import PropTypes from 'prop-types';
-// import Login from './../Login/Login';
-// import firebase from './../../firebase.js';
 
 
 class App extends Component {
@@ -48,13 +46,14 @@ class App extends Component {
             return (<Redirect to={'/login'} />);
           }} />
 
-          <Route exact path='/:loginCode/tables/:table' render={({ match }) => {
-            return <SeatManagerContainer />;
-          }} />
+          <Route exact path='/:loginCode/tables/:table'
+            component={SeatManagerContainer } />
 
-          <Route exact path='/:loginCode/tables/:table/:seat/menu' component={MenuViewContainer} />
+          <Route exact path='/:loginCode/tables/:table/:seat/menu'
+            component={MenuViewContainer} />
 
-          <Route exact path='/:loginCode/tables/:table/:seat/menu/entrees' component={EntreeContainer}/>
+          <Route exact path='/:loginCode/tables/:table/:seat/menu/entrees'
+            component={EntreeContainer}/>
 
           <Route exact path='/kitchenview' component={KitchenViewContainer}/>
 

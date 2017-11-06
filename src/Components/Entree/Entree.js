@@ -9,7 +9,8 @@ class Entree extends Component {
   }
 
   addToOrder(entree, entreeObject) {
-    const order = Object.assign({}, {item: entree}, {price: entreeObject.price});
+    const order = Object.assign({}, {item: entree},
+      {price: entreeObject.price});
     this.props.addToCurrentSeatOrder(order);
   }
 
@@ -20,7 +21,8 @@ class Entree extends Component {
   addOrderToSeat() {
     //add to currentSeat in store
     this.props.addOrderToCurrentSeat(this.props.currentSeatOrder);
-    this.props.addToCurrentTableOrder(this.props.currentSeatOrder, this.props.currentSeat.seatNumber);
+    this.props.addToCurrentTableOrder(this.props.currentSeatOrder,
+      this.props.currentSeat.seatNumber);
     this.props.clearCurrentSeatOrder();
   }
 
@@ -57,7 +59,8 @@ class Entree extends Component {
         <ul className='current-order'>Current Order:
           {this.displaycurrentSeatOrder()}
         </ul>
-        <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
+        <Link to={`/${this.props.currentUser.loginCode}
+        /tables/${this.props.currentTable.tableNumber}`}>
           <button className='add-order-to-seat-button'
             onClick={() => this.addOrderToSeat()}>Add to Seat</button>
         </Link>

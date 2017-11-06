@@ -9,9 +9,11 @@ class KitchenView extends Component {
 
   mapSeats(order) {
     const mappedSeatOrders = order.currentTableOrder.map( (seat, key) => {
-      const mappedCurrentSeatOrders = seat.currentSeatOrder.map( (item, index) => {
-        return <li key={index+Date.now()}
-               className='seat-order-item'>{item.item}</li>
+      const mappedCurrentSeatOrders =
+      seat.currentSeatOrder.map( (item, index) => {
+        return <li
+          key={index+Date.now()} className='seat-order-item'>{item.item}
+        </li>;
       });
       return <ul className='seat-order'
         key={key+Date.now()}>Seat {seat.seatNumber}:
@@ -22,8 +24,6 @@ class KitchenView extends Component {
   }
 
   removeOrderFromQueue(order) {
-    console.log('all orders: ', this.props.allOrders);
-    console.log('order: ', order);
     this.props.removeFromAllOrders(order);
   }
 
@@ -35,7 +35,8 @@ class KitchenView extends Component {
           <h3>Server: {order.server}</h3>
           <h3>Table: {order.tableNumber}</h3>
           <button className='remove-from-kitchen-view'
-            onClick={() => this.removeOrderFromQueue(order)}>Order Complete</button>
+            onClick={() =>
+              this.removeOrderFromQueue(order)}>Order Complete</button>
           {this.mapSeats(order)}
         </div>
       );
