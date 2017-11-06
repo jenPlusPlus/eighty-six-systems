@@ -1,7 +1,7 @@
 .hide-button {
   display: none; }
 
-.login-button, .logout-button {
+.login-button, .logout-button, .go-to-kitchen-view {
   background-color: #EFEFF0;
   color: #6D576A;
   border-radius: 15px;
@@ -16,6 +16,13 @@
   width: 80px;
   height: 25px;
   font-size: 16px; }
+
+.go-to-kitchen-view {
+  font-size: 12px;
+  margin: 5px 0 5px 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px; }
 
 .home-page {
   width: 400px;

@@ -25,10 +25,11 @@ class Seat extends Component {
     });
     if (currentSeat.length > 0){
       const mappedOrders = currentSeat[0].currentSeatOrder.map( (item, index) => {
-        return <li key={index + Date.now()}>{item.item}
+        return <li key={index + Date.now()}
+               className='menu-item'>{item.item}
           <button className='edit-order-item-button'>Edit</button>
           <button className='remove-order-item-button'
-            onClick={() => this.removeFromOrder(item)}>Remove</button>
+            onClick={() => this.removeFromOrder(item)}>X</button>
         </li>;
       });
       return mappedOrders;
@@ -42,7 +43,7 @@ class Seat extends Component {
         <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
           <h3>{this.props.seat.seatNumber}</h3>
         </Link>
-        <ul>{this.getCurrentOrder()}</ul>
+        <ul className='seat-order-container'>{this.getCurrentOrder()}</ul>
       </div>
     );
   }

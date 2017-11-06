@@ -3,36 +3,48 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px; }
+  margin: 5px 0 0 0;
+  height: 75%;
+  overflow-y: scroll; }
 
 .seat {
   border: 3px solid #33202A;
   background-color: #33202A;
   border-radius: 5px;
   width: 250px;
+  height: 365px;
   margin: 5px; }
 
 .seat-info {
-  margin: 5px; }
+  background-color: #33202A;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 .table-info-seat-manager {
   width: 120px;
   height: 40px;
   margin: auto;
   padding: 11px;
-  margin-top: 15px;
-  text-align: center; }
+  margin-top: 10px;
+  text-align: center;
+  font-size: 19px; }
 
 .all-tables-button {
   background-color: #EFEFF0;
   border-radius: 20px;
   color: #33202A;
-  width: 120px;
-  height: 40px;
-  padding: 11px;
+  width: 100px;
+  height: 30px;
+  padding: 8px;
   margin: auto;
   margin-bottom: 10px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  font-size: 16px; }
 
 .add-seat {
   width: 75px;
@@ -42,6 +54,36 @@
   background-color: #EFEFF0;
   border-radius: 15px;
   border: none; }
+
+.send-order-button, .close-table-button {
+  background-color: #EFEFF0;
+  color: #6D576A;
+  border: none; }
+
+.close-table-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 85px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 15px; }
+
+.send-order-button {
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 25px;
+  color: #33202A;
+  position: relative;
+  margin-top: 12px; }
+
+.server-dashboard-wrapper {
+  height: 75%; }
+
+.server-dashboard {
+  height: 100%;
+  width: 100%; }
 
 a {
   text-decoration: none; }
