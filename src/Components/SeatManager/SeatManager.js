@@ -89,9 +89,10 @@ class SeatManager extends Component {
 
             <button className='send-order-button'
               onClick={() => this.sendOrder()}>Send Order</button>
-            <button className='close-table-button'
-              onClick={() => this.closeTable()}>Close Table</button>
-
+            <Link to={`/${this.props.currentUser.loginCode}/tables`}>
+              <button className='close-table-button'
+                onClick={() => this.closeTable()}>Close Table</button>
+            </Link>
           </div>
         }
         {!this.props.currentUser.loginCode &&
