@@ -15,7 +15,14 @@
 }
 
 .seat-info {
-  margin: 5px;
+  background-color: #33202A;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .table-info-seat-manager {
