@@ -5,7 +5,8 @@ const currentTableOrder = (state = [], action) => {
   case 'REMOVE_FROM_CURRENT_TABLE_ORDER':
     return state.map( seat => {
       if (seat.seatNumber === action.removeItemInfo.seatNumber) {
-        const currentSeatOrder = seat.currentSeatOrder.filter(item => item !== action.removeItemInfo.menuItem);
+        const currentSeatOrder = seat.currentSeatOrder
+          .filter(item => item !== action.removeItemInfo.menuItem);
         return Object.assign(seat, {currentSeatOrder: currentSeatOrder});
       } else {
         return seat;

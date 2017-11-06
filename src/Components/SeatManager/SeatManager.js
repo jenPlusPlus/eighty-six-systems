@@ -35,16 +35,15 @@ class SeatManager extends Component {
   }
 
   sendOrder() {
-    // add seats with orders to currentTable in store
-    this.props.addToAllOrders(this.props.currentUser.name, this.props.currentTable.tableNumber, this.props.currentTableOrder);
-    this.props.addMenuItem(this.props.currentTable.tableNumber, this.props.currentTableOrder);
+    this.props.addToAllOrders(this.props.currentUser.name,
+      this.props.currentTable.tableNumber, this.props.currentTableOrder);
+    this.props.addMenuItem(this.props.currentTable.tableNumber,
+      this.props.currentTableOrder);
     this.props.clearCurrentTableOrder();
   }
 
   closeTable() {
     const indexToRemove = this.props.tables.findIndex( table => {
-      console.log('table: ', table.tableNumber);
-      console.log('current table: ', this.props.currentTable.tableNumber);
       return table.tableNumber === this.props.currentTable.tableNumber;
     });
     this.props.removeTable(indexToRemove);
@@ -82,11 +81,12 @@ class SeatManager extends Component {
             <Link to={`/${this.props.currentUser.loginCode}/tables`}>
               <h3 className='all-tables-button'>All Tables</h3>
             </Link>
-            <h3 className='table-info-seat-manager'>Table {this.props.currentTable.tableNumber}</h3>
+            <h3 className='table-info-seat-manager'>
+              Table {this.props.currentTable.tableNumber}</h3>
             <div className='seat-container'>
               {this.mapSeats()}
             </div>
-            
+
             <button className='send-order-button'
               onClick={() => this.sendOrder()}>Send Order</button>
             <Link to={`/${this.props.currentUser.loginCode}/tables`}>

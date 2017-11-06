@@ -55,10 +55,8 @@ describe('Seat snapshot', () => {
       seat={{
         tableNumber: '22',
         seatNumber: '1',
-        order: [
-        {item: 'Lamb', price: 29},
-        {item: 'Burger', price: 19},
-        {item:'Mahi Mahi', price: 27}
+        order: [{item: 'Lamb', price: 29},
+        {item: 'Burger', price: 19}, {item:'Mahi Mahi', price: 27}
         ]
       }}/>
     );

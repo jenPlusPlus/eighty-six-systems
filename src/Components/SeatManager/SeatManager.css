@@ -3,7 +3,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 5px 0 0 0;
   height: 75%;
   overflow-y: scroll; }
 
@@ -12,7 +11,7 @@
   background-color: #33202A;
   border-radius: 5px;
   width: 250px;
-  height: 365px;
+  height: 360px;
   margin: 5px; }
 
 .seat-info {
@@ -70,16 +69,16 @@
   border-radius: 15px; }
 
 .send-order-button {
-  width: 120px;
-  height: 40px;
+  width: 115px;
+  height: 35px;
   font-size: 18px;
   border-radius: 25px;
   color: #33202A;
   position: relative;
-  margin-top: 12px; }
+  margin-top: 5px; }
 
 .server-dashboard-wrapper {
-  height: 75%; }
+  height: 79%; }
 
 .server-dashboard {
   height: 100%;

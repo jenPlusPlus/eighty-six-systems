@@ -177,7 +177,7 @@ describe('actions testing', () => {
   it(`should add to the current table order`, () => {
 
     const expectation = actions.addToCurrentTableOrder(
-      toAddToCurrentTableOrder, 
+      toAddToCurrentTableOrder,
       seatNumber);
 
     expect(expectation.type).toEqual('ADD_TO_CURRENT_TABLE_ORDER');
@@ -189,7 +189,8 @@ describe('actions testing', () => {
 
   it(`should remove from the current table order`, () => {
 
-    const expectation = actions.removeFromCurrentTableOrder(menuItem, seatNumber);
+    const expectation = actions
+      .removeFromCurrentTableOrder(menuItem, seatNumber);
 
     expect(expectation.type).toEqual('REMOVE_FROM_CURRENT_TABLE_ORDER');
     expect(expectation.removeItemInfo.menuItem).toEqual(menuItem);

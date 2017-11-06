@@ -24,14 +24,15 @@ class Seat extends Component {
       return order.seatNumber === this.props.seat.seatNumber;
     });
     if (currentSeat.length > 0){
-      const mappedOrders = currentSeat[0].currentSeatOrder.map( (item, index) => {
-        return <li key={index + Date.now()}
-               className='menu-item'>{item.item}
-          <button className='edit-order-item-button'>Edit</button>
-          <button className='remove-order-item-button'
-            onClick={() => this.removeFromOrder(item)}>X</button>
-        </li>;
-      });
+      const mappedOrders = currentSeat[0].currentSeatOrder
+        .map( (item, index) => {
+          return <li key={index + Date.now()}
+                 className='menu-item'>{item.item}
+            <button className='edit-order-item-button'>Edit</button>
+            <button className='remove-order-item-button'
+              onClick={() => this.removeFromOrder(item)}>X</button>
+          </li>;
+        });
       return mappedOrders;
     }
   }
@@ -40,7 +41,9 @@ class Seat extends Component {
     return (
       <div className='seat'
         onClick={() => this.handleClick()}>
-        <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
+        <Link to={`/${this.props.currentUser.loginCode}
+        /tables/${this.props.currentTable.tableNumber}
+        /${this.props.seat.seatNumber}/menu`}>
           <h3>{this.props.seat.seatNumber}</h3>
         </Link>
         <ul className='seat-order-container'>{this.getCurrentOrder()}</ul>

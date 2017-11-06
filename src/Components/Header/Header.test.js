@@ -25,8 +25,7 @@ describe('Header snapshot', () => {
     const wrapper = shallow(<Header
       currentUser={initialState.currentUser}
       currentTable={initialState.currentTable}
-      currentSeat={initialState.currentSeat}
-                            />);
+      currentSeat={initialState.currentSeat}/>);
 
     expect(wrapper).toMatchSnapshot();
   });
