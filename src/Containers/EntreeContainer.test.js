@@ -84,6 +84,7 @@ describe('EntreeContainer tests', () => {
         currentSeat={initialState.currentSeat}
         tables={initialState.tables}
         currentSeatOrder={initialState.currentSeatOrder}
+        key={1482363367071}
       />
     );
 
