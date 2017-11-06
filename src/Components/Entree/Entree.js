@@ -28,10 +28,11 @@ class Entree extends Component {
 
   displaycurrentSeatOrder() {
     const mappedOrder = this.props.currentSeatOrder.map( (menuItem, index) => {
-      return <li key={index + Date.now()}>{menuItem.item}
+      return <li className='item-added-to-seat'
+        key={index + Date.now()}>{menuItem.item}
         <button className='edit-order-item-button'>Edit</button>
-        <button className='remove-order-item-button'
-          onClick={() => this.removeFromOrder(menuItem)}>Remove</button>
+        <button className='remove-entree-order-item-button'
+          onClick={() => this.removeFromOrder(menuItem)}>X</button>
       </li>;
     });
     return mappedOrder;
