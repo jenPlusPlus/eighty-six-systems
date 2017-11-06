@@ -86,14 +86,14 @@ class SeatManager extends Component {
             <div className='seat-container'>
               {this.mapSeats()}
             </div>
-            <div className='buttons-container'>
-              <button className='send-order-button'
-                onClick={() => this.sendOrder()}>Send Order</button>
-              <Link to={`/${this.props.currentUser.loginCode}/tables`}>
-                <button className='close-table-button'
-                  onClick={() => this.closeTable()}>Close Table</button>
-              </Link>
-            </div>
+            
+            <button className='send-order-button'
+              onClick={() => this.sendOrder()}>Send Order</button>
+            <Link to={`/${this.props.currentUser.loginCode}/tables`}>
+              <button className='close-table-button'
+                onClick={() => this.closeTable()}>Close Table</button>
+            </Link>
+
           </div>
         }
         {!this.props.currentUser.loginCode &&

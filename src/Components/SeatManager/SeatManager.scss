@@ -5,6 +5,7 @@
   justify-content: space-around;
   margin: 5px 0 0 0;
   height: 75%;
+  overflow-y: scroll;
 }
 
 .seat {
@@ -63,19 +64,26 @@
 .send-order-button, .close-table-button {
   background-color: #EFEFF0;
   color: #6D576A;
-  border-radius: 15px;
-  width: 85px;
-  height: 30px;
   border: none;
-  font-size: 12px;
-}
-
-.send-order-button {
-  margin-right: 5px;
 }
 
 .close-table-button {
-  margin-left: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 85px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+.send-order-button {
+  margin: auto;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 25px;
+  color: #33202A;
 }
 
 .server-dashboard-wrapper {
@@ -85,13 +93,6 @@
 .server-dashboard {
   height: 100%;
   width: 100%;
-}
-
-.buttons-container {
-  margin: auto;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
 }
 
 a {
