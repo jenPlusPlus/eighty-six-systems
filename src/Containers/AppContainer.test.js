@@ -10,15 +10,15 @@ describe('AppContainer tests', () => {
 
   it('container should have default state', () => {
 
-    const mockStore = configureStore()
-    const initialState = { currentUser: {} }
-    const store = mockStore(initialState)
+    const mockStore = configureStore();
+    const initialState = { currentUser: {} };
+    const store = mockStore(initialState);
     const wrapper = shallow(
-        <App
-          store={store}
-          currentUser={initialState}
-        />
-        )
+      <AppContainer
+        store={store}
+        currentUser={initialState}
+      />
+    );
 
 
     expect(wrapper.instance().props.currentUser).toEqual({ currentUser: {} });
@@ -26,15 +26,15 @@ describe('AppContainer tests', () => {
 
   it('container should add a user to state', () => {
 
-    const mockStore = configureStore()
-    const initialState = { currentUser: {name: 'Jen', loginCode: '0000'} }
-    const store = mockStore(initialState)
+    const mockStore = configureStore();
+    const initialState = { currentUser: {name: 'Jen', loginCode: '0000'} };
+    const store = mockStore(initialState);
     const wrapper = shallow(
-        <App
-          store={store}
-          currentUser={initialState}
-        />
-        )
+      <AppContainer
+        store={store}
+        currentUser={initialState}
+      />
+    );
 
 
     expect(wrapper.instance().props.currentUser).toEqual({ currentUser: {name: 'Jen', loginCode: '0000'} });
