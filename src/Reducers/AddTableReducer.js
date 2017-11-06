@@ -33,6 +33,10 @@ const tables = (state = [], action) => {
         }
       })
     );
+  case 'REMOVE_TABLE':
+  { state.splice(action.indexToRemove, 1);
+    return state;
+  }
   default:
     return state;
   }
