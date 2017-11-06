@@ -1,7 +1,7 @@
 .hide-button {
   display: none; }
 
-.login-button, .logout-button {
+.login-button, .logout-button, .go-to-kitchen-view {
   background-color: #EFEFF0;
   color: #6D576A;
   border-radius: 15px;
