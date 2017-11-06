@@ -1,0 +1,441 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot should always match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="app-wrapper"
+>
+        <Route
+                path="/"
+                render={[Function]}
+        />
+        <Route
+                exact={true}
+                path="/adduser"
+                render={[Function]}
+        />
+        <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+        />
+        <Route
+                exact={true}
+                path="/:loginCode/tables"
+                render={[Function]}
+        />
+        <Route
+                exact={true}
+                path="/:loginCode/tables/:table"
+                render={[Function]}
+        />
+        <Route
+                component={[Function]}
+                exact={true}
+                path="/:loginCode/tables/:table/:seat/menu"
+        />
+        <Route
+                component={[Function]}
+                exact={true}
+                path="/:loginCode/tables/:table/:seat/menu/entrees"
+        />
+        <Route
+                component={[Function]}
+                exact={true}
+                path="/kitchenview"
+        />
+</div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Route
+            path="/"
+            render={[Function]}
+/>,
+          <Route
+            exact={true}
+            path="/adduser"
+            render={[Function]}
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/login"
+/>,
+          <Route
+            exact={true}
+            path="/:loginCode/tables"
+            render={[Function]}
+/>,
+          <Route
+            exact={true}
+            path="/:loginCode/tables/:table"
+            render={[Function]}
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/:loginCode/tables/:table/:seat/menu"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/:loginCode/tables/:table/:seat/menu/entrees"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/kitchenview"
+/>,
+        ],
+        "className": "app-wrapper",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "path": "/",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/adduser",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/:loginCode/tables",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/:loginCode/tables/:table",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/:loginCode/tables/:table/:seat/menu",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/:loginCode/tables/:table/:seat/menu/entrees",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/kitchenview",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="app-wrapper"
+>
+          <Route
+                    path="/"
+                    render={[Function]}
+          />
+          <Route
+                    exact={true}
+                    path="/adduser"
+                    render={[Function]}
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/login"
+          />
+          <Route
+                    exact={true}
+                    path="/:loginCode/tables"
+                    render={[Function]}
+          />
+          <Route
+                    exact={true}
+                    path="/:loginCode/tables/:table"
+                    render={[Function]}
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/:loginCode/tables/:table/:seat/menu"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/:loginCode/tables/:table/:seat/menu/entrees"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/kitchenview"
+          />
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Route
+              path="/"
+              render={[Function]}
+/>,
+            <Route
+              exact={true}
+              path="/adduser"
+              render={[Function]}
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/login"
+/>,
+            <Route
+              exact={true}
+              path="/:loginCode/tables"
+              render={[Function]}
+/>,
+            <Route
+              exact={true}
+              path="/:loginCode/tables/:table"
+              render={[Function]}
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/:loginCode/tables/:table/:seat/menu"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/:loginCode/tables/:table/:seat/menu/entrees"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/kitchenview"
+/>,
+          ],
+          "className": "app-wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "/",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/adduser",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/login",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/:loginCode/tables",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/:loginCode/tables/:table",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/:loginCode/tables/:table/:seat/menu",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/:loginCode/tables/:table/:seat/menu/entrees",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/kitchenview",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

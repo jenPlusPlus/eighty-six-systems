@@ -49,8 +49,8 @@ class Entree extends Component {
     return (
       <div className='order-wrapper'>
         <div className='entrees-wrapper'>
+          Entrees
           <div className='entrees-list'>
-            Entrees
             {mappedEntrees}
           </div>
         </div>
