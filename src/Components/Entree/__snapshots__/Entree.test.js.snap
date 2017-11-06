@@ -1,0 +1,1373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entree snapshot should always match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Entree
+    currentSeat={
+        Object {
+            "order": Array [
+              Object {
+                "item": "Lamb",
+                "price": 29,
+              },
+              Object {
+                "item": "Burger",
+                "price": 19,
+              },
+              Object {
+                "item": "Mahi Mahi",
+                "price": 27,
+              },
+            ],
+            "seatNumber": "1",
+            "tableNumber": "22",
+          }
+    }
+    currentSeatOrder={
+        Array [
+            Object {
+              "item": "Lamb",
+              "price": 29,
+            },
+            Object {
+              "item": "Burger",
+              "price": 19,
+            },
+            Object {
+              "item": "Mahi Mahi",
+              "price": 27,
+            },
+          ]
+    }
+    currentTable={
+        Object {
+            "tableNumber": "22",
+          }
+    }
+    currentUser={
+        Object {
+            "loginCode": "0000",
+            "name": "Jen",
+          }
+    }
+    tables={
+        Array [
+            Object {
+              "seats": Array [
+                Object {
+                  "order": Array [
+                    Object {
+                      "item": "Lamb",
+                      "price": 29,
+                    },
+                    Object {
+                      "item": "Burger",
+                      "price": 19,
+                    },
+                    Object {
+                      "item": "Mahi Mahi",
+                      "price": 27,
+                    },
+                  ],
+                  "seatNumber": "1",
+                },
+              ],
+              "tableNumber": "22",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="entrees-wrapper"
+>
+          Entrees
+          <div
+                    className="entrees-list"
+          >
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Yellowfin Tuna
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Mahi Mahi
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Scallops
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Chicken Breast
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Filet Mignon
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Burger
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Pork Chop
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Duck Breast
+                    </div>
+                    <div
+                              className="entree-item"
+                              onClick={[Function]}
+                    >
+                              Lamb
+                    </div>
+          </div>
+</div>,
+        <ul
+          className="current-order"
+>
+          Current Order:
+          <li>
+                    Lamb
+                    <button
+                              className="edit-order-item-button"
+                    >
+                              Edit
+                    </button>
+                    <button
+                              className="remove-order-item-button"
+                              onClick={[Function]}
+                    >
+                              Remove
+                    </button>
+          </li>
+          <li>
+                    Burger
+                    <button
+                              className="edit-order-item-button"
+                    >
+                              Edit
+                    </button>
+                    <button
+                              className="remove-order-item-button"
+                              onClick={[Function]}
+                    >
+                              Remove
+                    </button>
+          </li>
+          <li>
+                    Mahi Mahi
+                    <button
+                              className="edit-order-item-button"
+                    >
+                              Edit
+                    </button>
+                    <button
+                              className="remove-order-item-button"
+                              onClick={[Function]}
+                    >
+                              Remove
+                    </button>
+          </li>
+</ul>,
+        <Link
+          replace={false}
+          to="/0000/tables/22"
+>
+          <button
+                    className="add-order-to-seat-button"
+                    onClick={[Function]}
+          >
+                    Add to Seat
+          </button>
+</Link>,
+      ],
+      "className": "order-wrapper",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Entrees",
+            <div
+              className="entrees-list"
+>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Yellowfin Tuna
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Mahi Mahi
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Scallops
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Chicken Breast
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Filet Mignon
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Burger
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Pork Chop
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Duck Breast
+              </div>
+              <div
+                            className="entree-item"
+                            onClick={[Function]}
+              >
+                            Lamb
+              </div>
+</div>,
+          ],
+          "className": "entrees-wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Entrees",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Yellowfin Tuna
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Mahi Mahi
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Scallops
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Chicken Breast
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Filet Mignon
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Burger
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Pork Chop
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Duck Breast
+</div>,
+                <div
+                  className="entree-item"
+                  onClick={[Function]}
+>
+                  Lamb
+</div>,
+              ],
+              "className": "entrees-list",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "1482363367071",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Yellowfin Tuna",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Yellowfin Tuna",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367072",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Mahi Mahi",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Mahi Mahi",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367073",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Scallops",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Scallops",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367074",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Chicken Breast",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Chicken Breast",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367075",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Filet Mignon",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Filet Mignon",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367076",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Burger",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Burger",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367077",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Pork Chop",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Pork Chop",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367078",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Duck Breast",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Duck Breast",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1482363367079",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lamb",
+                  "className": "entree-item",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Lamb",
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Current Order:",
+            Array [
+              <li>
+                Lamb
+                <button
+                                className="edit-order-item-button"
+                >
+                                Edit
+                </button>
+                <button
+                                className="remove-order-item-button"
+                                onClick={[Function]}
+                >
+                                Remove
+                </button>
+</li>,
+              <li>
+                Burger
+                <button
+                                className="edit-order-item-button"
+                >
+                                Edit
+                </button>
+                <button
+                                className="remove-order-item-button"
+                                onClick={[Function]}
+                >
+                                Remove
+                </button>
+</li>,
+              <li>
+                Mahi Mahi
+                <button
+                                className="edit-order-item-button"
+                >
+                                Edit
+                </button>
+                <button
+                                className="remove-order-item-button"
+                                onClick={[Function]}
+                >
+                                Remove
+                </button>
+</li>,
+            ],
+          ],
+          "className": "current-order",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Current Order:",
+          Object {
+            "instance": null,
+            "key": "1482363367071",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Lamb",
+                <button
+                  className="edit-order-item-button"
+>
+                  Edit
+</button>,
+                <button
+                  className="remove-order-item-button"
+                  onClick={[Function]}
+>
+                  Remove
+</button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Lamb",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Edit",
+                  "className": "edit-order-item-button",
+                },
+                "ref": null,
+                "rendered": "Edit",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Remove",
+                  "className": "remove-order-item-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Remove",
+                "type": "button",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1482363367072",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Burger",
+                <button
+                  className="edit-order-item-button"
+>
+                  Edit
+</button>,
+                <button
+                  className="remove-order-item-button"
+                  onClick={[Function]}
+>
+                  Remove
+</button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Burger",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Edit",
+                  "className": "edit-order-item-button",
+                },
+                "ref": null,
+                "rendered": "Edit",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Remove",
+                  "className": "remove-order-item-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Remove",
+                "type": "button",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1482363367073",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Mahi Mahi",
+                <button
+                  className="edit-order-item-button"
+>
+                  Edit
+</button>,
+                <button
+                  className="remove-order-item-button"
+                  onClick={[Function]}
+>
+                  Remove
+</button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Mahi Mahi",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Edit",
+                  "className": "edit-order-item-button",
+                },
+                "ref": null,
+                "rendered": "Edit",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Remove",
+                  "className": "remove-order-item-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Remove",
+                "type": "button",
+              },
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <button
+            className="add-order-to-seat-button"
+            onClick={[Function]}
+>
+            Add to Seat
+</button>,
+          "replace": false,
+          "to": "/0000/tables/22",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add to Seat",
+            "className": "add-order-to-seat-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Add to Seat",
+          "type": "button",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="entrees-wrapper"
+>
+            Entrees
+            <div
+                        className="entrees-list"
+            >
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Yellowfin Tuna
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Mahi Mahi
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Scallops
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Chicken Breast
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Filet Mignon
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Burger
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Pork Chop
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Duck Breast
+                        </div>
+                        <div
+                                    className="entree-item"
+                                    onClick={[Function]}
+                        >
+                                    Lamb
+                        </div>
+            </div>
+</div>,
+          <ul
+            className="current-order"
+>
+            Current Order:
+            <li>
+                        Lamb
+                        <button
+                                    className="edit-order-item-button"
+                        >
+                                    Edit
+                        </button>
+                        <button
+                                    className="remove-order-item-button"
+                                    onClick={[Function]}
+                        >
+                                    Remove
+                        </button>
+            </li>
+            <li>
+                        Burger
+                        <button
+                                    className="edit-order-item-button"
+                        >
+                                    Edit
+                        </button>
+                        <button
+                                    className="remove-order-item-button"
+                                    onClick={[Function]}
+                        >
+                                    Remove
+                        </button>
+            </li>
+            <li>
+                        Mahi Mahi
+                        <button
+                                    className="edit-order-item-button"
+                        >
+                                    Edit
+                        </button>
+                        <button
+                                    className="remove-order-item-button"
+                                    onClick={[Function]}
+                        >
+                                    Remove
+                        </button>
+            </li>
+</ul>,
+          <Link
+            replace={false}
+            to="/0000/tables/22"
+>
+            <button
+                        className="add-order-to-seat-button"
+                        onClick={[Function]}
+            >
+                        Add to Seat
+            </button>
+</Link>,
+        ],
+        "className": "order-wrapper",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Entrees",
+              <div
+                className="entrees-list"
+>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Yellowfin Tuna
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Mahi Mahi
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Scallops
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Chicken Breast
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Filet Mignon
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Burger
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Pork Chop
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Duck Breast
+                </div>
+                <div
+                                className="entree-item"
+                                onClick={[Function]}
+                >
+                                Lamb
+                </div>
+</div>,
+            ],
+            "className": "entrees-wrapper",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Entrees",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Yellowfin Tuna
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Mahi Mahi
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Scallops
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Chicken Breast
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Filet Mignon
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Burger
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Pork Chop
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Duck Breast
+</div>,
+                  <div
+                    className="entree-item"
+                    onClick={[Function]}
+>
+                    Lamb
+</div>,
+                ],
+                "className": "entrees-list",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "1482363367071",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Yellowfin Tuna",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Yellowfin Tuna",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367072",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Mahi Mahi",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Mahi Mahi",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367073",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Scallops",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Scallops",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367074",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Chicken Breast",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Chicken Breast",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367075",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Filet Mignon",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Filet Mignon",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367076",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Burger",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Burger",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367077",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Pork Chop",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Pork Chop",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367078",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Duck Breast",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Duck Breast",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1482363367079",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lamb",
+                    "className": "entree-item",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Lamb",
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Current Order:",
+              Array [
+                <li>
+                  Lamb
+                  <button
+                                    className="edit-order-item-button"
+                  >
+                                    Edit
+                  </button>
+                  <button
+                                    className="remove-order-item-button"
+                                    onClick={[Function]}
+                  >
+                                    Remove
+                  </button>
+</li>,
+                <li>
+                  Burger
+                  <button
+                                    className="edit-order-item-button"
+                  >
+                                    Edit
+                  </button>
+                  <button
+                                    className="remove-order-item-button"
+                                    onClick={[Function]}
+                  >
+                                    Remove
+                  </button>
+</li>,
+                <li>
+                  Mahi Mahi
+                  <button
+                                    className="edit-order-item-button"
+                  >
+                                    Edit
+                  </button>
+                  <button
+                                    className="remove-order-item-button"
+                                    onClick={[Function]}
+                  >
+                                    Remove
+                  </button>
+</li>,
+              ],
+            ],
+            "className": "current-order",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Current Order:",
+            Object {
+              "instance": null,
+              "key": "1482363367071",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Lamb",
+                  <button
+                    className="edit-order-item-button"
+>
+                    Edit
+</button>,
+                  <button
+                    className="remove-order-item-button"
+                    onClick={[Function]}
+>
+                    Remove
+</button>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Lamb",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Edit",
+                    "className": "edit-order-item-button",
+                  },
+                  "ref": null,
+                  "rendered": "Edit",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Remove",
+                    "className": "remove-order-item-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Remove",
+                  "type": "button",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1482363367072",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Burger",
+                  <button
+                    className="edit-order-item-button"
+>
+                    Edit
+</button>,
+                  <button
+                    className="remove-order-item-button"
+                    onClick={[Function]}
+>
+                    Remove
+</button>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Burger",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Edit",
+                    "className": "edit-order-item-button",
+                  },
+                  "ref": null,
+                  "rendered": "Edit",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Remove",
+                    "className": "remove-order-item-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Remove",
+                  "type": "button",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1482363367073",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Mahi Mahi",
+                  <button
+                    className="edit-order-item-button"
+>
+                    Edit
+</button>,
+                  <button
+                    className="remove-order-item-button"
+                    onClick={[Function]}
+>
+                    Remove
+</button>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Mahi Mahi",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Edit",
+                    "className": "edit-order-item-button",
+                  },
+                  "ref": null,
+                  "rendered": "Edit",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Remove",
+                    "className": "remove-order-item-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Remove",
+                  "type": "button",
+                },
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <button
+              className="add-order-to-seat-button"
+              onClick={[Function]}
+>
+              Add to Seat
+</button>,
+            "replace": false,
+            "to": "/0000/tables/22",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add to Seat",
+              "className": "add-order-to-seat-button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Add to Seat",
+            "type": "button",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

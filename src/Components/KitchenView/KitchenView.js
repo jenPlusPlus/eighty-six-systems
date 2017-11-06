@@ -22,6 +22,8 @@ class KitchenView extends Component {
   }
 
   removeOrderFromQueue(order) {
+    console.log('all orders: ', this.props.allOrders);
+    console.log('order: ', order);
     this.props.removeFromAllOrders(order);
   }
 

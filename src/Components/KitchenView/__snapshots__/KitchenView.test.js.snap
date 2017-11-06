@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KitchenView snapshot should always match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <KitchenView
+    allOrders={Array []}
+    currentUser={
+        Object {
+            "loginCode": "0000",
+            "name": "Jen",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Link
+          replace={false}
+          to="/0000/tables"
+>
+          <button>
+                    Table Manager
+          </button>
+</Link>,
+        <h2>
+          All Orders
+</h2>,
+        <div
+          className="all-orders"
+>
+          
+</div>,
+      ],
+      "className": "orders-wrapper",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <button>
+            Table Manager
+</button>,
+          "replace": false,
+          "to": "/0000/tables",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Table Manager",
+          },
+          "ref": null,
+          "rendered": "Table Manager",
+          "type": "button",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "All Orders",
+        },
+        "ref": null,
+        "rendered": "All Orders",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "all-orders",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            replace={false}
+            to="/0000/tables"
+>
+            <button>
+                        Table Manager
+            </button>
+</Link>,
+          <h2>
+            All Orders
+</h2>,
+          <div
+            className="all-orders"
+>
+            
+</div>,
+        ],
+        "className": "orders-wrapper",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <button>
+              Table Manager
+</button>,
+            "replace": false,
+            "to": "/0000/tables",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Table Manager",
+            },
+            "ref": null,
+            "rendered": "Table Manager",
+            "type": "button",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "All Orders",
+          },
+          "ref": null,
+          "rendered": "All Orders",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "all-orders",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
