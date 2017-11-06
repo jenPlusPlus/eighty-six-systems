@@ -3,7 +3,7 @@
 ## Stack
 This project uses React, Redux, Router, and Firebase
 
-## Running this app.
+## Running the App
 
 After cloning down this repo, install all dependencies using npm install. Start the app by running npm start. Visit the app at http://localhost:3000.
 
