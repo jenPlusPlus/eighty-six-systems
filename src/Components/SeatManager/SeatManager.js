@@ -71,6 +71,9 @@ class SeatManager extends Component {
       <div className="server-dashboard-wrapper">
         {this.props.currentUser.loginCode &&
           <div className='server-dashboard'>
+            <Link to={`/${this.props.currentUser.loginCode}/tables`}>
+              <h3 className='all-tables-button'>All Tables</h3>
+            </Link>
             <form>
               <input type='text'
                 placeholder='Enter Seat Number'
@@ -79,9 +82,6 @@ class SeatManager extends Component {
               <button className='add-seat'
                 onClick={(event) => this.handleSubmit(event)}>Add Seat</button>
             </form>
-            <Link to={`/${this.props.currentUser.loginCode}/tables`}>
-              <h3 className='all-tables-button'>All Tables</h3>
-            </Link>
             <h3 className='table-info-seat-manager'>Table {this.props.currentTable.tableNumber}</h3>
             <div className='seat-container'>
               {this.mapSeats()}
