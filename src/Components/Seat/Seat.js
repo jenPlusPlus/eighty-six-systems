@@ -37,13 +37,13 @@ class Seat extends Component {
 
   render() {
     return (
-      <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
-        <div className='seat'
-          onClick={() => this.handleClick()}>
+      <div className='seat'
+        onClick={() => this.handleClick()}>
+        <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
           <h3>{this.props.seat.seatNumber}</h3>
-          <ul>{this.getCurrentOrder()}</ul>
-        </div>
-      </Link>
+        </Link>
+        <ul>{this.getCurrentOrder()}</ul>
+      </div>
     );
   }
 }
