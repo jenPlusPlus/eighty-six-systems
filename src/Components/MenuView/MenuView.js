@@ -22,8 +22,28 @@ class MenuView extends Component {
             </div>
             <div className='menu'>
               <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.currentSeat.seatNumber}/menu/entrees`}>
+                <div className='entrees appetizers'>
+                  <h3 className='seat-info'>Appetizers</h3>
+                </div>
+              </Link>
+              <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.currentSeat.seatNumber}/menu/entrees`}>
+                <div className='entrees soup-salad'>
+                  <h3 className='seat-info'>Soups & Salads</h3>
+                </div>
+              </Link>
+              <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.currentSeat.seatNumber}/menu/entrees`}>
                 <div className='entrees'>
                   <h3 className='seat-info'>Entrees</h3>
+                </div>
+              </Link>
+              <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.currentSeat.seatNumber}/menu/entrees`}>
+                <div className='entrees desserts'>
+                  <h3 className='seat-info'>Desserts</h3>
+                </div>
+              </Link>
+              <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.currentSeat.seatNumber}/menu/entrees`}>
+                <div className='entrees beverages'>
+                  <h3 className='seat-info'>Beverages</h3>
                 </div>
               </Link>
             </div>
