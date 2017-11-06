@@ -41,6 +41,15 @@ class SeatManager extends Component {
     this.props.clearCurrentTableOrder();
   }
 
+  closeTable() {
+    const indexToRemove = this.props.tables.findIndex( table => {
+      console.log('table: ', table.tableNumber);
+      console.log('current table: ', this.props.currentTable.tableNumber);
+      return table.tableNumber === this.props.currentTable.tableNumber;
+    });
+    this.props.removeTable(indexToRemove);
+  }
+
   mapSeats() {
     const currTable = this.props.tables.find((table) => {
       return table.tableNumber === this.props.currentTable.tableNumber;
@@ -80,6 +89,8 @@ class SeatManager extends Component {
 
             <button className='send-order-button'
               onClick={() => this.sendOrder()}>Send Order</button>
+            <button className='close-table-button'
+              onClick={() => this.closeTable()}>Close Table</button>
 
           </div>
         }
@@ -101,7 +112,8 @@ SeatManager.propTypes = {
   currentTableOrder: PropTypes.array,
   addToAllOrders: PropTypes.func,
   clearCurrentTableOrder: PropTypes.func,
-  addMenuItem: PropTypes.func
+  addMenuItem: PropTypes.func,
+  removeTable: PropTypes.func
 };
 
 export default SeatManager;

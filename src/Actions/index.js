@@ -19,6 +19,13 @@ export const addTable = (table) => {
   };
 };
 
+export const removeTable = (indexToRemove) => {
+  return {
+    type: 'REMOVE_TABLE',
+    indexToRemove
+  };
+};
+
 export const addSeat = (tableNumber, seat) => {
   return {
     type: 'ADD_SEAT',
