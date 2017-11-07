@@ -41,9 +41,7 @@ class Seat extends Component {
     return (
       <div className='seat'
         onClick={() => this.handleClick()}>
-        <Link to={`/${this.props.currentUser.loginCode}
-        /tables/${this.props.currentTable.tableNumber}
-        /${this.props.seat.seatNumber}/menu`}>
+        <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
           <h3>{this.props.seat.seatNumber}</h3>
         </Link>
         <ul className='seat-order-container'>{this.getCurrentOrder()}</ul>
