@@ -60,8 +60,7 @@ class Entree extends Component {
         <ul className='current-order'>Current Order:
           {this.displaycurrentSeatOrder()}
         </ul>
-        <Link to={`/${this.props.currentUser.loginCode}
-        /tables/${this.props.currentTable.tableNumber}`}>
+        <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
           <button className='add-order-to-seat-button'
             onClick={() => this.addOrderToSeat()}>Add to Seat</button>
         </Link>
