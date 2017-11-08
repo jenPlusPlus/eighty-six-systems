@@ -162,7 +162,6 @@ describe(`reducers tests`, () => {
         }
       };
 
-      // this test fails
       expect(allOrders([{
         currentTableOrder: [
           {
@@ -206,7 +205,6 @@ describe(`reducers tests`, () => {
         }
       };
 
-      // this test fails
       expect(currentSeatOrder([{
         item: 'Lamb',
         price: 29
@@ -303,17 +301,19 @@ describe(`reducers tests`, () => {
         {
           type: 'REMOVE_FROM_CURRENT_TABLE_ORDER',
           removeItemInfo: {
-            menuItem: {item: 'Lamb', price: 29},
+            menuItem: {item: 'Lamb', price: 29, id: 5},
             seatNumber: '2'
           }
         };
 
-      // this test fails
       expect(currentTableOrder([{
         seatNumber: '2',
         currentSeatOrder:[
-          {item: 'Lamb', price: 29}]
-      }], removeFromCurrentTableOrderAction)).toEqual([]);
+          {item: 'Lamb', price: 29, id: 5}]
+      }], removeFromCurrentTableOrderAction)).toEqual([{
+        seatNumber: '2',
+        currentSeatOrder:[]
+      }]);
 
       const clearCurrentTableOrderAction =
         {

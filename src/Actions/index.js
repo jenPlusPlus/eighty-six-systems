@@ -117,7 +117,8 @@ export const addToAllOrders = (serverName, tableNumber, currentTableOrder) => {
     orderInfo: {
       server: serverName,
       tableNumber: tableNumber,
-      currentTableOrder: currentTableOrder
+      currentTableOrder: currentTableOrder,
+      id: Date.now()
     }
   };
 };

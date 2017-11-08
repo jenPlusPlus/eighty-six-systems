@@ -10,7 +10,8 @@ class Entree extends Component {
 
   addToOrder(entree, entreeObject) {
     const order = Object.assign({}, {item: entree},
-      {price: entreeObject.price});
+      {price: entreeObject.price},
+      {id: Date.now()});
     this.props.addToCurrentSeatOrder(order);
   }
 
