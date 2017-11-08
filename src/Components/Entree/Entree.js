@@ -53,13 +53,14 @@ class Entree extends Component {
     return (
       <div className='order-wrapper'>
         <div className='entrees-wrapper'>
-          Entrees
+          <h3>Entrees</h3>
           <div className='entrees-list'>
             {mappedEntrees}
           </div>
         </div>
+        <h3>Current Order: </h3>
         <div className='current-order-wrapper'>
-          <ul className='current-order'>Current Order:
+          <ul className='current-order'>
             {this.displaycurrentSeatOrder()}
           </ul>
         </div>
