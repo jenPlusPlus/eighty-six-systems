@@ -32,19 +32,23 @@ class KitchenView extends Component {
       return (
         <div key={index+Date.now()}
         className='kitchen-view-order'>
-          <h3>Server: {order.server}</h3>
-          <h3>Table: {order.tableNumber}</h3>
-          <button className='remove-from-kitchen-view'
+          <div className='order-table-info'>
+            <h3 className='server'>Server: {order.server}</h3>
+            <h3 className='table-number'>Table: {order.tableNumber}</h3>
+          </div>
+            <button className='remove-from-kitchen-view'
             onClick={() =>
               this.removeOrderFromQueue(order)}>Order Complete</button>
-          {this.mapSeats(order)}
+          <div className='seat-order-card'>
+            {this.mapSeats(order)}
+          </div>
         </div>
       );
     });
     return (
       <div className='orders-wrapper'>
         <Link to={`/${this.props.currentUser.loginCode}/tables`}>
-          <button>Table Manager</button>
+          <button className='table-manager-button'>Table Manager</button>
         </Link>
         <h2>All Orders</h2>
         <div className='all-orders'>

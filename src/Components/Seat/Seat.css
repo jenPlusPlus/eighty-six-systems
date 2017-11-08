@@ -11,8 +11,7 @@
 
 .menu-item {
   color: #33202A;
-  margin-bottom: 5px;
-  text-align: left; }
+  margin-bottom: 5px; }
 
 .edit-order-item-button {
   display: none; }
@@ -20,7 +19,6 @@
 .remove-order-item-button {
   background-color: #DADADB;
   color: #A63D40;
-  float: left;
   border-radius: 50%;
   border: 1px solid #C68385;
   width: 17px;
