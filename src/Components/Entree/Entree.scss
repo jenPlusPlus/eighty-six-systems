@@ -1,12 +1,30 @@
 .order-wrapper {
-  height: 35%;
+  height: 100%;
   text-align: center;
 }
 
 .entrees-list {
+  width: 60%;
   padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
 }
 
 .entree-item {
-  margin-bottom: 3px;
+  margin: 10px;
+  background-color: #33202A;
+  height: 50px;
+  width: 80px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.current-order-wrapper {
+  height: 43%;
 }

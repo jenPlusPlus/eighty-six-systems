@@ -58,9 +58,11 @@ class Entree extends Component {
             {mappedEntrees}
           </div>
         </div>
-        <ul className='current-order'>Current Order:
-          {this.displaycurrentSeatOrder()}
-        </ul>
+        <div className='current-order-wrapper'>
+          <ul className='current-order'>Current Order:
+            {this.displaycurrentSeatOrder()}
+          </ul>
+        </div>
         <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
           <button className='add-order-to-seat-button'
             onClick={() => this.addOrderToSeat()}>Add to Seat</button>
