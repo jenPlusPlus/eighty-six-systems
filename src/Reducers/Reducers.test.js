@@ -312,9 +312,7 @@ describe(`reducers tests`, () => {
       expect(currentTableOrder([{
         seatNumber: '2',
         currentSeatOrder:[
-          {item: 'Lamb', price: 29},
-          {item: 'Burger', price: 19},
-          {item:'Mahi Mahi', price: 27}]
+          {item: 'Lamb', price: 29}]
       }], removeFromCurrentTableOrderAction)).toEqual([]);
 
       const clearCurrentTableOrderAction =
