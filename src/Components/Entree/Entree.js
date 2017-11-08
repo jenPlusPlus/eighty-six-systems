@@ -19,7 +19,6 @@ class Entree extends Component {
   }
 
   addOrderToSeat() {
-    //add to currentSeat in store
     this.props.addOrderToCurrentSeat(this.props.currentSeatOrder);
     this.props.addToCurrentTableOrder(this.props.currentSeatOrder,
       this.props.currentSeat.seatNumber);

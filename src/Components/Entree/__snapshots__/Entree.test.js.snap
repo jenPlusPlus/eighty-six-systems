@@ -159,7 +159,9 @@ ShallowWrapper {
           className="current-order"
 >
           Current Order:
-          <li>
+          <li
+                    className="item-added-to-seat"
+          >
                     Lamb
                     <button
                               className="edit-order-item-button"
@@ -167,13 +169,15 @@ ShallowWrapper {
                               Edit
                     </button>
                     <button
-                              className="remove-order-item-button"
+                              className="remove-entree-order-item-button"
                               onClick={[Function]}
                     >
-                              Remove
+                              X
                     </button>
           </li>
-          <li>
+          <li
+                    className="item-added-to-seat"
+          >
                     Burger
                     <button
                               className="edit-order-item-button"
@@ -181,13 +185,15 @@ ShallowWrapper {
                               Edit
                     </button>
                     <button
-                              className="remove-order-item-button"
+                              className="remove-entree-order-item-button"
                               onClick={[Function]}
                     >
-                              Remove
+                              X
                     </button>
           </li>
-          <li>
+          <li
+                    className="item-added-to-seat"
+          >
                     Mahi Mahi
                     <button
                               className="edit-order-item-button"
@@ -195,10 +201,10 @@ ShallowWrapper {
                               Edit
                     </button>
                     <button
-                              className="remove-order-item-button"
+                              className="remove-entree-order-item-button"
                               onClick={[Function]}
                     >
-                              Remove
+                              X
                     </button>
           </li>
 </ul>,
@@ -485,7 +491,9 @@ ShallowWrapper {
           "children": Array [
             "Current Order:",
             Array [
-              <li>
+              <li
+                className="item-added-to-seat"
+>
                 Lamb
                 <button
                                 className="edit-order-item-button"
@@ -493,13 +501,15 @@ ShallowWrapper {
                                 Edit
                 </button>
                 <button
-                                className="remove-order-item-button"
+                                className="remove-entree-order-item-button"
                                 onClick={[Function]}
                 >
-                                Remove
+                                X
                 </button>
 </li>,
-              <li>
+              <li
+                className="item-added-to-seat"
+>
                 Burger
                 <button
                                 className="edit-order-item-button"
@@ -507,13 +517,15 @@ ShallowWrapper {
                                 Edit
                 </button>
                 <button
-                                className="remove-order-item-button"
+                                className="remove-entree-order-item-button"
                                 onClick={[Function]}
                 >
-                                Remove
+                                X
                 </button>
 </li>,
-              <li>
+              <li
+                className="item-added-to-seat"
+>
                 Mahi Mahi
                 <button
                                 className="edit-order-item-button"
@@ -521,10 +533,10 @@ ShallowWrapper {
                                 Edit
                 </button>
                 <button
-                                className="remove-order-item-button"
+                                className="remove-entree-order-item-button"
                                 onClick={[Function]}
                 >
-                                Remove
+                                X
                 </button>
 </li>,
             ],
@@ -547,12 +559,13 @@ ShallowWrapper {
                   Edit
 </button>,
                 <button
-                  className="remove-order-item-button"
+                  className="remove-entree-order-item-button"
                   onClick={[Function]}
 >
-                  Remove
+                  X
 </button>,
               ],
+              "className": "item-added-to-seat",
             },
             "ref": null,
             "rendered": Array [
@@ -574,12 +587,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Remove",
-                  "className": "remove-order-item-button",
+                  "children": "X",
+                  "className": "remove-entree-order-item-button",
                   "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "Remove",
+                "rendered": "X",
                 "type": "button",
               },
             ],
@@ -598,12 +611,13 @@ ShallowWrapper {
                   Edit
 </button>,
                 <button
-                  className="remove-order-item-button"
+                  className="remove-entree-order-item-button"
                   onClick={[Function]}
 >
-                  Remove
+                  X
 </button>,
               ],
+              "className": "item-added-to-seat",
             },
             "ref": null,
             "rendered": Array [
@@ -625,12 +639,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Remove",
-                  "className": "remove-order-item-button",
+                  "children": "X",
+                  "className": "remove-entree-order-item-button",
                   "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "Remove",
+                "rendered": "X",
                 "type": "button",
               },
             ],
@@ -649,12 +663,13 @@ ShallowWrapper {
                   Edit
 </button>,
                 <button
-                  className="remove-order-item-button"
+                  className="remove-entree-order-item-button"
                   onClick={[Function]}
 >
-                  Remove
+                  X
 </button>,
               ],
+              "className": "item-added-to-seat",
             },
             "ref": null,
             "rendered": Array [
@@ -676,12 +691,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Remove",
-                  "className": "remove-order-item-button",
+                  "children": "X",
+                  "className": "remove-entree-order-item-button",
                   "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "Remove",
+                "rendered": "X",
                 "type": "button",
               },
             ],
@@ -797,7 +812,9 @@ ShallowWrapper {
             className="current-order"
 >
             Current Order:
-            <li>
+            <li
+                        className="item-added-to-seat"
+            >
                         Lamb
                         <button
                                     className="edit-order-item-button"
@@ -805,13 +822,15 @@ ShallowWrapper {
                                     Edit
                         </button>
                         <button
-                                    className="remove-order-item-button"
+                                    className="remove-entree-order-item-button"
                                     onClick={[Function]}
                         >
-                                    Remove
+                                    X
                         </button>
             </li>
-            <li>
+            <li
+                        className="item-added-to-seat"
+            >
                         Burger
                         <button
                                     className="edit-order-item-button"
@@ -819,13 +838,15 @@ ShallowWrapper {
                                     Edit
                         </button>
                         <button
-                                    className="remove-order-item-button"
+                                    className="remove-entree-order-item-button"
                                     onClick={[Function]}
                         >
-                                    Remove
+                                    X
                         </button>
             </li>
-            <li>
+            <li
+                        className="item-added-to-seat"
+            >
                         Mahi Mahi
                         <button
                                     className="edit-order-item-button"
@@ -833,10 +854,10 @@ ShallowWrapper {
                                     Edit
                         </button>
                         <button
-                                    className="remove-order-item-button"
+                                    className="remove-entree-order-item-button"
                                     onClick={[Function]}
                         >
-                                    Remove
+                                    X
                         </button>
             </li>
 </ul>,
@@ -1123,7 +1144,9 @@ ShallowWrapper {
             "children": Array [
               "Current Order:",
               Array [
-                <li>
+                <li
+                  className="item-added-to-seat"
+>
                   Lamb
                   <button
                                     className="edit-order-item-button"
@@ -1131,13 +1154,15 @@ ShallowWrapper {
                                     Edit
                   </button>
                   <button
-                                    className="remove-order-item-button"
+                                    className="remove-entree-order-item-button"
                                     onClick={[Function]}
                   >
-                                    Remove
+                                    X
                   </button>
 </li>,
-                <li>
+                <li
+                  className="item-added-to-seat"
+>
                   Burger
                   <button
                                     className="edit-order-item-button"
@@ -1145,13 +1170,15 @@ ShallowWrapper {
                                     Edit
                   </button>
                   <button
-                                    className="remove-order-item-button"
+                                    className="remove-entree-order-item-button"
                                     onClick={[Function]}
                   >
-                                    Remove
+                                    X
                   </button>
 </li>,
-                <li>
+                <li
+                  className="item-added-to-seat"
+>
                   Mahi Mahi
                   <button
                                     className="edit-order-item-button"
@@ -1159,10 +1186,10 @@ ShallowWrapper {
                                     Edit
                   </button>
                   <button
-                                    className="remove-order-item-button"
+                                    className="remove-entree-order-item-button"
                                     onClick={[Function]}
                   >
-                                    Remove
+                                    X
                   </button>
 </li>,
               ],
@@ -1185,12 +1212,13 @@ ShallowWrapper {
                     Edit
 </button>,
                   <button
-                    className="remove-order-item-button"
+                    className="remove-entree-order-item-button"
                     onClick={[Function]}
 >
-                    Remove
+                    X
 </button>,
                 ],
+                "className": "item-added-to-seat",
               },
               "ref": null,
               "rendered": Array [
@@ -1212,12 +1240,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Remove",
-                    "className": "remove-order-item-button",
+                    "children": "X",
+                    "className": "remove-entree-order-item-button",
                     "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Remove",
+                  "rendered": "X",
                   "type": "button",
                 },
               ],
@@ -1236,12 +1264,13 @@ ShallowWrapper {
                     Edit
 </button>,
                   <button
-                    className="remove-order-item-button"
+                    className="remove-entree-order-item-button"
                     onClick={[Function]}
 >
-                    Remove
+                    X
 </button>,
                 ],
+                "className": "item-added-to-seat",
               },
               "ref": null,
               "rendered": Array [
@@ -1263,12 +1292,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Remove",
-                    "className": "remove-order-item-button",
+                    "children": "X",
+                    "className": "remove-entree-order-item-button",
                     "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Remove",
+                  "rendered": "X",
                   "type": "button",
                 },
               ],
@@ -1287,12 +1316,13 @@ ShallowWrapper {
                     Edit
 </button>,
                   <button
-                    className="remove-order-item-button"
+                    className="remove-entree-order-item-button"
                     onClick={[Function]}
 >
-                    Remove
+                    X
 </button>,
                 ],
+                "className": "item-added-to-seat",
               },
               "ref": null,
               "rendered": Array [
@@ -1314,12 +1344,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Remove",
-                    "className": "remove-order-item-button",
+                    "children": "X",
+                    "className": "remove-entree-order-item-button",
                     "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Remove",
+                  "rendered": "X",
                   "type": "button",
                 },
               ],
