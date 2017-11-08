@@ -15,17 +15,15 @@ class Entree extends Component {
   }
 
   removeFromOrder(menuItem) {
-    console.log('menuItem to remove: ', menuItem);
     this.props.removeFromCurrentSeatOrder(menuItem);
   }
 
   addOrderToSeat() {
-    //add to currentSeat in store
-    console.log('currentSeatOrder: ', this.props.currentSeatOrder);
     this.props.addOrderToCurrentSeat(this.props.currentSeatOrder);
     this.props.addToCurrentTableOrder(this.props.currentSeatOrder,
       this.props.currentSeat.seatNumber);
     this.props.clearCurrentSeatOrder();
+    this.props.removeCurrentSeat(this.props.currentSeat);
   }
 
   displaycurrentSeatOrder() {
@@ -81,7 +79,8 @@ Entree.propTypes = {
   removeFromCurrentSeatOrder: PropTypes.func,
   currentUser: PropTypes.object,
   addToCurrentTableOrder: PropTypes.func,
-  addOrderToCurrentSeat: PropTypes.func
+  addOrderToCurrentSeat: PropTypes.func,
+  removeCurrentSeat: PropTypes.func
 };
 
 export default Entree;

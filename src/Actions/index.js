@@ -135,3 +135,10 @@ export const addOrderToCurrentSeat = (order) => {
     order
   };
 };
+
+export const removeCurrentSeat = (currentSeat) => {
+  return {
+    type: 'REMOVE_CURRENT_SEAT',
+    currentSeat
+  };
+};
