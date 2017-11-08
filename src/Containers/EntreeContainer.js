@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Entree from './../Components/Entree/Entree';
-import { addToCurrentSeatOrder, clearCurrentSeatOrder, removeFromCurrentSeatOrder, addToCurrentTableOrder, addOrderToCurrentSeat, removeCurrentSeat } from './../Actions/index';
+import { addToCurrentSeatOrder, clearCurrentSeatOrder, removeFromCurrentSeatOrder, addToCurrentTableOrder, addOrderToCurrentSeat, removeCurrentSeat, removeCurrentTable } from './../Actions/index';
 
 const mapStateToProps = (store) => ({
   currentUser: store.currentUser,
@@ -28,6 +28,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   removeCurrentSeat: (currentSeat) => {
     return dispatch(removeCurrentSeat(currentSeat));
+  },
+  removeCurrentTable: (currentTable) => {
+    return dispatch(removeCurrentTable(currentTable));
   }
 });
 

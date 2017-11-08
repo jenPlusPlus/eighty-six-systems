@@ -142,3 +142,9 @@ export const removeCurrentSeat = (currentSeat) => {
     currentSeat
   };
 };
+
+export const removeCurrentTable = () => {
+  return {
+    type: 'REMOVE_CURRENT_TABLE'
+  };
+};

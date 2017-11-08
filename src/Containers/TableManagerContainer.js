@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addTable, addCurrentTable } from './../Actions/index.js';
+import { addTable, addCurrentTable, removeCurrentTable } from './../Actions/index.js';
 import TableManager from './../Components/TableManager/TableManager';
 
 const mapStateToProps = (store) => ({
@@ -14,6 +14,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   addCurrentTable: (table) => {
     return dispatch(addCurrentTable(table));
+  },
+  removeCurrentTable: (currentTable) => {
+    return dispatch(removeCurrentTable(currentTable));
   }
 });
 
