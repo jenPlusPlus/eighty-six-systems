@@ -40,9 +40,9 @@ ShallowWrapper {
                 render={[Function]}
         />
         <Route
+                component={[Function]}
                 exact={true}
                 path="/:loginCode/tables/:table"
-                render={[Function]}
         />
         <Route
                 component={[Function]}
@@ -88,9 +88,9 @@ ShallowWrapper {
             render={[Function]}
 />,
           <Route
+            component={[Function]}
             exact={true}
             path="/:loginCode/tables/:table"
-            render={[Function]}
 />,
           <Route
             component={[Function]}
@@ -168,9 +168,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
             "path": "/:loginCode/tables/:table",
-            "render": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -249,9 +249,9 @@ ShallowWrapper {
                     render={[Function]}
           />
           <Route
+                    component={[Function]}
                     exact={true}
                     path="/:loginCode/tables/:table"
-                    render={[Function]}
           />
           <Route
                     component={[Function]}
@@ -297,9 +297,9 @@ ShallowWrapper {
               render={[Function]}
 />,
             <Route
+              component={[Function]}
               exact={true}
               path="/:loginCode/tables/:table"
-              render={[Function]}
 />,
             <Route
               component={[Function]}
@@ -377,9 +377,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "component": [Function],
               "exact": true,
               "path": "/:loginCode/tables/:table",
-              "render": [Function],
             },
             "ref": null,
             "rendered": null,
