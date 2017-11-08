@@ -48,6 +48,15 @@
   margin-bottom: 10px;
   margin-top: 10px;
   font-size: 16px;
+  border: none;
+}
+
+.all-tables-button:disabled {
+  background-color: #AEAEAF;
+}
+
+.send-order-button:disabled {
+  background-color: #AEAEAF;
 }
 
 .add-seat {
@@ -84,7 +93,6 @@
   color: #33202A;
   position: relative;
   margin-top: 5px;
-
 }
 
 .server-dashboard-wrapper {
