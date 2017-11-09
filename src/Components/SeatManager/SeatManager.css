@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 90%;
+  height: 75%;
   overflow-y: scroll; }
 
 .seat {
@@ -13,6 +13,10 @@
   width: 250px;
   height: 360px;
   margin: 5px; }
+
+.seat:hover {
+  background-color: #54204D;
+  border: 3px solid #54204D; }
 
 .seat-info {
   background-color: #33202A;

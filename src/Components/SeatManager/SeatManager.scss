@@ -16,6 +16,11 @@
   margin: 5px;
 }
 
+.seat:hover {
+  background-color: #54204D;
+  border: 3px solid #54204D;
+}
+
 .seat-info {
   background-color: #33202A;
   height: 100px;
@@ -25,6 +30,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.seat-info:hover {
+  background-color: #54204D;
 }
 
 .table-info-seat-manager {
