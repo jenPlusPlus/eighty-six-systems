@@ -30,6 +30,16 @@
   border-top: dashed 1px #5F5F60;
 }
 
+.current-order-list- {
+  display: none;
+}
+
+.current-order-list-has-current-order {
+  border: none;
+  color: #33202A;
+  margin: 5px 0 5px 0;
+}
+
 .edit-order-item-button {
   display: none;
 }

@@ -77,7 +77,9 @@ class Seat extends Component {
           <h3>{this.props.seat.seatNumber}</h3>
         </Link>
         <div className='orders-container'>
-          <ul className='seat-order-container'>{this.getCurrentOrder()}</ul>
+          <ul className='seat-order-container'>
+            <h4 className={`current-order-list-${this.hasCurrentOrder()}`}>Current Order:</h4>
+            {this.getCurrentOrder()}</ul>
           <ul className='previous-seat-order-container'>
             <h4 className={`prev-orders-list ${this.hasPreviousOrders()} ${this.hasCurrentOrder()}`}>Previous Orders:</h4>
             {this.getPreviousOrders()}</ul>
