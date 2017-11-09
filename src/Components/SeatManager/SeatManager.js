@@ -80,7 +80,7 @@ class SeatManager extends Component {
             </form>
             <Link to={`/${this.props.currentUser.loginCode}/tables`}>
               <button className='all-tables-button'
-                disabled={this.props.currentTableOrder.length > 0}
+                disabled={this.props.currentTableOrder.length}
               >All Tables
               </button>
             </Link>
@@ -92,7 +92,7 @@ class SeatManager extends Component {
 
             <button className='send-order-button'
               onClick={() => this.sendOrder()}
-              disabled={this.props.currentTableOrder.length <= 0}>Send Order</button>
+              disabled={!this.props.currentTableOrder.length}>Send Order</button>
             <Link to={`/${this.props.currentUser.loginCode}/tables`}>
               <button className='close-table-button'
                 onClick={() => this.closeTable()}>Close Table</button>

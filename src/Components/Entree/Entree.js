@@ -10,7 +10,8 @@ class Entree extends Component {
 
   addToOrder(entree, entreeObject) {
     const order = Object.assign({}, {item: entree},
-      {price: entreeObject.price});
+      {price: entreeObject.price},
+      {id: Date.now()});
     this.props.addToCurrentSeatOrder(order);
   }
 
@@ -52,14 +53,17 @@ class Entree extends Component {
     return (
       <div className='order-wrapper'>
         <div className='entrees-wrapper'>
-          Entrees
+          <h3>Entrees</h3>
           <div className='entrees-list'>
             {mappedEntrees}
           </div>
         </div>
-        <ul className='current-order'>Current Order:
-          {this.displaycurrentSeatOrder()}
-        </ul>
+        <h3>Current Order: </h3>
+        <div className='current-order-wrapper'>
+          <ul className='current-order'>
+            {this.displaycurrentSeatOrder()}
+          </ul>
+        </div>
         <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}`}>
           <button className='add-order-to-seat-button'
             onClick={() => this.addOrderToSeat()}>Add to Seat</button>

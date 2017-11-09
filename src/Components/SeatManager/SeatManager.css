@@ -43,7 +43,14 @@
   margin: auto;
   margin-bottom: 10px;
   margin-top: 10px;
-  font-size: 16px; }
+  font-size: 16px;
+  border: none; }
+
+.all-tables-button:disabled {
+  background-color: #AEAEAF; }
+
+.send-order-button:disabled {
+  background-color: #AEAEAF; }
 
 .add-seat {
   width: 75px;
@@ -75,8 +82,7 @@
   border-radius: 25px;
   color: #33202A;
   position: relative;
-  margin-top: 5px;
-  border: none; }
+  margin-top: 5px; }
 
 .server-dashboard-wrapper {
   height: 79%; }

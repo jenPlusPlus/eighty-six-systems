@@ -95,7 +95,9 @@ ShallowWrapper {
         <div
           className="entrees-wrapper"
 >
-          Entrees
+          <h3>
+                    Entrees
+          </h3>
           <div
                     className="entrees-list"
           >
@@ -155,59 +157,65 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-        <ul
-          className="current-order"
+        <h3>
+          Current Order: 
+</h3>,
+        <div
+          className="current-order-wrapper"
 >
-          Current Order:
-          <li
-                    className="item-added-to-seat"
+          <ul
+                    className="current-order"
           >
-                    Lamb
-                    <button
-                              className="edit-order-item-button"
+                    <li
+                              className="item-added-to-seat"
                     >
-                              Edit
-                    </button>
-                    <button
-                              className="remove-entree-order-item-button"
-                              onClick={[Function]}
+                              Lamb
+                              <button
+                                        className="edit-order-item-button"
+                              >
+                                        Edit
+                              </button>
+                              <button
+                                        className="remove-entree-order-item-button"
+                                        onClick={[Function]}
+                              >
+                                        X
+                              </button>
+                    </li>
+                    <li
+                              className="item-added-to-seat"
                     >
-                              X
-                    </button>
-          </li>
-          <li
-                    className="item-added-to-seat"
-          >
-                    Burger
-                    <button
-                              className="edit-order-item-button"
+                              Burger
+                              <button
+                                        className="edit-order-item-button"
+                              >
+                                        Edit
+                              </button>
+                              <button
+                                        className="remove-entree-order-item-button"
+                                        onClick={[Function]}
+                              >
+                                        X
+                              </button>
+                    </li>
+                    <li
+                              className="item-added-to-seat"
                     >
-                              Edit
-                    </button>
-                    <button
-                              className="remove-entree-order-item-button"
-                              onClick={[Function]}
-                    >
-                              X
-                    </button>
-          </li>
-          <li
-                    className="item-added-to-seat"
-          >
-                    Mahi Mahi
-                    <button
-                              className="edit-order-item-button"
-                    >
-                              Edit
-                    </button>
-                    <button
-                              className="remove-entree-order-item-button"
-                              onClick={[Function]}
-                    >
-                              X
-                    </button>
-          </li>
-</ul>,
+                              Mahi Mahi
+                              <button
+                                        className="edit-order-item-button"
+                              >
+                                        Edit
+                              </button>
+                              <button
+                                        className="remove-entree-order-item-button"
+                                        onClick={[Function]}
+                              >
+                                        X
+                              </button>
+                    </li>
+          </ul>
+</div>,
         <Link
           replace={false}
           to="/0000/tables/22"
@@ -230,7 +238,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Entrees",
+            <h3>
+              Entrees
+</h3>,
             <div
               className="entrees-list"
 >
@@ -294,7 +304,17 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          "Entrees",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Entrees",
+            },
+            "ref": null,
+            "rendered": "Entrees",
+            "type": "h3",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -488,9 +508,78 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "Current Order:",
-            Array [
+          "children": "Current Order: ",
+        },
+        "ref": null,
+        "rendered": "Current Order: ",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <ul
+            className="current-order"
+>
+            <li
+                        className="item-added-to-seat"
+            >
+                        Lamb
+                        <button
+                                    className="edit-order-item-button"
+                        >
+                                    Edit
+                        </button>
+                        <button
+                                    className="remove-entree-order-item-button"
+                                    onClick={[Function]}
+                        >
+                                    X
+                        </button>
+            </li>
+            <li
+                        className="item-added-to-seat"
+            >
+                        Burger
+                        <button
+                                    className="edit-order-item-button"
+                        >
+                                    Edit
+                        </button>
+                        <button
+                                    className="remove-entree-order-item-button"
+                                    onClick={[Function]}
+                        >
+                                    X
+                        </button>
+            </li>
+            <li
+                        className="item-added-to-seat"
+            >
+                        Mahi Mahi
+                        <button
+                                    className="edit-order-item-button"
+                        >
+                                    Edit
+                        </button>
+                        <button
+                                    className="remove-entree-order-item-button"
+                                    onClick={[Function]}
+                        >
+                                    X
+                        </button>
+            </li>
+</ul>,
+          "className": "current-order-wrapper",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
               <li
                 className="item-added-to-seat"
 >
@@ -540,170 +629,170 @@ ShallowWrapper {
                 </button>
 </li>,
             ],
-          ],
-          "className": "current-order",
-        },
-        "ref": null,
-        "rendered": Array [
-          "Current Order:",
-          Object {
-            "instance": null,
-            "key": "1482363367071",
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
+            "className": "current-order",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1482363367071",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Lamb",
+                  <button
+                    className="edit-order-item-button"
+>
+                    Edit
+</button>,
+                  <button
+                    className="remove-entree-order-item-button"
+                    onClick={[Function]}
+>
+                    X
+</button>,
+                ],
+                "className": "item-added-to-seat",
+              },
+              "ref": null,
+              "rendered": Array [
                 "Lamb",
-                <button
-                  className="edit-order-item-button"
->
-                  Edit
-</button>,
-                <button
-                  className="remove-entree-order-item-button"
-                  onClick={[Function]}
->
-                  X
-</button>,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Edit",
+                    "className": "edit-order-item-button",
+                  },
+                  "ref": null,
+                  "rendered": "Edit",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "X",
+                    "className": "remove-entree-order-item-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "X",
+                  "type": "button",
+                },
               ],
-              "className": "item-added-to-seat",
+              "type": "li",
             },
-            "ref": null,
-            "rendered": Array [
-              "Lamb",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Edit",
-                  "className": "edit-order-item-button",
-                },
-                "ref": null,
-                "rendered": "Edit",
-                "type": "button",
+            Object {
+              "instance": null,
+              "key": "1482363367072",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Burger",
+                  <button
+                    className="edit-order-item-button"
+>
+                    Edit
+</button>,
+                  <button
+                    className="remove-entree-order-item-button"
+                    onClick={[Function]}
+>
+                    X
+</button>,
+                ],
+                "className": "item-added-to-seat",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "X",
-                  "className": "remove-entree-order-item-button",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "X",
-                "type": "button",
-              },
-            ],
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": "1482363367072",
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
+              "ref": null,
+              "rendered": Array [
                 "Burger",
-                <button
-                  className="edit-order-item-button"
->
-                  Edit
-</button>,
-                <button
-                  className="remove-entree-order-item-button"
-                  onClick={[Function]}
->
-                  X
-</button>,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Edit",
+                    "className": "edit-order-item-button",
+                  },
+                  "ref": null,
+                  "rendered": "Edit",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "X",
+                    "className": "remove-entree-order-item-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "X",
+                  "type": "button",
+                },
               ],
-              "className": "item-added-to-seat",
+              "type": "li",
             },
-            "ref": null,
-            "rendered": Array [
-              "Burger",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Edit",
-                  "className": "edit-order-item-button",
-                },
-                "ref": null,
-                "rendered": "Edit",
-                "type": "button",
+            Object {
+              "instance": null,
+              "key": "1482363367073",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Mahi Mahi",
+                  <button
+                    className="edit-order-item-button"
+>
+                    Edit
+</button>,
+                  <button
+                    className="remove-entree-order-item-button"
+                    onClick={[Function]}
+>
+                    X
+</button>,
+                ],
+                "className": "item-added-to-seat",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "X",
-                  "className": "remove-entree-order-item-button",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "X",
-                "type": "button",
-              },
-            ],
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": "1482363367073",
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
+              "ref": null,
+              "rendered": Array [
                 "Mahi Mahi",
-                <button
-                  className="edit-order-item-button"
->
-                  Edit
-</button>,
-                <button
-                  className="remove-entree-order-item-button"
-                  onClick={[Function]}
->
-                  X
-</button>,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Edit",
+                    "className": "edit-order-item-button",
+                  },
+                  "ref": null,
+                  "rendered": "Edit",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "X",
+                    "className": "remove-entree-order-item-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "X",
+                  "type": "button",
+                },
               ],
-              "className": "item-added-to-seat",
+              "type": "li",
             },
-            "ref": null,
-            "rendered": Array [
-              "Mahi Mahi",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Edit",
-                  "className": "edit-order-item-button",
-                },
-                "ref": null,
-                "rendered": "Edit",
-                "type": "button",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "X",
-                  "className": "remove-entree-order-item-button",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "X",
-                "type": "button",
-              },
-            ],
-            "type": "li",
-          },
-        ],
-        "type": "ul",
+          ],
+          "type": "ul",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -748,7 +837,9 @@ ShallowWrapper {
           <div
             className="entrees-wrapper"
 >
-            Entrees
+            <h3>
+                        Entrees
+            </h3>
             <div
                         className="entrees-list"
             >
@@ -808,59 +899,65 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          <ul
-            className="current-order"
+          <h3>
+            Current Order: 
+</h3>,
+          <div
+            className="current-order-wrapper"
 >
-            Current Order:
-            <li
-                        className="item-added-to-seat"
+            <ul
+                        className="current-order"
             >
-                        Lamb
-                        <button
-                                    className="edit-order-item-button"
+                        <li
+                                    className="item-added-to-seat"
                         >
-                                    Edit
-                        </button>
-                        <button
-                                    className="remove-entree-order-item-button"
-                                    onClick={[Function]}
+                                    Lamb
+                                    <button
+                                                className="edit-order-item-button"
+                                    >
+                                                Edit
+                                    </button>
+                                    <button
+                                                className="remove-entree-order-item-button"
+                                                onClick={[Function]}
+                                    >
+                                                X
+                                    </button>
+                        </li>
+                        <li
+                                    className="item-added-to-seat"
                         >
-                                    X
-                        </button>
-            </li>
-            <li
-                        className="item-added-to-seat"
-            >
-                        Burger
-                        <button
-                                    className="edit-order-item-button"
+                                    Burger
+                                    <button
+                                                className="edit-order-item-button"
+                                    >
+                                                Edit
+                                    </button>
+                                    <button
+                                                className="remove-entree-order-item-button"
+                                                onClick={[Function]}
+                                    >
+                                                X
+                                    </button>
+                        </li>
+                        <li
+                                    className="item-added-to-seat"
                         >
-                                    Edit
-                        </button>
-                        <button
-                                    className="remove-entree-order-item-button"
-                                    onClick={[Function]}
-                        >
-                                    X
-                        </button>
-            </li>
-            <li
-                        className="item-added-to-seat"
-            >
-                        Mahi Mahi
-                        <button
-                                    className="edit-order-item-button"
-                        >
-                                    Edit
-                        </button>
-                        <button
-                                    className="remove-entree-order-item-button"
-                                    onClick={[Function]}
-                        >
-                                    X
-                        </button>
-            </li>
-</ul>,
+                                    Mahi Mahi
+                                    <button
+                                                className="edit-order-item-button"
+                                    >
+                                                Edit
+                                    </button>
+                                    <button
+                                                className="remove-entree-order-item-button"
+                                                onClick={[Function]}
+                                    >
+                                                X
+                                    </button>
+                        </li>
+            </ul>
+</div>,
           <Link
             replace={false}
             to="/0000/tables/22"
@@ -883,7 +980,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Entrees",
+              <h3>
+                Entrees
+</h3>,
               <div
                 className="entrees-list"
 >
@@ -947,7 +1046,17 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            "Entrees",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Entrees",
+              },
+              "ref": null,
+              "rendered": "Entrees",
+              "type": "h3",
+            },
             Object {
               "instance": null,
               "key": undefined,
@@ -1141,9 +1250,78 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "Current Order:",
-              Array [
+            "children": "Current Order: ",
+          },
+          "ref": null,
+          "rendered": "Current Order: ",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <ul
+              className="current-order"
+>
+              <li
+                            className="item-added-to-seat"
+              >
+                            Lamb
+                            <button
+                                          className="edit-order-item-button"
+                            >
+                                          Edit
+                            </button>
+                            <button
+                                          className="remove-entree-order-item-button"
+                                          onClick={[Function]}
+                            >
+                                          X
+                            </button>
+              </li>
+              <li
+                            className="item-added-to-seat"
+              >
+                            Burger
+                            <button
+                                          className="edit-order-item-button"
+                            >
+                                          Edit
+                            </button>
+                            <button
+                                          className="remove-entree-order-item-button"
+                                          onClick={[Function]}
+                            >
+                                          X
+                            </button>
+              </li>
+              <li
+                            className="item-added-to-seat"
+              >
+                            Mahi Mahi
+                            <button
+                                          className="edit-order-item-button"
+                            >
+                                          Edit
+                            </button>
+                            <button
+                                          className="remove-entree-order-item-button"
+                                          onClick={[Function]}
+                            >
+                                          X
+                            </button>
+              </li>
+</ul>,
+            "className": "current-order-wrapper",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
                 <li
                   className="item-added-to-seat"
 >
@@ -1193,170 +1371,170 @@ ShallowWrapper {
                   </button>
 </li>,
               ],
-            ],
-            "className": "current-order",
-          },
-          "ref": null,
-          "rendered": Array [
-            "Current Order:",
-            Object {
-              "instance": null,
-              "key": "1482363367071",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
+              "className": "current-order",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "1482363367071",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Lamb",
+                    <button
+                      className="edit-order-item-button"
+>
+                      Edit
+</button>,
+                    <button
+                      className="remove-entree-order-item-button"
+                      onClick={[Function]}
+>
+                      X
+</button>,
+                  ],
+                  "className": "item-added-to-seat",
+                },
+                "ref": null,
+                "rendered": Array [
                   "Lamb",
-                  <button
-                    className="edit-order-item-button"
->
-                    Edit
-</button>,
-                  <button
-                    className="remove-entree-order-item-button"
-                    onClick={[Function]}
->
-                    X
-</button>,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Edit",
+                      "className": "edit-order-item-button",
+                    },
+                    "ref": null,
+                    "rendered": "Edit",
+                    "type": "button",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "X",
+                      "className": "remove-entree-order-item-button",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "X",
+                    "type": "button",
+                  },
                 ],
-                "className": "item-added-to-seat",
+                "type": "li",
               },
-              "ref": null,
-              "rendered": Array [
-                "Lamb",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Edit",
-                    "className": "edit-order-item-button",
-                  },
-                  "ref": null,
-                  "rendered": "Edit",
-                  "type": "button",
+              Object {
+                "instance": null,
+                "key": "1482363367072",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Burger",
+                    <button
+                      className="edit-order-item-button"
+>
+                      Edit
+</button>,
+                    <button
+                      className="remove-entree-order-item-button"
+                      onClick={[Function]}
+>
+                      X
+</button>,
+                  ],
+                  "className": "item-added-to-seat",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "X",
-                    "className": "remove-entree-order-item-button",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "X",
-                  "type": "button",
-                },
-              ],
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": "1482363367072",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
+                "ref": null,
+                "rendered": Array [
                   "Burger",
-                  <button
-                    className="edit-order-item-button"
->
-                    Edit
-</button>,
-                  <button
-                    className="remove-entree-order-item-button"
-                    onClick={[Function]}
->
-                    X
-</button>,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Edit",
+                      "className": "edit-order-item-button",
+                    },
+                    "ref": null,
+                    "rendered": "Edit",
+                    "type": "button",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "X",
+                      "className": "remove-entree-order-item-button",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "X",
+                    "type": "button",
+                  },
                 ],
-                "className": "item-added-to-seat",
+                "type": "li",
               },
-              "ref": null,
-              "rendered": Array [
-                "Burger",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Edit",
-                    "className": "edit-order-item-button",
-                  },
-                  "ref": null,
-                  "rendered": "Edit",
-                  "type": "button",
+              Object {
+                "instance": null,
+                "key": "1482363367073",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Mahi Mahi",
+                    <button
+                      className="edit-order-item-button"
+>
+                      Edit
+</button>,
+                    <button
+                      className="remove-entree-order-item-button"
+                      onClick={[Function]}
+>
+                      X
+</button>,
+                  ],
+                  "className": "item-added-to-seat",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "X",
-                    "className": "remove-entree-order-item-button",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "X",
-                  "type": "button",
-                },
-              ],
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": "1482363367073",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
+                "ref": null,
+                "rendered": Array [
                   "Mahi Mahi",
-                  <button
-                    className="edit-order-item-button"
->
-                    Edit
-</button>,
-                  <button
-                    className="remove-entree-order-item-button"
-                    onClick={[Function]}
->
-                    X
-</button>,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Edit",
+                      "className": "edit-order-item-button",
+                    },
+                    "ref": null,
+                    "rendered": "Edit",
+                    "type": "button",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "X",
+                      "className": "remove-entree-order-item-button",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "X",
+                    "type": "button",
+                  },
                 ],
-                "className": "item-added-to-seat",
+                "type": "li",
               },
-              "ref": null,
-              "rendered": Array [
-                "Mahi Mahi",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Edit",
-                    "className": "edit-order-item-button",
-                  },
-                  "ref": null,
-                  "rendered": "Edit",
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "X",
-                    "className": "remove-entree-order-item-button",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "X",
-                  "type": "button",
-                },
-              ],
-              "type": "li",
-            },
-          ],
-          "type": "ul",
+            ],
+            "type": "ul",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,

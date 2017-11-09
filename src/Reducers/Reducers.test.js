@@ -162,7 +162,6 @@ describe(`reducers tests`, () => {
         }
       };
 
-      // this test fails
       expect(allOrders([{
         currentTableOrder: [
           {
@@ -206,7 +205,6 @@ describe(`reducers tests`, () => {
         }
       };
 
-      // this test fails
       expect(currentSeatOrder([{
         item: 'Lamb',
         price: 29
@@ -246,6 +244,21 @@ describe(`reducers tests`, () => {
         tableNumber: '22',
         order: []
       });
+
+      const removeCurrentSeatAction = {
+        type: 'REMOVE_CURRENT_SEAT',
+        currentSeat: {
+          seatNumber: '1',
+          tableNumber: '22',
+          order: []
+        }
+      };
+
+      expect(currentSeat({
+        seatNumber: '1',
+        tableNumber: '22',
+        order: []
+      }, removeCurrentSeatAction)).toEqual({});
 
       const addOrderToCurrentSeatAction = {
         type: 'ADD_ORDER_TO_CURRENT_SEAT',
@@ -303,19 +316,19 @@ describe(`reducers tests`, () => {
         {
           type: 'REMOVE_FROM_CURRENT_TABLE_ORDER',
           removeItemInfo: {
-            menuItem: {item: 'Lamb', price: 29},
+            menuItem: {item: 'Lamb', price: 29, id: 5},
             seatNumber: '2'
           }
         };
 
-      // this test fails
       expect(currentTableOrder([{
         seatNumber: '2',
         currentSeatOrder:[
-          {item: 'Lamb', price: 29},
-          {item: 'Burger', price: 19},
-          {item:'Mahi Mahi', price: 27}]
-      }], removeFromCurrentTableOrderAction)).toEqual([]);
+          {item: 'Lamb', price: 29, id: 5}]
+      }], removeFromCurrentTableOrderAction)).toEqual([{
+        seatNumber: '2',
+        currentSeatOrder:[]
+      }]);
 
       const clearCurrentTableOrderAction =
         {
@@ -348,6 +361,15 @@ describe(`reducers tests`, () => {
         tableNumber: '33',
         seats: {}
       });
+
+      const removeCurrentTableAction = {
+        type: 'REMOVE_CURRENT_TABLE'
+      };
+
+      expect(currentTable({
+        tableNumber: '33',
+        seats: {}
+      }, removeCurrentTableAction)).toEqual({});
 
     });
 
