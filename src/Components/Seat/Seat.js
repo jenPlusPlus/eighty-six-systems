@@ -19,6 +19,19 @@ class Seat extends Component {
     this.props.removeFromCurrentTableOrder(item, this.props.seat.seatNumber);
   }
 
+  getPreviousOrders() {
+    const currentTable = this.props.tables.find( table => table.tableNumber === this.props.currentTableNumber);
+    const currentSeat = currentTable.seats.find( seat => seat.seatNumber === this.props.seat.seatNumber);
+    const mappedPrevOrders = currentSeat.order.map( (item, index) => {
+      return (
+        <li key={index + Date.now()}
+        className='prev-ordered-menu-item'>{item.item}
+        </li>
+      );
+    })
+    return mappedPrevOrders;
+  }
+
   getCurrentOrder() {
     const currentSeat = this.props.currentTableOrder.filter( order => {
       return order.seatNumber === this.props.seat.seatNumber;
@@ -44,6 +57,7 @@ class Seat extends Component {
         <Link to={`/${this.props.currentUser.loginCode}/tables/${this.props.currentTable.tableNumber}/${this.props.seat.seatNumber}/menu`}>
           <h3>{this.props.seat.seatNumber}</h3>
         </Link>
+        <ul className='previous-seat-order-container'>{this.getPreviousOrders()}</ul>
         <ul className='seat-order-container'>{this.getCurrentOrder()}</ul>
       </div>
     );
@@ -58,7 +72,8 @@ Seat.propTypes = {
   currentTable: PropTypes.object,
   removeFromCurrentTableOrder: PropTypes.func,
   currentTableOrder: PropTypes.array,
-  currentSeatOrder: PropTypes.array
+  currentSeatOrder: PropTypes.array,
+  tables: PropTypes.array
 };
 
 export default Seat;
