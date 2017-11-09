@@ -23,6 +23,7 @@ class Entree extends Component {
     this.props.addToCurrentTableOrder(this.props.currentSeatOrder,
       this.props.currentSeat.seatNumber);
     this.props.clearCurrentSeatOrder();
+    this.props.removeCurrentSeat(this.props.currentSeat);
   }
 
   displaycurrentSeatOrder() {
@@ -78,7 +79,8 @@ Entree.propTypes = {
   removeFromCurrentSeatOrder: PropTypes.func,
   currentUser: PropTypes.object,
   addToCurrentTableOrder: PropTypes.func,
-  addOrderToCurrentSeat: PropTypes.func
+  addOrderToCurrentSeat: PropTypes.func,
+  removeCurrentSeat: PropTypes.func
 };
 
 export default Entree;

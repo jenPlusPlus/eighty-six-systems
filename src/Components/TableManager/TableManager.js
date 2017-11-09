@@ -13,6 +13,10 @@ class TableManager extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.removeCurrentTable();
+  }
+
   updateState(event) {
     this.setState({
       input: event.target.value
@@ -86,7 +90,8 @@ TableManager.propTypes = {
   addTable: PropTypes.func,
   tables: PropTypes.array,
   addCurrentTable: PropTypes.func,
-  currentTable: PropTypes.object
+  currentTable: PropTypes.object,
+  removeCurrentTable: PropTypes.func
 };
 
 export default TableManager;

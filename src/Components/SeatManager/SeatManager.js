@@ -79,7 +79,10 @@ class SeatManager extends Component {
                 onClick={(event) => this.handleSubmit(event)}>Add Seat</button>
             </form>
             <Link to={`/${this.props.currentUser.loginCode}/tables`}>
-              <h3 className='all-tables-button'>All Tables</h3>
+              <button className='all-tables-button'
+                disabled={this.props.currentTableOrder.length > 0}
+              >All Tables
+              </button>
             </Link>
             <h3 className='table-info-seat-manager'>
               Table {this.props.currentTable.tableNumber}</h3>
@@ -88,7 +91,8 @@ class SeatManager extends Component {
             </div>
 
             <button className='send-order-button'
-              onClick={() => this.sendOrder()}>Send Order</button>
+              onClick={() => this.sendOrder()}
+              disabled={this.props.currentTableOrder.length <= 0}>Send Order</button>
             <Link to={`/${this.props.currentUser.loginCode}/tables`}>
               <button className='close-table-button'
                 onClick={() => this.closeTable()}>Close Table</button>
@@ -114,7 +118,8 @@ SeatManager.propTypes = {
   addToAllOrders: PropTypes.func,
   clearCurrentTableOrder: PropTypes.func,
   addMenuItem: PropTypes.func,
-  removeTable: PropTypes.func
+  removeTable: PropTypes.func,
+  removeCurrentTable: PropTypes.func
 };
 
 export default SeatManager;

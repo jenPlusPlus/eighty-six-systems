@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addSeat, addCurrentSeat, addToAllOrders, clearCurrentTableOrder, addMenuItem, removeTable } from './../Actions/index.js';
+import { addSeat, addCurrentSeat, addToAllOrders, clearCurrentTableOrder, addMenuItem, removeTable, removeCurrentTable } from './../Actions/index.js';
 import SeatManager from './../Components/SeatManager/SeatManager';
 
 const mapStateToProps = (store) => ({
@@ -28,6 +28,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   removeTable: (indexToRemove) => {
     return dispatch(removeTable(indexToRemove));
+  },
+  removeCurrentTable: (currentTable) => {
+    return dispatch(removeCurrentTable(currentTable));
   }
 });
 

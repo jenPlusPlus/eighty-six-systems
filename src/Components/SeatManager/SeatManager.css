@@ -75,7 +75,8 @@
   border-radius: 25px;
   color: #33202A;
   position: relative;
-  margin-top: 5px; }
+  margin-top: 5px;
+  border: none; }
 
 .server-dashboard-wrapper {
   height: 79%; }
