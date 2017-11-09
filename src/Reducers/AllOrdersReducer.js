@@ -4,8 +4,6 @@ const allOrders = (state = [], action) => {
     return [...state, action.orderInfo];
   case 'REMOVE_FROM_ALL_ORDERS':
     return state.filter(order => order.id !== action.order.id);
-  case 'CLEAR_ALL_ORDERS':
-    return [];
   default:
     return state;
   }

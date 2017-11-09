@@ -2,8 +2,62 @@
   border: none;
   font-size: 12px;
   margin: 5px 0 5px 0;
-  width: 85px;
+  width: 90px;
   height: 30px;
   border-radius: 15px;
   background-color: #EFEFF0;
   color: #6D576A; }
+
+.kitchen-view-order {
+  background-color: #33202A;
+  position: relative;
+  width: 60%;
+  margin: 10px auto 10px auto;
+  border-radius: 15px;
+  padding: 5px; }
+
+.remove-from-kitchen-view {
+  border: none;
+  font-size: 12px;
+  margin: 5px 0 5px 0;
+  width: 90px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #EFEFF0;
+  color: #6D576A;
+  position: absolute;
+  top: 5px;
+  right: 5px; }
+
+.orders-wrapper {
+  height: 80%; }
+
+.all-orders {
+  height: 87%;
+  overflow-y: scroll; }
+
+.order-table-info {
+  position: absolute;
+  top: 5px;
+  left: 5px; }
+
+.seat-order-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 45px; }
+
+.seat-order {
+  background-color: #EFEFF0;
+  color: #33202A;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  width: 45%;
+  font-weight: bolder; }
+
+.seat-order-item {
+  color: #33202A;
+  margin-top: 3px;
+  font-weight: normal; }

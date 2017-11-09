@@ -30,7 +30,9 @@ ShallowWrapper {
           replace={false}
           to="/0000/tables"
 >
-          <button>
+          <button
+                    className="table-manager-button"
+          >
                     Table Manager
           </button>
 </Link>,
@@ -52,7 +54,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <button>
+          "children": <button
+            className="table-manager-button"
+>
             Table Manager
 </button>,
           "replace": false,
@@ -65,6 +69,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Table Manager",
+            "className": "table-manager-button",
           },
           "ref": null,
           "rendered": "Table Manager",
@@ -109,7 +114,9 @@ ShallowWrapper {
             replace={false}
             to="/0000/tables"
 >
-            <button>
+            <button
+                        className="table-manager-button"
+            >
                         Table Manager
             </button>
 </Link>,
@@ -131,7 +138,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <button>
+            "children": <button
+              className="table-manager-button"
+>
               Table Manager
 </button>,
             "replace": false,
@@ -144,6 +153,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Table Manager",
+              "className": "table-manager-button",
             },
             "ref": null,
             "rendered": "Table Manager",
