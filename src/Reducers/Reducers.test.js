@@ -245,6 +245,21 @@ describe(`reducers tests`, () => {
         order: []
       });
 
+      const removeCurrentSeatAction = {
+        type: 'REMOVE_CURRENT_SEAT',
+        currentSeat: {
+          seatNumber: '1',
+          tableNumber: '22',
+          order: []
+        }
+      };
+
+      expect(currentSeat({
+        seatNumber: '1',
+        tableNumber: '22',
+        order: []
+      }, removeCurrentSeatAction)).toEqual({});
+
       const addOrderToCurrentSeatAction = {
         type: 'ADD_ORDER_TO_CURRENT_SEAT',
         order: [
@@ -346,6 +361,15 @@ describe(`reducers tests`, () => {
         tableNumber: '33',
         seats: {}
       });
+
+      const removeCurrentTableAction = {
+        type: 'REMOVE_CURRENT_TABLE'
+      };
+
+      expect(currentTable({
+        tableNumber: '33',
+        seats: {}
+      }, removeCurrentTableAction)).toEqual({});
 
     });
 
