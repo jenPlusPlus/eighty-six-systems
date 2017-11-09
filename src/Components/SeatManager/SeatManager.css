@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 75%;
+  height: 90%;
   overflow-y: scroll; }
 
 .seat {
