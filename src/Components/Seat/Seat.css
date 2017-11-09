@@ -1,4 +1,4 @@
-.seat-order-container {
+.orders-container {
   height: 93%;
   width: 95%;
   overflow-y: scroll;
@@ -13,6 +13,26 @@
   color: #33202A;
   margin-bottom: 5px; }
 
+.prev-ordered-menu-item {
+  color: #5F5F60;
+  margin-bottom: 5px; }
+
+.prev-orders-list {
+  color: #5F5F60;
+  margin: 5px 0 5px 0;
+  padding-top: 5px; }
+
+.has-current-order {
+  border-top: dashed 1px #5F5F60; }
+
+.current-order-list- {
+  display: none; }
+
+.current-order-list-has-current-order {
+  border: none;
+  color: #33202A;
+  margin: 5px 0 5px 0; }
+
 .edit-order-item-button {
   display: none; }
 
@@ -25,3 +45,6 @@
   height: 17px;
   font-size: 15px;
   margin: 0 5px 0 3px; }
+
+.has-no-previous-orders {
+  display: none; }
